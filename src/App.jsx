@@ -151,6 +151,20 @@ function Capabilities() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => ScrollTrigger.refresh(), 100);
+    return () => clearTimeout(timeout);
+  }, [isExpanded]);
+
+  const handleToggle = () => {
+    if (isExpanded) {
+      setIsExpanded(false);
+      capRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      setIsExpanded(true);
+    }
+  };
+
   return (
     <section ref={capRef} id="capabilities" className="py-32 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
@@ -259,7 +273,7 @@ function Capabilities() {
 
         <div className="mt-16 text-center">
           <button 
-            onClick={() => setIsExpanded(!isExpanded)}
+            onClick={handleToggle}
             className="font-data text-sm uppercase tracking-widest text-bronze glow-text hover:text-ink transition-colors cursor-pointer"
           >
             {isExpanded ? "Collapse Layers" : "Examine All 9 Layers"}
