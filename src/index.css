@@ -14,3 +14,12 @@
     text-wrap: balance;
   }
 }
+
+@keyframes customGlow {
+  0% { text-shadow: 0 0 5px rgba(220,185,150,0.3); }
+  50% { text-shadow: 0 0 16px rgba(220,185,150,0.9); }
+  100% { text-shadow: 0 0 5px rgba(220,185,150,0.3); }
+}
+.glow-text {
+  animation: customGlow 2s infinite ease-in-out;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useLayoutEffect } from 'react';
-import { ShieldCheck, Globe, Briefcase, ArrowRight, ChevronRight, Compass, Network, Vault } from 'lucide-react';
+import { ShieldCheck, Globe, Briefcase, ArrowRight, ChevronRight, Compass, Network, Vault, Landmark, Lock, Coins, FileText, HeartPulse, GraduationCap, Scale } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -65,7 +65,7 @@ function Hero() {
           <span className="block hero-text font-drama italic text-bronze mt-2 whitespace-nowrap">for global professionals.</span>
         </h1>
         <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-10">
-          We architect international banking, legal entity optimization, and dual citizenship structures to reclaim your absolute freedom and secure generational wealth.
+          We map your profile against our 9-layer global wealth architecture spanning tax residency, ownership structures, capital access, risk transfer, and succession planning to build a completely unified, frictionless global life.
         </p>
         <div className="hero-text flex gap-4">
           <a href="#platform" className="bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform">
@@ -135,6 +135,7 @@ function ClientProfiles() {
 
 function Capabilities() {
   const capRef = useRef(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -154,8 +155,8 @@ function Capabilities() {
     <section ref={capRef} id="capabilities" className="py-32 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
         <div className="cap-header mb-20 max-w-2xl">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">Strategic Pillars</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Architectural precision across borders.</h3>
+          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">9-Layer Framework</h2>
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Architectural precision across all dimensions of your global life.</h3>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -163,7 +164,7 @@ function Capabilities() {
             <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
               <ShieldCheck size={24} strokeWidth={1.5} />
             </div>
-            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Offshore Banking</h4>
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Capital Access</h4>
             <div className="h-px w-full bg-graphite/10 mb-5"></div>
             <p className="text-graphite font-sans leading-relaxed text-[15px]">
               Access premium jurisdictional liquidity. We structure resilient treasury architectures that insulate assets from localized instability, ensuring capital is always working, never trapped.
@@ -173,7 +174,7 @@ function Capabilities() {
             <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
               <Globe size={24} strokeWidth={1.5} />
             </div>
-            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Dual Citizenship</h4>
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Tax Residency</h4>
             <div className="h-px w-full bg-graphite/10 mb-5"></div>
             <p className="text-graphite font-sans leading-relaxed text-[15px]">
               Strategic acquisition of alternate passports and residencies. We engineer your personal base to guarantee mobility rights, untethered optionality, and precise tax optimization.
@@ -183,13 +184,89 @@ function Capabilities() {
             <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
               <Briefcase size={24} strokeWidth={1.5} />
             </div>
-            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Global Investments</h4>
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Ownership Architecture</h4>
             <div className="h-px w-full bg-graphite/10 mb-5"></div>
             <p className="text-graphite font-sans leading-relaxed text-[15px]">
-              High-leverage asset allocation unbound by geography. We design structures for enduring wealth preservation, institutional access, and strict privacy control.
+              High-leverage entity allocation unbound by geography. We design foundation and trust structures for enduring wealth preservation, institutional access, and strict privacy control.
             </p>
           </div>
+
+          {isExpanded && (
+            <>
+              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+                  <Landmark size={24} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Mobility & Nationality</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                  Bespoke dual citizenship acquisition paths prioritizing access, security, and global movement decoupled from single-sovereign control.
+                </p>
+              </div>
+              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+                  <Lock size={24} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Risk Transfer</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                  Institutional risk transfer mechanisms mitigating jurisdictional litigation, volatile markets, and systemic sovereign threats to your capital.
+                </p>
+              </div>
+              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+                  <HeartPulse size={24} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Healthcare Overlay</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                  Immediate global medical access networks overlaying your residency design, avoiding the wait queues and limits of nationalized systems.
+                </p>
+              </div>
+              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+                  <GraduationCap size={24} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Education Overlay</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                  Educational pathways mapped specifically to ensure legacy continuity, prestigious access, and high-quality stability for the next generation.
+                </p>
+              </div>
+              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+                  <Scale size={24} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Succession Planning</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                  Dynastic planning structuring ensuring frictionless wealth transfer devoid of draconian estate taxes and probate interferences.
+                </p>
+              </div>
+              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+                  <Coins size={24} strokeWidth={1.5} />
+                </div>
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Digital Custody</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                  Sophisticated banking and legal rails bridging crypto wealth safely and favorably into trad-fi and global real estate.
+                </p>
+              </div>
+            </>
+          )}
         </div>
+
+        {!isExpanded && (
+          <div className="mt-16 text-center">
+            <button 
+              onClick={() => setIsExpanded(true)}
+              className="font-data text-sm uppercase tracking-widest text-bronze glow-text hover:text-ink transition-colors cursor-pointer"
+            >
+              Examine All 9 Layers
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -290,42 +367,31 @@ function Engagement() {
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from('.eng-item', {
-        scrollTrigger: { trigger: engRef.current, start: 'top 80%' },
-        y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out'
+        scrollTrigger: { trigger: engRef.current, start: 'top 85%' },
+        y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
       });
     }, engRef);
     return () => ctx.revert();
   }, []);
 
   return (
-    <section id="engagement" ref={engRef} className="py-32 px-6 md:px-12 bg-white rounded-t-[3rem] relative z-20 mt-[-3rem]">
-      <div className="max-w-6xl mx-auto bg-porcelain rounded-[3rem] overflow-hidden flex flex-col lg:flex-row border border-graphite/5 shadow-sm">
-        <div className="w-full lg:w-[45%] relative min-h-[400px]">
+    <section id="engagement" ref={engRef} className="py-24 px-6 md:px-12 bg-white relative z-20">
+      <div className="max-w-4xl mx-auto bg-porcelain rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col items-center text-center">
+        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 eng-item ring-4 ring-white shadow-md flex-shrink-0">
           <img 
             src="/martin.jpg" 
             alt="Martin Popiel - Founder" 
-            className="absolute inset-0 w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.9]"
+            className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.9]"
           />
         </div>
-        <div className="w-full lg:w-[55%] p-12 md:p-20 flex flex-col justify-center">
-          <h2 className="eng-item font-data text-xs uppercase tracking-widest text-bronze mb-5">Meet The Architect</h2>
-          <h3 className="eng-item text-3xl md:text-4xl font-sans font-medium tracking-tight text-ink mb-6">
+        <div className="eng-item">
+          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-3">Meet The Architect</h2>
+          <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-4">
             Martin Popiel, CPA & Global Strategist
           </h3>
-          <p className="eng-item text-graphite font-sans leading-relaxed mb-6 text-lg">
-            Behind the Blueprint Global platform is a network of world-class tax attorneys, jurisdictional bankers, and geopolitical analysts. 
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto">
+            This infrastructure was pioneered by our founder, Martin Popiel. Realizing the friction of the offshore world firsthand, he spent years traversing 40+ countries to aggregate the absolute best strategies into a single, unified platform—empowered by a network of elite tax attorneys, jurisdictional bankers, and geopolitical analysts.
           </p>
-          <p className="eng-item text-graphite font-sans leading-relaxed mb-8 text-lg">
-            This infrastructure was pioneered by our founder, Martin Popiel. Realizing the friction of the offshore world firsthand, he spent years traversing 40+ countries to aggregate the absolute best strategies into a single, unified platform.
-          </p>
-          <ul className="eng-item flex flex-col gap-3 mb-12 font-sans text-ink/80 text-[15px]">
-            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Aggregates expertise from elite lawyers and policy-makers globally.</li>
-            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> CPA-led protocol ensuring strict compliance alongside optimization.</li>
-            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Reclaimed absolute freedom for himself, and now architects it for the platform's members.</li>
-          </ul>
-          <div className="eng-item mt-2">
-            <p className="text-sm text-graphite/70 font-sans uppercase font-medium tracking-widest text-bronze">Strictly highly-confidential</p>
-          </div>
         </div>
       </div>
     </section>
