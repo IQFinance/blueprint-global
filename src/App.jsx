@@ -257,16 +257,14 @@ function Capabilities() {
           )}
         </div>
 
-        {!isExpanded && (
-          <div className="mt-16 text-center">
-            <button 
-              onClick={() => setIsExpanded(true)}
-              className="font-data text-sm uppercase tracking-widest text-bronze glow-text hover:text-ink transition-colors cursor-pointer"
-            >
-              Examine All 9 Layers
-            </button>
-          </div>
-        )}
+        <div className="mt-16 text-center">
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="font-data text-sm uppercase tracking-widest text-bronze glow-text hover:text-ink transition-colors cursor-pointer"
+          >
+            {isExpanded ? "Collapse Layers" : "Examine All 9 Layers"}
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -375,9 +373,9 @@ function Engagement() {
   }, []);
 
   return (
-    <section id="engagement" ref={engRef} className="py-24 px-6 md:px-12 bg-white relative z-20">
-      <div className="max-w-4xl mx-auto bg-porcelain rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col items-center text-center">
-        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 eng-item ring-4 ring-white shadow-md flex-shrink-0">
+    <section id="engagement" ref={engRef} className="py-24 px-6 md:px-12 bg-porcelain relative z-20">
+      <div className="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col items-center text-center">
+        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 eng-item ring-4 ring-porcelain shadow-sm flex-shrink-0">
           <img 
             src="/martin.jpg" 
             alt="Martin Popiel - Founder" 
@@ -389,9 +387,20 @@ function Engagement() {
           <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-4">
             Martin Popiel, CPA & Global Strategist
           </h3>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto">
-            This infrastructure was pioneered by our founder, Martin Popiel. Realizing the friction of the offshore world firsthand, he spent years traversing 40+ countries to aggregate the absolute best strategies into a single, unified platform—empowered by a network of elite tax attorneys, jurisdictional bankers, and geopolitical analysts.
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto mb-8">
+            This infrastructure was pioneered by our founder, Martin Popiel. Realizing the friction of the offshore world firsthand, he spent years traversing 40+ countries to aggregate the absolute best global strategies into one unified platform. Today, this system is governed by a formidable network of elite tax attorneys, jurisdictional bankers, and geopolitical analysts.
           </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
+              <ShieldCheck size={14} className="text-bronze"/> CPA-Governed
+            </span>
+            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
+              <Globe size={14} className="text-bronze"/> 40+ Jurisdictions
+            </span>
+            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
+              <Network size={14} className="text-bronze"/> Global Network
+            </span>
+          </div>
         </div>
       </div>
     </section>
