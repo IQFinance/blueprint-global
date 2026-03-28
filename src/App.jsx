@@ -143,7 +143,7 @@ function Capabilities() {
         scrollTrigger: { trigger: capRef.current, start: 'top 80%' },
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
-      gsap.from('.cap-card', {
+      gsap.from('.cap-card-initial', {
         scrollTrigger: { trigger: capRef.current, start: 'top 70%' },
         y: 40, opacity: 0, duration: 1, stagger: 0.12, ease: 'power3.out'
       });
@@ -173,97 +173,97 @@ function Capabilities() {
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Architectural precision across all dimensions of your global life.</h3>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8">
+          <div className="cap-card-initial flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
               <ShieldCheck size={24} strokeWidth={1.5} />
             </div>
-            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Capital Access</h4>
-            <div className="h-px w-full bg-graphite/10 mb-5"></div>
-            <p className="text-graphite font-sans leading-relaxed text-[15px]">
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Capital Access</h4>
+            <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+            <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
               Access premium jurisdictional liquidity. We structure resilient treasury architectures that insulate assets from localized instability, ensuring capital is always working, never trapped.
             </p>
           </div>
-          <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+          <div className="cap-card-initial flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
               <Globe size={24} strokeWidth={1.5} />
             </div>
-            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Tax Residency</h4>
-            <div className="h-px w-full bg-graphite/10 mb-5"></div>
-            <p className="text-graphite font-sans leading-relaxed text-[15px]">
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Tax Residency</h4>
+            <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+            <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
               Strategic acquisition of alternate passports and residencies. We engineer your personal base to guarantee mobility rights, untethered optionality, and precise tax optimization.
             </p>
           </div>
-          <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+          <div className="cap-card-initial flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
               <Briefcase size={24} strokeWidth={1.5} />
             </div>
-            <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Ownership Architecture</h4>
-            <div className="h-px w-full bg-graphite/10 mb-5"></div>
-            <p className="text-graphite font-sans leading-relaxed text-[15px]">
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Ownership Architecture</h4>
+            <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+            <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
               High-leverage entity allocation unbound by geography. We design foundation and trust structures for enduring wealth preservation, institutional access, and strict privacy control.
             </p>
           </div>
 
           {isExpanded && (
             <>
-              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <Landmark size={24} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Mobility & Nationality</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Mobility & Nationality</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
                   Bespoke dual citizenship acquisition paths prioritizing access, security, and global movement decoupled from single-sovereign control.
                 </p>
               </div>
-              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <Lock size={24} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Risk Transfer</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Risk Transfer</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
                   Institutional risk transfer mechanisms mitigating jurisdictional litigation, volatile markets, and systemic sovereign threats to your capital.
                 </p>
               </div>
-              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <HeartPulse size={24} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Healthcare Overlay</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Healthcare Overlay</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
                   Immediate global medical access networks overlaying your residency design, avoiding the wait queues and limits of nationalized systems.
                 </p>
               </div>
-              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <GraduationCap size={24} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Education Overlay</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Education Overlay</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
                   Educational pathways mapped specifically to ensure legacy continuity, prestigious access, and high-quality stability for the next generation.
                 </p>
               </div>
-              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <Scale size={24} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Succession Planning</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Succession Planning</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
                   Dynastic planning structuring ensuring frictionless wealth transfer devoid of draconian estate taxes and probate interferences.
                 </p>
               </div>
-              <div className="cap-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
+              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
+                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <Coins size={24} strokeWidth={1.5} />
                 </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink">Digital Custody</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px]">
+                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Digital Custody</h4>
+                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
                   Sophisticated banking and legal rails bridging crypto wealth safely and favorably into trad-fi and global real estate.
                 </p>
               </div>
@@ -273,6 +273,7 @@ function Capabilities() {
 
         <div className="mt-16 text-center">
           <button 
+
             onClick={handleToggle}
             className="font-data text-sm uppercase tracking-widest text-bronze glow-text hover:text-ink transition-colors cursor-pointer"
           >
