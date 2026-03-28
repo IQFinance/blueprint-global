@@ -23,8 +23,8 @@ function Navbar() {
         <a href="#engagement" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">About</a>
       </div>
       <div className="flex items-center gap-4">
-        <a href="#platform" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
-        <a href="#platform" className="bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform shadow-sm">
+        <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
+        <a href="https://app.blueprintglobal.io/onboarding" className="bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform shadow-sm">
           <span>Get Started</span>
           <ArrowRight size={16} />
         </a>
@@ -68,7 +68,7 @@ function Hero() {
           We map your profile against our 9-layer global wealth architecture spanning tax residency, ownership structures, capital access, risk transfer, and succession planning to build a completely unified, frictionless global life.
         </p>
         <div className="hero-text flex gap-4">
-          <a href="#platform" className="bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform">
+          <a href="https://app.blueprintglobal.io/onboarding" className="bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform">
             Get Started
             <ArrowRight size={16} />
           </a>
@@ -549,9 +549,9 @@ function AppShowcase() {
             Beyond our private advisory, Blueprint Global serves as your persistent architecture engine. Compare jurisdictions, optimize entity structures, and actively monitor your global footprint entirely from our discreet, member-only platform ecosystem.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:scale-[1.02] transition-transform shadow-sm flex items-center gap-2">
+            <a href="https://app.blueprintglobal.io/onboarding" className="bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:scale-[1.02] transition-transform shadow-sm flex items-center gap-2">
               Get Started with the Platform <ArrowRight size={16} />
-            </button>
+            </a>
           </div>
         </div>
         <div className="w-full md:w-1/2">
@@ -586,7 +586,7 @@ function Footer() {
           <div className="flex flex-col gap-4">
             <span className="font-data text-xs uppercase tracking-widest text-bronze mb-2">Firm</span>
             <a href="#engagement" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">About</a>
-            <a href="#platform" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">Platform Access</a>
+            <a href="https://app.blueprintglobal.io/onboarding" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">Platform Access</a>
           </div>
         </div>
       </div>
