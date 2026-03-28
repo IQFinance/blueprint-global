@@ -517,10 +517,10 @@ export default function App() {
       <Navbar />
       <Hero />
       <TrustBand />
-      <ClientProfiles />
       <Capabilities />
       <Philosophy />
       <Framework />
+      <ClientProfiles />
       <Engagement />
       <AppShowcase />
       <Footer />
