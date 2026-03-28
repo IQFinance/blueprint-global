@@ -83,20 +83,50 @@ function TrustBand() {
     <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/4">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Experience</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">CPA Founded</span>
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">CPA-Governed</span>
         </div>
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/4 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Jurisdictions</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">40+ Countries</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Active in 40+</span>
         </div>
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/4 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Communication</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">3 Languages</span>
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Infrastructure</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Institutional</span>
         </div>
         <div className="flex flex-col w-full md:w-1/4 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Global Network</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Institutional</span>
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Scale</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Global Network</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClientProfiles() {
+  return (
+    <section className="bg-ink pt-20 pb-40 px-6 md:px-12 relative z-10 border-t border-surface/5">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-20">
+          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">Who We Serve</h2>
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-surface max-w-3xl">
+            Engineered specifically for capital generators.
+          </h3>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="border border-surface/10 p-10 rounded-[2rem] bg-surface/5 hover:bg-surface/10 transition-colors">
+            <h4 className="text-xl font-sans font-medium text-surface mb-4">Scaling Entrepreneurs</h4>
+            <p className="text-surface/60 font-sans leading-relaxed text-sm">Founders with high-growth operations seeking to optimize their corporate tax footprint globally before a liquidity event.</p>
+          </div>
+          <div className="border border-surface/10 p-10 rounded-[2rem] bg-surface/5 hover:bg-surface/10 transition-colors">
+            <h4 className="text-xl font-sans font-medium text-surface mb-4">Crypto-Wealth Investors</h4>
+            <p className="text-surface/60 font-sans leading-relaxed text-sm">Crypto-native individuals needing sophisticated banking access and favorable tax residencies integrated safely into the traditional financial system.</p>
+          </div>
+          <div className="border border-surface/10 p-10 rounded-[2rem] bg-surface/5 hover:bg-surface/10 transition-colors">
+            <h4 className="text-xl font-sans font-medium text-surface mb-4">High-Income Professionals</h4>
+            <p className="text-surface/60 font-sans leading-relaxed text-sm">C-suite executives and elite independent professionals structuring a transition away from high-tax jurisdictions to maximize retained wealth.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -278,17 +308,20 @@ function Engagement() {
           />
         </div>
         <div className="w-full lg:w-[55%] p-12 md:p-20 flex flex-col justify-center">
-          <h2 className="eng-item font-data text-xs uppercase tracking-widest text-bronze mb-5">Leadership</h2>
-          <h3 className="eng-item text-4xl font-sans font-medium tracking-tight text-ink mb-8 leading-[1.1]">
-            Led by a CPA and global strategist who lives the architecture.
+          <h2 className="eng-item font-data text-xs uppercase tracking-widest text-bronze mb-5">Meet The Architect</h2>
+          <h3 className="eng-item text-3xl md:text-4xl font-sans font-medium tracking-tight text-ink mb-6">
+            Martin Popiel, CPA & Global Strategist
           </h3>
           <p className="eng-item text-graphite font-sans leading-relaxed mb-6 text-lg">
-            Martin Popiel isn't an academic observer. He has executed these very same multi-jurisdictional strategies personally, forging direct networks with lawyers, real estate professionals, and government officials worldwide. 
+            Behind the Blueprint Global platform is a network of world-class tax attorneys, jurisdictional bankers, and geopolitical analysts. 
+          </p>
+          <p className="eng-item text-graphite font-sans leading-relaxed mb-8 text-lg">
+            This infrastructure was pioneered by our founder, Martin Popiel. Realizing the friction of the offshore world firsthand, he spent years traversing 40+ countries to aggregate the absolute best strategies into a single, unified platform.
           </p>
           <ul className="eng-item flex flex-col gap-3 mb-12 font-sans text-ink/80 text-[15px]">
-            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Traveled to 40+ countries building on-the-ground intelligence.</li>
-            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Speaks 3 languages, ensuring strict cultural fluency.</li>
-            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Reclaimed absolute freedom for himself, and now architects it for others.</li>
+            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Aggregates expertise from elite lawyers and policy-makers globally.</li>
+            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> CPA-led protocol ensuring strict compliance alongside optimization.</li>
+            <li className="flex items-center gap-3"><ChevronRight size={16} className="text-bronze flex-shrink-0" /> Reclaimed absolute freedom for himself, and now architects it for the platform's members.</li>
           </ul>
           <div className="eng-item mt-2">
             <p className="text-sm text-graphite/70 font-sans uppercase font-medium tracking-widest text-bronze">Strictly highly-confidential</p>
@@ -484,6 +517,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <TrustBand />
+      <ClientProfiles />
       <Capabilities />
       <Philosophy />
       <Framework />
