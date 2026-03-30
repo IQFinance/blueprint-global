@@ -14,6 +14,8 @@ import {
   CheckCircle,
   MapPin,
   ChevronDown,
+  Plane,
+  Lightbulb,
 } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -734,13 +736,15 @@ function About() {
               Martin Popiel, CPA
             </h2>
             <p className="text-ink/30 font-sans text-[13px] mb-7">
-              Chartered Professional Accountant (CPA)
+              Chartered Professional Accountant &middot; Entrepreneur &middot; Digital Nomad
             </p>
             <p className="text-[14px] font-sans leading-relaxed text-ink/55 mb-4">
-              Martin built Blueprint after living the problem firsthand. After
-              visiting 40+ countries, he saw how disconnected the international
-              advisory world was — one firm for banking, another for residency,
-              another for tax, none of them talking to each other.
+              Martin built Blueprint after living the problem firsthand. An
+              entrepreneur and business owner who has been location-independent
+              for years, he spent time across 40+ countries and saw how
+              disconnected the international advisory world was — one firm for
+              banking, another for residency, another for tax, none of them
+              talking to each other.
             </p>
             <p className="text-[14px] font-sans leading-relaxed text-ink/55 mb-8">
               Blueprint is the firm he wished existed: one team that sees the
@@ -750,7 +754,11 @@ function About() {
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1.5 bg-porcelain px-3.5 py-1.5 rounded-full text-[10px] font-data uppercase tracking-[0.12em] text-ink/60 border border-ink/[0.07]">
-                <MapPin size={11} className="text-bronze" />
+                <Lightbulb size={11} className="text-bronze" />
+                Entrepreneur
+              </span>
+              <span className="inline-flex items-center gap-1.5 bg-porcelain px-3.5 py-1.5 rounded-full text-[10px] font-data uppercase tracking-[0.12em] text-ink/60 border border-ink/[0.07]">
+                <Plane size={11} className="text-bronze" />
                 40+ Countries
               </span>
               <span className="inline-flex items-center gap-1.5 bg-porcelain px-3.5 py-1.5 rounded-full text-[10px] font-data uppercase tracking-[0.12em] text-ink/60 border border-ink/[0.07]">
