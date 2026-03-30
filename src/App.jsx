@@ -202,12 +202,11 @@ function Hero() {
         {/* Body */}
         <p className="hero-text text-[15px] md:text-[16px] text-porcelain/60 font-sans leading-relaxed max-w-[38rem] mb-10">
           Blueprint designs and builds complete international structures for
-          entrepreneurs, investors, and globally mobile families. Legally, under
-          one roof.
+          entrepreneurs, investors, and globally mobile families.
         </p>
 
         {/* CTA group */}
-        <div className="hero-text flex flex-wrap items-center gap-4 mb-8">
+        <div className="hero-text flex flex-wrap items-center gap-4">
           <a
             href="https://app.blueprintglobal.io/onboarding"
             className="inline-flex items-center gap-2 bg-porcelain text-ink px-8 py-4 rounded-full text-[14px] font-semibold hover:bg-white transition-colors"
@@ -221,14 +220,6 @@ function Hero() {
             See what we do <ChevronDown size={14} className="mt-px" />
           </a>
         </div>
-
-        {/* Trust micro-copy */}
-        <p className="hero-text text-[11px] text-porcelain/25 font-sans leading-relaxed max-w-md">
-          Blueprint Global coordinates international structuring. We do not
-          provide tax, legal, or investment advice. All structures are
-          implemented by licensed professionals in their respective
-          jurisdictions.
-        </p>
       </div>
 
       {/* Scroll cue */}
