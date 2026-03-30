@@ -5,6 +5,23 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+function MidPageCTA({ headline, dark = false }) {
+  const bg = dark ? 'bg-ink border-surface/10' : 'bg-porcelain border-graphite/10';
+  const text = dark ? 'text-surface' : 'text-ink';
+  const sub = dark ? 'text-surface/60' : 'text-graphite';
+  return (
+    <section className={`${bg} py-16 px-6 md:px-12 border-t border-b relative z-10`}>
+      <div className="max-w-3xl mx-auto text-center">
+        <p className={`${sub} font-sans text-lg mb-6`}>{headline}</p>
+        <a href="https://app.blueprintglobal.io/onboarding" className="inline-flex items-center gap-2 bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:scale-[1.02] transition-transform shadow-sm">
+          Book Your Blueprint <ArrowRight size={16} />
+        </a>
+        <p className={`${sub} font-data text-xs uppercase tracking-widest mt-6 opacity-60`}>No commitment required. 30-minute strategy call.</p>
+      </div>
+    </section>
+  );
+}
+
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -25,7 +42,7 @@ function Navbar() {
       <div className="flex items-center gap-4">
         <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
         <a href="https://app.blueprintglobal.io/onboarding" className="bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform shadow-sm">
-          <span>Get Started</span>
+          <span>Book Your Blueprint</span>
           <ArrowRight size={16} />
         </a>
       </div>
@@ -69,7 +86,7 @@ function Hero() {
         </p>
         <div className="hero-text flex gap-4">
           <a href="https://app.blueprintglobal.io/onboarding" className="bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform">
-            Get Started
+            Start Your 9-Layer Assessment
             <ArrowRight size={16} />
           </a>
         </div>
@@ -112,20 +129,21 @@ function ClientProfiles() {
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-surface max-w-3xl">
             Engineered specifically for capital generators.
           </h3>
+          <p className="text-surface/40 font-data text-xs uppercase tracking-widest mt-6">Trusted by founders, investors, and executives across 40+ jurisdictions</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="border border-surface/10 p-10 rounded-[2rem] bg-surface/5 hover:bg-surface/10 transition-colors">
             <h4 className="text-xl font-sans font-medium text-surface mb-4">Scaling Entrepreneurs</h4>
-            <p className="text-surface/60 font-sans leading-relaxed text-sm">Founders with high-growth operations seeking to optimize their corporate tax footprint globally before a liquidity event.</p>
+            <p className="text-surface/60 font-sans leading-relaxed text-sm">Founders optimizing global tax before a liquidity event.</p>
           </div>
           <div className="border border-surface/10 p-10 rounded-[2rem] bg-surface/5 hover:bg-surface/10 transition-colors">
             <h4 className="text-xl font-sans font-medium text-surface mb-4">Crypto-Wealth Investors</h4>
-            <p className="text-surface/60 font-sans leading-relaxed text-sm">Crypto-native individuals needing sophisticated banking access and favorable tax residencies integrated safely into the traditional financial system.</p>
+            <p className="text-surface/60 font-sans leading-relaxed text-sm">Crypto-native individuals bridging into trad-fi with compliant banking and favorable residency.</p>
           </div>
           <div className="border border-surface/10 p-10 rounded-[2rem] bg-surface/5 hover:bg-surface/10 transition-colors">
             <h4 className="text-xl font-sans font-medium text-surface mb-4">High-Income Professionals</h4>
-            <p className="text-surface/60 font-sans leading-relaxed text-sm">C-suite executives and elite independent professionals structuring a transition away from high-tax jurisdictions to maximize retained wealth.</p>
+            <p className="text-surface/60 font-sans leading-relaxed text-sm">Executives and professionals relocating from high-tax jurisdictions to keep more of what they earn.</p>
           </div>
         </div>
       </div>
@@ -171,6 +189,7 @@ function Capabilities() {
         <div className="cap-header mb-20 max-w-2xl">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">9-Layer Framework</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Architectural precision across all dimensions of your global life.</h3>
+          <p className="text-graphite/50 font-data text-xs uppercase tracking-widest mt-6">CPA-governed framework. Every layer independently verified.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8">
@@ -205,38 +224,39 @@ function Capabilities() {
             </p>
           </div>
 
+          <div className="cap-card-initial flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
+              <Landmark size={24} strokeWidth={1.5} />
+            </div>
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Mobility & Nationality</h4>
+            <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+            <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
+              Dual citizenship paths prioritizing access, security, and movement decoupled from single-sovereign control.
+            </p>
+          </div>
+          <div className="cap-card-initial flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
+              <Lock size={24} strokeWidth={1.5} />
+            </div>
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Risk Transfer</h4>
+            <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+            <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
+              Institutional mechanisms mitigating jurisdictional litigation, volatile markets, and sovereign threats.
+            </p>
+          </div>
+          <div className="cap-card-initial flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
+            <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
+              <HeartPulse size={24} strokeWidth={1.5} />
+            </div>
+            <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Healthcare Overlay</h4>
+            <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
+            <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
+              Global medical access networks bypassing nationalized wait queues and coverage limits.
+            </p>
+          </div>
+
           {isExpanded && (
             <>
-              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
-                  <Landmark size={24} strokeWidth={1.5} />
-                </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Mobility & Nationality</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
-                  Bespoke dual citizenship acquisition paths prioritizing access, security, and global movement decoupled from single-sovereign control.
-                </p>
-              </div>
-              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
-                  <Lock size={24} strokeWidth={1.5} />
-                </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Risk Transfer</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
-                  Institutional risk transfer mechanisms mitigating jurisdictional litigation, volatile markets, and systemic sovereign threats to your capital.
-                </p>
-              </div>
-              <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
-                  <HeartPulse size={24} strokeWidth={1.5} />
-                </div>
-                <h4 className="text-2xl font-sans font-medium mb-4 text-ink z-10">Healthcare Overlay</h4>
-                <div className="h-px w-full bg-graphite/10 mb-5 z-10"></div>
-                <p className="text-graphite font-sans leading-relaxed text-[15px] z-10 flex-grow">
-                  Immediate global medical access networks overlaying your residency design, avoiding the wait queues and limits of nationalized systems.
-                </p>
-              </div>
               <div className="cap-card-extended flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 opacity-100 translate-y-0">
                 <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze z-10">
                   <GraduationCap size={24} strokeWidth={1.5} />
@@ -277,7 +297,7 @@ function Capabilities() {
             onClick={handleToggle}
             className="font-data text-sm uppercase tracking-widest text-bronze glow-text hover:text-ink transition-colors cursor-pointer"
           >
-            {isExpanded ? "Collapse Layers" : "Examine All 9 Layers"}
+            {isExpanded ? "Collapse" : "See All 9 Layers"}
           </button>
         </div>
       </div>
@@ -326,19 +346,22 @@ function Framework() {
       num: "01",
       title: "Discovery & Mapping",
       desc: "We analyze your exact profile—citizenships, tax base, family overlay, and liquid/illiquid assets—to define the structural bottlenecks and immediate risk exposures.",
-      icon: <Compass size={140} strokeWidth={0.5} className="text-surface/80 group-hover:text-bronze transition-colors duration-700" />
+      keyword: "DISCOVER",
+      gradient: "from-bronze/20 via-bronze/5 to-transparent"
     },
     {
       num: "02",
       title: "Structuring & Alignment",
       desc: "We engineer a cohesive architecture. This means sequencing banking access before entity formation, and aligning tax residency with mobility execution securely.",
-      icon: <Network size={140} strokeWidth={0.5} className="text-surface/80 group-hover:text-bronze transition-colors duration-700" />
+      keyword: "STRUCTURE",
+      gradient: "from-bronze/15 via-ink/10 to-transparent"
     },
     {
       num: "03",
       title: "Stewardship & Continuity",
       desc: "Implementation is just the beginning. We establish legacy preservation frameworks, ensuring seamless transitions and multigenerational control over your capital.",
-      icon: <Vault size={140} strokeWidth={0.5} className="text-surface/80 group-hover:text-bronze transition-colors duration-700" />
+      keyword: "STEWARD",
+      gradient: "from-ink/30 via-bronze/10 to-transparent"
     }
   ];
 
@@ -363,9 +386,8 @@ function Framework() {
               <h4 className="text-3xl font-sans font-medium mb-6 text-ink">{step.title}</h4>
               <p className="text-graphite font-sans leading-relaxed text-lg">{step.desc}</p>
             </div>
-            <div className="w-full md:w-1/2 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden relative z-10 hidden md:flex items-center justify-center border border-graphite/10 bg-[#0E1014]">
-              {step.icon}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-transparent to-surface/5 opacity-50 pointer-events-none"></div>
+            <div className={`w-full md:w-1/2 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden relative z-10 hidden md:flex items-center justify-center border border-graphite/10 bg-[#0E1014] bg-gradient-to-br ${step.gradient}`}>
+              <span className="font-data text-[4rem] md:text-[5rem] tracking-[0.3em] uppercase text-surface/[0.07] select-none">{step.keyword}</span>
             </div>
           </div>
         ))}
@@ -550,7 +572,7 @@ function AppShowcase() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href="https://app.blueprintglobal.io/onboarding" className="bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:scale-[1.02] transition-transform shadow-sm flex items-center gap-2">
-              Get Started with the Platform <ArrowRight size={16} />
+              Access the Platform <ArrowRight size={16} />
             </a>
           </div>
         </div>
@@ -608,9 +630,12 @@ export default function App() {
       <Hero />
       <TrustBand />
       <Capabilities />
+      <MidPageCTA headline="See how 9 layers work together to protect your wealth." />
       <Philosophy />
       <Framework />
+      <MidPageCTA headline="Ready to map your global architecture?" dark />
       <ClientProfiles />
+      <MidPageCTA headline="Sound like you? Let's talk." dark />
       <Engagement />
       <AppShowcase />
       <Footer />
