@@ -9,13 +9,13 @@ function MidPageCTA({ headline, dark = false }) {
   const bg = dark ? 'bg-ink border-surface/10' : 'bg-porcelain border-graphite/10';
   const sub = dark ? 'text-surface/60' : 'text-graphite';
   return (
-    <section className={`${bg} py-16 px-6 md:px-12 border-t border-b relative z-10`}>
+    <section className={`${bg} py-12 px-6 md:px-12 border-t border-b relative z-10`}>
       <div className="max-w-3xl mx-auto text-center">
         <p className={`${sub} font-sans text-lg mb-6`}>{headline}</p>
         <a href="https://app.blueprintglobal.io/onboarding" className="inline-flex items-center gap-2 bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:scale-[1.02] transition-transform shadow-sm">
-          Book Your Blueprint <ArrowRight size={16} />
+          Try the Demo <ArrowRight size={16} />
         </a>
-        <p className={`${sub} font-data text-xs uppercase tracking-widest mt-6 opacity-60`}>No commitment. 30-minute strategy call.</p>
+        <p className={`${sub} font-data text-xs uppercase tracking-widest mt-6 opacity-60`}>Free. No account required.</p>
       </div>
     </section>
   );
@@ -41,7 +41,7 @@ function Navbar() {
       <div className="flex items-center gap-4">
         <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
         <a href="https://app.blueprintglobal.io/onboarding" className="bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform shadow-sm">
-          <span>Book Your Blueprint</span>
+          <span>Try the Demo</span>
           <ArrowRight size={16} />
         </a>
       </div>
@@ -106,7 +106,7 @@ function TrustBand() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Licensed CPA</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">CPA-Led</span>
         </div>
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
@@ -114,7 +114,7 @@ function TrustBand() {
         </div>
         <div className="flex flex-col w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Standard</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Fully Legal</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">100% Compliant</span>
         </div>
       </div>
     </section>
@@ -196,12 +196,11 @@ function Education() {
   ];
 
   return (
-    <section ref={eduRef} id="education" className="py-32 px-6 md:px-12 bg-porcelain">
+    <section ref={eduRef} id="education" className="py-20 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
-        <div className="edu-header mb-20 max-w-2xl">
+        <div className="edu-header mb-14 max-w-2xl">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Most people don't know these problems exist — until they're stuck.</h3>
-          <p className="text-graphite/50 font-data text-xs uppercase tracking-widest mt-6">Licensed CPA. Every structure fully legal and independently verified.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8">
@@ -240,7 +239,7 @@ function Bridge() {
   }, []);
 
   return (
-    <section ref={bridgeRef} className="relative py-40 px-6 md:px-12 bg-ink text-surface overflow-hidden">
+    <section ref={bridgeRef} className="relative py-24 px-6 md:px-12 bg-ink text-surface overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop"
@@ -312,9 +311,9 @@ function WhatYouGet() {
   ];
 
   return (
-    <section ref={getRef} className="py-32 px-6 md:px-12 bg-porcelain">
+    <section ref={getRef} className="py-20 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
-        <div className="get-header mb-20 max-w-2xl">
+        <div className="get-header mb-14 max-w-2xl">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What You Get</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Tangible outcomes. Not just advice.</h3>
         </div>
@@ -361,7 +360,7 @@ function WhoThisIsFor() {
   ];
 
   return (
-    <section ref={whoRef} className="bg-ink pt-20 pb-40 px-6 md:px-12 relative z-10 border-t border-surface/5">
+    <section ref={whoRef} className="bg-ink pt-20 pb-24 px-6 md:px-12 relative z-10 border-t border-surface/5">
       <div className="max-w-4xl mx-auto">
         <div className="who-header mb-16">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">Who This Is For</h2>
@@ -412,7 +411,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-porcelain pt-32 pb-48 px-6 md:px-12 relative z-10">
+    <section id="how-it-works" className="bg-porcelain pt-24 pb-32 px-6 md:px-12 relative z-10">
       <div className="max-w-6xl mx-auto mb-16">
         <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">How It Works</h2>
         <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. Maintain.</h3>
@@ -471,21 +470,15 @@ function About() {
           <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-4">
             Martin Popiel, CPA
           </h3>
-          <p className="text-graphite/60 font-sans text-sm mb-6">
-            CPA = Chartered Professional Accountant, licensed by CPA Ontario — Canada's equivalent of a U.S. CPA.
-          </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto mb-4">
-            Martin built Blueprint after living the problem firsthand. As a digital nomad who visited 40+ countries, he saw how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them talking to each other.
+            Martin built Blueprint after living the problem firsthand. After visiting 40+ countries, he saw how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them talking to each other.
           </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto mb-8">
-            Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof. As a licensed CPA, Martin brings the financial discipline and compliance rigor that most offshore advisors lack — while partnering with local counsel in every jurisdiction to ensure every structure holds up.
+            Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure every structure holds up.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
-              <ShieldCheck size={14} className="text-bronze"/> Licensed CPA (Ontario)
-            </span>
-            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
-              <MapPin size={14} className="text-bronze"/> 40+ Countries Visited
+              <MapPin size={14} className="text-bronze"/> 40+ Countries
             </span>
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
               <Network size={14} className="text-bronze"/> Global Partner Network
