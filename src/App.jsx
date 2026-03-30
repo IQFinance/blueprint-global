@@ -1278,7 +1278,7 @@ function Footer() {
         </p>
 
         {/* Bottom row */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[11px] font-sans text-porcelain/22">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[11px] font-sans text-porcelain/25">
           <p>&copy; {new Date().getFullYear()} Blueprint Group LLC. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-porcelain transition-colors">
