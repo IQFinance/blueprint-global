@@ -467,9 +467,12 @@ function About() {
         </div>
         <div className="about-item">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-3">About</h2>
-          <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-4">
+          <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-2">
             Martin Popiel, CPA
           </h3>
+          <p className="text-graphite/50 font-sans text-sm mb-6">
+            Chartered Professional Accountant, licensed by CPA Ontario
+          </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto mb-4">
             Martin built Blueprint after living the problem firsthand. After visiting 40+ countries, he saw how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them talking to each other.
           </p>
