@@ -105,16 +105,16 @@ function TrustBand() {
     <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">CPA-Led</span>
-        </div>
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight">One Firm. The Full Picture.</span>
         </div>
+        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">CPA-Led</span>
+        </div>
         <div className="flex flex-col w-full md:w-1/3 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Standard</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">100% Compliant</span>
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
+          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Compliance-First</span>
         </div>
       </div>
     </section>
@@ -457,8 +457,8 @@ function About() {
 
   return (
     <section id="about" ref={aboutRef} className="py-24 px-6 md:px-12 bg-porcelain relative z-20">
-      <div className="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col items-center text-center">
-        <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-6 about-item ring-4 ring-porcelain shadow-sm flex-shrink-0">
+      <div className="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col md:flex-row items-start gap-8 md:gap-12">
+        <div className="w-24 h-24 md:w-36 md:h-36 rounded-full overflow-hidden about-item ring-4 ring-porcelain shadow-sm flex-shrink-0">
           <img
             src="/martin.jpg"
             alt="Martin Popiel - Founder"
@@ -471,15 +471,15 @@ function About() {
             Martin Popiel, CPA
           </h3>
           <p className="text-graphite/50 font-sans text-sm mb-6">
-            Chartered Professional Accountant, licensed by CPA Ontario
+            Chartered Professional Accountant (CPA)
           </p>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto mb-4">
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-4">
             Martin built Blueprint after living the problem firsthand. After visiting 40+ countries, he saw how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them talking to each other.
           </p>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mx-auto mb-8">
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-8">
             Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure every structure holds up.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap gap-3">
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
               <MapPin size={14} className="text-bronze"/> 40+ Countries
             </span>
@@ -516,12 +516,8 @@ function FAQ() {
       a: "Yes. Everything we coordinate is fully legal and compliant. We work with licensed professionals in every jurisdiction — tax attorneys, immigration lawyers, banking compliance officers. There are no grey areas."
     },
     {
-      q: "Do you give tax or legal advice?",
-      a: "No. Blueprint coordinates your international structure and manages the process. All tax, legal, and financial advice is delivered by licensed professionals in their respective jurisdictions. We make sure they're all working from the same plan."
-    },
-    {
       q: "How long does this take?",
-      a: "Most initial structures are designed and started within 30 days. Full implementation — including bank accounts, entities, and residency applications — typically takes 3 to 6 months depending on the jurisdictions involved."
+      a: "It depends on your situation. Some structures can be in place within 6 months. More complex, multi-jurisdiction roadmaps can take a year or longer. We scope the timeline during your initial assessment."
     },
     {
       q: "How much does it cost?",
@@ -588,7 +584,7 @@ function Footer() {
         </p>
       </div>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-sans text-surface/40">
-        <p>&copy; {new Date().getFullYear()} Blueprint Group LLC. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Blueprint Group LLC. All rights reserved. CPA Ontario, Canada.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-surface transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-surface transition-colors">Terms of Service</a>
