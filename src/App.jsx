@@ -28,11 +28,22 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ─── Blueprint Thread (decorative vertical line) ──────────── */
+/* ─── Blueprint Thread (decorative vertical line + section dots) */
+const THREAD_OFFSETS = ['15%', '30%', '46%', '60%', '74%', '88%'];
+
 function BlueprintThread() {
   return (
     <div className="hidden md:block fixed left-[72px] top-0 bottom-0 z-30 pointer-events-none">
-      <div className="relative w-px h-full bg-bronze/[0.12]" />
+      {/* The line itself */}
+      <div className="absolute inset-0 w-px bg-bronze/[0.12]" />
+      {/* Section marker dots */}
+      {THREAD_OFFSETS.map((top) => (
+        <div
+          key={top}
+          className="absolute -left-[3px] w-[7px] h-[7px] rounded-full bg-bronze/30"
+          style={{ top }}
+        />
+      ))}
     </div>
   );
 }
@@ -1102,7 +1113,7 @@ function About() {
   );
 }
 
-/* ─── FAQ ───────────────────────────────────────────────────── */
+/* ─── FAQ ─────────────────��─────────────────────────────────── */
 const questions = [
   {
     icon: <Scale size={16} strokeWidth={1.5} />,
