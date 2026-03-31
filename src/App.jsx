@@ -99,17 +99,17 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-4xl">
-          <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-6 md:mb-8">
+          <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-10 md:mb-12">
             <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
             <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg mt-1">to one country.</span>
             <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-4 md:mb-5 max-w-3xl drop-shadow-md">
+          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 md:mb-10 max-w-3xl drop-shadow-md">
             We build your international life. You live it.
           </p>
           
-          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-8 md:mb-10 drop-shadow-md">
+          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
             Blueprint designs international structures for entrepreneurs, investors, and globally mobile families.
           </p>
 
