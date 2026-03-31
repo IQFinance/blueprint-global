@@ -107,7 +107,7 @@ function Hero() {
 
           
           <p className="hero-text text-lg md:text-xl text-porcelain/60 font-sans leading-relaxed max-w-4xl mb-14 md:mb-16 drop-shadow-md">
-            International structures for entrepreneurs, investors, and global mobile families.
+            International structures for entrepreneurs, investors, and mobile families.
           </p>
 
           <div className="hero-text flex flex-col sm:flex-row items-start gap-5">
