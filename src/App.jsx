@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[78dvh] lg:min-h-[80dvh] pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[78dvh] lg:min-h-[80dvh] pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -99,14 +99,14 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-none">
-          <h1 className="text-4xl md:text-6xl lg:text-[4rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl md:whitespace-nowrap">
+          <h1 className="text-[1.85rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl md:whitespace-nowrap">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[4px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
 
           
-          <p className="hero-text text-xl md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-5xl md:whitespace-nowrap mb-10 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-lg md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-5xl md:whitespace-nowrap mb-10 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -126,23 +126,23 @@ function Hero() {
 
 function TrustBand() {
   return (
-    <section className="bg-ink py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
+    <section className="bg-ink py-12 md:py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
           <div className="flex items-center gap-3 group">
             <ShieldCheck size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[10px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
+            <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
             <Globe size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[10px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
+            <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
             <Lock size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[10px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
+            <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
           </div>
         </div>
       </div>
@@ -261,7 +261,7 @@ function WhatYouGet() {
   ];
 
   return (
-    <section ref={getRef} className="py-20 px-6 md:px-12 bg-porcelain">
+    <section id="what-you-get" ref={getRef} className="py-16 md:py-32 px-6 md:px-12 bg-porcelain scroll-mt-24">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
@@ -324,7 +324,7 @@ function WhoThisIsFor() {
   ];
 
   return (
-    <section ref={whoRef} className="py-24 md:py-32 px-6 md:px-12 bg-ink relative z-10 overflow-hidden text-surface">
+    <section id="who-this-is-for" ref={whoRef} className="py-16 md:py-32 px-6 md:px-12 bg-ink relative z-10 overflow-hidden text-surface scroll-mt-24">
       <div className="absolute inset-0 z-0 pointer-events-none opacity-40" style={{ backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(156, 123, 82, 0.1) 0%, transparent 70%)' }}></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
@@ -422,7 +422,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-porcelain pt-24 pb-32 px-6 md:px-12 relative z-10">
+    <section id="how-it-works" className="bg-porcelain pt-16 md:pt-32 pb-16 md:pb-32 px-6 md:px-12 relative z-10 scroll-mt-24">
       <div className="max-w-6xl mx-auto mb-16">
         <div className="who-header text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">How It Works</h2>
@@ -471,7 +471,7 @@ function About() {
   }, []);
 
   return (
-    <section id="about" ref={aboutRef} className="pt-0 pb-32 px-6 md:px-12 bg-porcelain relative z-20">
+    <section id="about" ref={aboutRef} className="py-16 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 scroll-mt-24">
       <div className="max-w-5xl mx-auto">
         {/* Main card */}
         <div className="about-item relative rounded-[2.5rem] overflow-hidden border border-graphite/8 shadow-xl"
@@ -514,7 +514,7 @@ function About() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-x-2.5 gap-y-3">
                 {[
                   { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
                   { icon: <Globe size={14} />, label: "3 Languages" },
@@ -588,7 +588,7 @@ function FAQ() {
   ];
 
   return (
-    <section ref={faqRef} className="py-32 px-6 md:px-12 bg-ink text-surface relative z-10 border-t border-surface/5">
+    <section id="faq" ref={faqRef} className="py-16 md:py-32 px-6 md:px-12 bg-ink text-surface relative z-10 border-t border-surface/5 scroll-mt-24">
       <div className="max-w-3xl mx-auto">
         <div className="faq-header mb-16 text-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">FAQ</h2>
