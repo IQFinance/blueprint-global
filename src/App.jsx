@@ -129,20 +129,20 @@ function TrustBand() {
     <section className="bg-ink py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
           <div className="flex items-center gap-3 group">
-            <ShieldCheck size={20} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
+            <ShieldCheck size={18} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-[10px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
-            <Globe size={20} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
+            <Globe size={18} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-[10px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
-            <Lock size={20} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
+            <Lock size={18} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-[10px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
           </div>
         </div>
       </div>
