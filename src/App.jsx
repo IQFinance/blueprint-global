@@ -99,7 +99,7 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-4xl">
-          <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-10 md:mb-12 max-w-5xl">
+          <h1 className="text-4xl md:text-6xl lg:text-[4.5rem] leading-[1.1] tracking-tight mb-10 md:mb-12 max-w-none">
             <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your life is tied to <span className="text-white font-semibold relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[2px] bg-bronze/60"></span></span> country</span>
             <span className="block hero-text font-sans font-medium text-bronze drop-shadow-lg mt-1">...it doesn't have to be.</span>
           </h1>
@@ -255,7 +255,7 @@ function WhatYouGet() {
     { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "Strategic Blueprint", desc: "A comprehensive, written roadmap for your global architecture, tailored to your unique footprint, not a generic template." },
     { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "Global Banking Access", desc: "We navigate the complexities of account opening in stable, tax-efficient jurisdictions, securing the access you need for global mobility." },
     { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "Entity Architecture", desc: "Professional setup and coordination of holding companies, trusts, or foundations, ensuring every structure is registered for maximum benefit." },
-    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Residency Coordination", desc: "A white-glove approach to cross-border residency and citizenship. We handle the paperwork and coordinate directly with local counsel." },
+    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Residency Coordination", desc: "Expert management of cross-border residency and citizenship. We handle the paperwork and coordinate directly with local counsel." },
     { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Compliance Oversight", desc: "Proactive management of cross-border reporting and annual filings, ensuring your global structure remains compliant with every jurisdiction." },
     { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "Global Portfolio Reviews", desc: "Ongoing structural optimization as laws and your life evolve. We maintain the efficiency and security of your international setup for the long term." },
   ];
@@ -266,8 +266,8 @@ function WhatYouGet() {
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
           <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
-            <span className="block text-ink">White-glove implementation.</span>
-            <span className="block text-bronze/60 mt-3 md:mt-4">Your global life, coordinated.</span>
+            <span className="block text-ink">Strategic implementation.</span>
+            <span className="block text-bronze/60 mt-3 md:mt-4">Everything, coordinated.</span>
           </h3>
         </div>
 
@@ -281,7 +281,7 @@ function WhatYouGet() {
                 </div>
                 
                 <div className="flex-grow">
-                  <h4 className="text-xl md:text-2xl font-sans font-medium mb-1 text-ink group-hover:text-bronze transition-colors duration-300">
+                  <h4 className="text-xl md:text-2xl font-sans font-bold text-bronze mb-2 tracking-tight uppercase group-hover:text-bronze/80 transition-colors duration-300">
                     {item.title}
                   </h4>
                   <p className="text-graphite/70 font-sans leading-relaxed text-[15px] md:text-[17px] max-w-4xl group-hover:text-graphite transition-colors">
