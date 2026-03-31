@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ShieldCheck, Globe, Briefcase, ArrowRight, Compass, Network, Vault, Landmark, Lock, Coins, HeartPulse, GraduationCap, Scale, CheckCircle, FileText, MapPin, Menu, X, ChevronDown, Clock, Users, RefreshCw, Map, Building2, FileCheck, Settings } from 'lucide-react';
+import { ShieldCheck, Globe, Briefcase, ArrowRight, Compass, Network, Vault, Landmark, Lock, Coins, HeartPulse, Activity, GraduationCap, Scale, CheckCircle, FileText, MapPin, Menu, X, ChevronDown, Clock, Users, RefreshCw, Map, Building2, FileCheck, Settings } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
