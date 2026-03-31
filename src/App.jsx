@@ -43,16 +43,17 @@ function Navbar() {
           <a href="#how-it-works" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">How It Works</a>
           <a href="#about" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">About</a>
         </div>
+
         <div className="flex items-center gap-4">
-        <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
-        <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium hidden md:flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
-          <span>Try the Demo</span>
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-        </a>
-      </div>
-        <button className={`p-1 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'}`} onClick={() => setMenuOpen(true)}>
-          <Menu size={24} />
-        </button>
+          <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
+          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium hidden md:flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
+            <span>Try the Demo</span>
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <button className={`p-1 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'} md:hidden`} onClick={() => setMenuOpen(true)}>
+            <Menu size={24} />
+          </button>
+        </div>
       </nav>
 
       <div className={`fixed inset-0 bg-ink z-50 transition-transform duration-500 flex flex-col pt-24 px-8 ${menuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
@@ -195,10 +196,10 @@ function Education() {
     <section ref={eduRef} id="education" className="py-20 md:py-32 px-6 md:px-12 bg-porcelain relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-16 md:mb-20 text-center flex flex-col items-center">
-          <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-5">What We Do</h2>
+          <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What We Do</h2>
           <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
-            <span className="block text-ink">We build your international life.</span>
-            <span className="block text-bronze mt-2 md:mt-4">You live it.</span>
+            <span className="block text-ink mb-4 md:mb-6">We build your international life.</span>
+            <span className="block text-bronze text-4xl md:text-6xl lg:text-[64px] font-medium">You live it.</span>
           </h3>
         </div>
 
@@ -261,10 +262,10 @@ function WhatYouGet() {
     <section id="what-you-get" ref={getRef} className="py-20 md:py-32 px-6 md:px-12 bg-porcelain scroll-mt-24">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 md:mb-16 flex flex-col items-center">
-          <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-5">What You Get</h2>
+          <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
           <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
-            <span className="block text-ink">Strategic implementation.</span>
-            <span className="block text-bronze mt-2 md:mt-4 font-medium">Everything, coordinated.</span>
+            <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
+            <span className="block text-bronze text-4xl md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
           </h3>
         </div>
 
