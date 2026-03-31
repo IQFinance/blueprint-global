@@ -531,7 +531,6 @@ function About() {
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
           <div className="relative z-10 p-8 md:p-14 lg:p-20 flex flex-col md:flex-row gap-12 md:gap-20 items-start">
-            {/* Left col - photo + stats */}
             <div className="flex flex-col items-center md:items-start gap-8 flex-shrink-0">
               <div className="w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden about-item ring-1 ring-bronze/30 shadow-2xl">
                 <img
@@ -539,21 +538,6 @@ function About() {
                   alt="Martin Popiel - Founder"
                   className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85]"
                 />
-              </div>
-              
-              {/* Stat chips */}
-              <div className="grid grid-cols-2 gap-3 w-full">
-                {[
-                  { value: "40+", label: "Countries" },
-                  { value: "3", label: "Languages" },
-                  { value: "2", label: "Citizenships" },
-                  { value: "CPA", label: "Designated" },
-                ].map((stat, i) => (
-                  <div key={i} className="about-item flex flex-col items-center justify-center p-4 rounded-2xl text-center border border-white/8" style={{ background: 'rgba(255,255,255,0.04)' }}>
-                    <span className="text-2xl font-sans font-medium text-bronze">{stat.value}</span>
-                    <span className="text-[10px] font-data uppercase tracking-widest text-white/40 mt-1">{stat.label}</span>
-                  </div>
-                ))}
               </div>
             </div>
 
@@ -611,8 +595,8 @@ function FAQ() {
   const questions = [
     {
       icon: <Scale size={18} className="text-bronze flex-shrink-0" />,
-      q: "Is this tax evasion?",
-      a: "Absolutely not. Everything we coordinate is fully legal and compliant. We work with licensed professionals in every jurisdiction — tax attorneys, immigration lawyers, banking compliance officers. There are no grey areas."
+      q: "Is this legal?",
+      a: "Yes — fully. Every structure we coordinate is built on established legal frameworks, implemented by licensed professionals in each jurisdiction. We work with tax attorneys, immigration lawyers, and banking compliance officers to ensure everything is transparent and above board."
     },
     {
       icon: <Clock size={18} className="text-bronze flex-shrink-0" />,
