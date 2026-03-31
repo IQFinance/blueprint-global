@@ -106,7 +106,7 @@ function Hero() {
           </h1>
           
           <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 md:mb-10 max-w-3xl drop-shadow-md">
-            We build your international life. You <span className="text-bronze font-semibold italic">live</span> it.
+            We build your international life. You <span className="text-bronze font-semibold">live</span> it.
           </p>
           
           <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
