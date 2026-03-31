@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[70dvh] lg:min-h-[72dvh] pb-12 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-20">
+    <section ref={heroRef} className="relative min-h-[70dvh] lg:min-h-[72dvh] pb-12 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -167,8 +167,8 @@ function Education() {
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
       gsap.from('.edu-card-wrapper', {
-        scrollTrigger: { trigger: eduRef.current, start: 'top 90%' },
-        y: 40, opacity: 0, duration: 1, stagger: 0.08, ease: 'power3.out'
+        scrollTrigger: { trigger: eduRef.current, start: 'top 95%' },
+        y: 30, duration: 1, stagger: 0.08, ease: 'power3.out'
       });
     }, eduRef);
     return () => ctx.revert();
@@ -359,36 +359,50 @@ function WhoThisIsFor() {
   }, []);
 
   const profiles = [
-    { title: "Global Income", desc: "You earn income in more than one country and face redundant tax exposure." },
-    { title: "Second Passports", desc: "You seek a second passport or residency to expand your mobility and secure your future." },
-    { title: "Digital Assets", desc: "You hold significant crypto and need a compliant, structural bridge to traditional finance." },
-    { title: "Relocating", desc: "You're planning a strategic move abroad and need to cleanly transition your life." },
-    { title: "Asset Protection", desc: "You want to insulate your wealth across trusted jurisdictions from localized risks." },
-    { title: "Family Planning", desc: "You need cross-border architecture for your family's education, healthcare, and succession." }
+    { icon: <Globe size={28} strokeWidth={1.5} />, label: "01", title: "Global Income", desc: "You earn income in more than one country and face redundant tax exposure." },
+    { icon: <Landmark size={28} strokeWidth={1.5} />, label: "02", title: "Second Passports", desc: "You seek a second passport or residency to expand your mobility and secure your future." },
+    { icon: <Coins size={28} strokeWidth={1.5} />, label: "03", title: "Digital Assets", desc: "You hold significant crypto and need a compliant, structural bridge to traditional finance." },
+    { icon: <Compass size={28} strokeWidth={1.5} />, label: "04", title: "Relocating", desc: "You're planning a strategic move abroad and need to cleanly transition your life." },
+    { icon: <Lock size={28} strokeWidth={1.5} />, label: "05", title: "Asset Protection", desc: "You want to insulate your wealth across trusted jurisdictions from localized risks." },
+    { icon: <GraduationCap size={28} strokeWidth={1.5} />, label: "06", title: "Family Planning", desc: "You need cross-border architecture for your family's education, healthcare, and succession." }
   ];
 
   return (
-    <section ref={whoRef} className="py-24 px-6 md:px-12 bg-ink relative z-10 overflow-hidden text-surface">
-      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")', backgroundRepeat: 'repeat' }}></div>
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 60% 40%, rgba(156, 123, 82, 0.15) 0%, transparent 60%)' }}></div>
+    <section ref={whoRef} className="py-32 px-6 md:px-12 bg-ink relative z-10 overflow-hidden text-surface">
+      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(156, 123, 82, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(156, 123, 82, 0.07) 0%, transparent 50%)' }}></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="who-header text-center mb-16 flex flex-col items-center">
+        <div className="who-header text-center mb-20 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">Who This Is For</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-white max-w-2xl">
             This is for you if...
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10">
           {profiles.map((profile, idx) => (
             <div key={idx} className="who-card-wrapper h-full">
-              <div className="group bg-surface/5 border border-surface/10 p-8 rounded-[2rem] hover:bg-surface/10 hover:border-bronze/30 transition-all duration-300 h-full flex flex-col cursor-default shadow-sm hover:shadow-md backdrop-blur-sm">
-                <CheckCircle className="text-bronze/50 mb-6 group-hover:text-bronze transition-colors flex-shrink-0" size={28} strokeWidth={1.5} />
-                <h4 className="text-lg md:text-xl font-sans font-medium text-white mb-3">{profile.title}</h4>
-                <p className="text-surface/60 font-sans leading-relaxed text-[15px] md:text-base group-hover:text-surface/80 transition-colors">
+              <div className="group relative h-full flex flex-col p-8 rounded-[2rem] border border-white/8 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30"
+                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)', backdropFilter: 'blur(12px)' }}>
+                {/* Glow effect */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[2rem]" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(156,123,82,0.12) 0%, transparent 70%)' }}></div>
+                
+                <div className="relative z-10 flex items-start justify-between mb-8">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-bronze border border-bronze/20 group-hover:border-bronze/50 group-hover:bg-bronze/10 transition-all duration-300" style={{ background: 'rgba(156,123,82,0.08)' }}>
+                    {profile.icon}
+                  </div>
+                  <span className="font-data text-3xl text-white/8 group-hover:text-white/15 transition-colors duration-300">{profile.label}</span>
+                </div>
+                
+                <h4 className="relative z-10 text-xl font-sans font-medium text-white mb-3">{profile.title}</h4>
+                <p className="relative z-10 text-surface/55 font-sans leading-relaxed text-[15px] group-hover:text-surface/80 transition-colors duration-300 flex-grow">
                   {profile.desc}
                 </p>
+                
+                <div className="relative z-10 mt-6 pt-6 border-t border-white/8 flex items-center gap-2">
+                  <CheckCircle size={14} className="text-bronze/60 group-hover:text-bronze transition-colors duration-300" />
+                  <span className="text-[11px] font-data uppercase tracking-wider text-white/30 group-hover:text-white/50 transition-colors duration-300">Blueprint can help</span>
+                </div>
               </div>
             </div>
           ))}
@@ -506,41 +520,69 @@ function About() {
   }, []);
 
   return (
-    <section id="about" ref={aboutRef} className="pt-0 pb-24 px-6 md:px-12 bg-porcelain relative z-20">
-      <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-16 border border-graphite/5 shadow-sm flex flex-col md:flex-row items-center gap-10 md:gap-20">
-        <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden about-item ring-2 ring-bronze/30 shadow-md flex-shrink-0">
-          <img
-            src="/martin.jpg"
-            alt="Martin Popiel - Founder"
-            className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.9]"
-          />
-        </div>
-        <div className="about-item flex-grow">
-          <h2 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink mb-8">
-            Meet the Architect
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-xl md:text-2xl font-sans font-medium text-ink mb-1">
-              Martin Popiel, CPA
-            </h3>
-            <p className="text-graphite/60 font-sans text-xs tracking-widest uppercase">
-              Chartered Professional Accountant
-            </p>
-          </div>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-2xl mb-4">
-            Martin built Blueprint after navigating the exact cross-border complexities our clients face. As an entrepreneur with multiple citizenships and residencies, he built businesses across 40+ countries — experiencing firsthand how disconnected the international advisory world truly is.
-          </p>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-2xl mb-8">
-            He found one firm for banking, another for residency, and another for tax, with none of them speaking to each other. Blueprint is the firm he wished existed: a single master architect that sees the full picture and coordinates your entire global structure under one roof.
-          </p>
-          <div className="flex flex-wrap gap-3 mt-4">
-            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
-              <ShieldCheck size={14} className="text-bronze"/> CPA Ontario
-            </span>
-            <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#0A66C2]/10 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-[#0A66C2] border border-[#0A66C2]/20 hover:bg-[#0A66C2]/20 transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </a>
+    <section id="about" ref={aboutRef} className="pt-0 pb-32 px-6 md:px-12 bg-porcelain relative z-20">
+      <div className="max-w-5xl mx-auto">
+        {/* Main card */}
+        <div className="about-item relative rounded-[2.5rem] overflow-hidden border border-graphite/8 shadow-xl"
+          style={{ background: 'linear-gradient(150deg, #1a1c1f 0%, #16181B 60%, #1e1a15 100%)' }}>
+          
+          {/* Subtle bronze glow top-right */}
+          <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
+
+          <div className="relative z-10 p-8 md:p-14 lg:p-20 flex flex-col md:flex-row gap-12 md:gap-20 items-start">
+            {/* Left col - photo + stats */}
+            <div className="flex flex-col items-center md:items-start gap-8 flex-shrink-0">
+              <div className="w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden about-item ring-1 ring-bronze/30 shadow-2xl">
+                <img
+                  src="/martin.jpg"
+                  alt="Martin Popiel - Founder"
+                  className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85]"
+                />
+              </div>
+              
+              {/* Stat chips */}
+              <div className="grid grid-cols-2 gap-3 w-full">
+                {[
+                  { value: "40+", label: "Countries" },
+                  { value: "3", label: "Languages" },
+                  { value: "2", label: "Citizenships" },
+                  { value: "CPA", label: "Designated" },
+                ].map((stat, i) => (
+                  <div key={i} className="about-item flex flex-col items-center justify-center p-4 rounded-2xl text-center border border-white/8" style={{ background: 'rgba(255,255,255,0.04)' }}>
+                    <span className="text-2xl font-sans font-medium text-bronze">{stat.value}</span>
+                    <span className="text-[10px] font-data uppercase tracking-widest text-white/40 mt-1">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right col - text */}
+            <div className="about-item flex-grow">
+              <span className="font-data text-sm uppercase tracking-widest text-bronze/70 mb-6 block">About</span>
+              <h2 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-white mb-8">
+                Meet the Architect
+              </h2>
+              <h3 className="text-xl font-sans font-medium text-white mb-1">Martin Popiel, CPA</h3>
+              <p className="text-white/40 font-sans text-xs tracking-widest uppercase mb-8">Chartered Professional Accountant · Entrepreneur · Digital Nomad</p>
+              
+              <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-5">
+                Martin built Blueprint after navigating the exact cross-border complexities our clients face. As an entrepreneur with multiple citizenships and residencies, he built businesses across 40+ countries — experiencing firsthand how disconnected the international advisory world truly is.
+              </p>
+              <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
+                He found one firm for banking, another for residency, and another for tax, with none of them speaking to each other. Blueprint is the firm he wished existed: a single master architect that sees the full picture and coordinates your entire global structure under one roof.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-white/60 border border-white/10 hover:border-bronze/40 transition-colors" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                  <ShieldCheck size={14} className="text-bronze"/> CPA Ontario
+                </span>
+                <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-[#70a9e8] border border-[#70a9e8]/20 hover:border-[#70a9e8]/50 transition-colors" style={{ background: 'rgba(10,102,194,0.12)' }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
