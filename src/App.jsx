@@ -267,7 +267,7 @@ function WhatYouGet() {
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
           <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.1] max-w-none px-4">
             <span className="block text-ink">Strategic implementation.</span>
-            <span className="block text-bronze/60 mt-3 md:mt-4">Everything, coordinated.</span>
+            <span className="block text-bronze mt-3 md:mt-4 italic font-medium">Everything, coordinated.</span>
           </h3>
         </div>
 
@@ -403,7 +403,7 @@ function HowItWorks() {
     },
     {
       num: "03",
-      title: "Maintain",
+      title: "You live it.",
       subtitle: "Ongoing optimization.",
       desc: "As laws and your life evolve, we ensure your structure remains compliant and optimized. One partner for the long-term management of your international life.",
       svg: (
@@ -426,7 +426,7 @@ function HowItWorks() {
       <div className="max-w-6xl mx-auto mb-16">
         <div className="who-header text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">How It Works</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. Maintain.</h3>
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. <span className="text-bronze italic">You live it.</span></h3>
         </div>
       </div>
 
