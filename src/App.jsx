@@ -62,7 +62,7 @@ function Navbar() {
           <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="border-b border-surface/10 pb-4 hover:text-bronze transition-colors">How It Works</a>
           <a href="#about" onClick={() => setMenuOpen(false)} className="border-b border-surface/10 pb-4 hover:text-bronze transition-colors">About</a>
           <a href="https://app.blueprintglobal.io/dashboard" onClick={() => setMenuOpen(false)} className="text-bronze mt-4">Client Login</a>
-          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-6 py-4 rounded-[2rem] text-lg mt-4 flex items-center justify-between hover:bg-white transition-colors">
+          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-6 py-4 rounded-[2rem] text-lg mt-4 flex items-center justify-between hover:bg-bronze/90 transition-colors">
             Try the Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -171,110 +171,70 @@ function Education() {
         scrollTrigger: { trigger: eduRef.current, start: 'top 80%' },
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
-      gsap.from('.edu-card-wrapper', {
-        scrollTrigger: { trigger: eduRef.current, start: 'top 95%' },
-        y: 30, duration: 1, stagger: 0.08, ease: 'power3.out'
+      gsap.from('.edu-pillar', {
+        scrollTrigger: { trigger: eduRef.current, start: 'top 85%' },
+        y: 30, opacity: 0, duration: 1, stagger: 0.15, ease: 'power3.out'
       });
     }, eduRef);
     return () => ctx.revert();
   }, []);
 
-  const cards = [
+  const pillars = [
     {
-      icon: <Globe size={24} strokeWidth={1.5} />,
-      title: "Tax Residency",
-      problem: "You're paying taxes based on where you were born — not where you live or earn.",
-      solution: "We help you establish residency in jurisdictions that align with your actual lifestyle and income sources."
+      title: "Capital & Access",
+      items: [
+        { icon: <Globe size={20} />, title: "Tax Residency", problem: "You're paying taxes based on where you were born — not where you live or earn." },
+        { icon: <ShieldCheck size={20} />, title: "Banking & Capital Access", problem: "Your bank can freeze your account, restrict transfers, or close you out — with no warning." },
+        { icon: <Coins size={20} />, title: "Digital Asset Integration", problem: "Crypto profits sit in a grey zone — hard to bank, hard to spend, easy to lose to bad compliance." }
+      ]
     },
     {
-      icon: <ShieldCheck size={24} strokeWidth={1.5} />,
-      title: "Banking & Capital Access",
-      problem: "Your bank can freeze your account, restrict transfers, or close you out — with no warning.",
-      solution: "We open accounts across stable jurisdictions so your capital is always accessible, never trapped."
+      title: "Structure & Protection",
+      items: [
+        { icon: <Briefcase size={20} />, title: "Ownership Structures", problem: "Holding everything in your personal name means one lawsuit could take it all." },
+        { icon: <Lock size={20} />, title: "Risk & Asset Protection", problem: "Political instability, lawsuits, or currency devaluation can wipe out progress overnight." },
+        { icon: <Scale size={20} />, title: "Succession & Estate", problem: "Without cross-border planning, your estate could face double taxation or probate." }
+      ]
     },
     {
-      icon: <Briefcase size={24} strokeWidth={1.5} />,
-      title: "Ownership Structures",
-      problem: "Holding everything in your personal name means one lawsuit could take it all.",
-      solution: "We design entity structures — trusts, foundations, holding companies — that separate you from your assets."
-    },
-    {
-      icon: <Landmark size={24} strokeWidth={1.5} />,
-      title: "Citizenship & Mobility",
-      problem: "A single passport limits where you can live, work, and move freely.",
-      solution: "We map pathways to second citizenships and residency permits that expand your options permanently."
-    },
-    {
-      icon: <Lock size={24} strokeWidth={1.5} />,
-      title: "Risk & Asset Protection",
-      problem: "Political instability, lawsuits, or currency devaluation can wipe out years of progress overnight.",
-      solution: "We spread your risk across jurisdictions so no single event can compromise your entire position."
-    },
-    {
-      icon: <HeartPulse size={24} strokeWidth={1.5} />,
-      title: "Healthcare Access",
-      problem: "You're stuck with one country's healthcare system — long waits, limited options, no portability.",
-      solution: "We connect you with global health networks that follow you wherever you go."
-    },
-    {
-      icon: <GraduationCap size={24} strokeWidth={1.5} />,
-      title: "Education Planning",
-      problem: "Your children's education options are limited to one country's school system.",
-      solution: "We map international schooling and university pathways that keep doors open for the next generation."
-    },
-    {
-      icon: <Scale size={24} strokeWidth={1.5} />,
-      title: "Succession & Estate",
-      problem: "Without cross-border planning, your estate could face double taxation or probate in multiple countries.",
-      solution: "We structure succession plans that transfer wealth cleanly across borders, without legal friction."
-    },
-    {
-      icon: <Coins size={24} strokeWidth={1.5} />,
-      title: "Digital Asset Integration",
-      problem: "Crypto profits sit in a grey zone — hard to bank, hard to spend, easy to lose to bad compliance.",
-      solution: "We build compliant bridges between your digital holdings and the traditional financial system."
+      title: "Life & Mobility",
+      items: [
+        { icon: <Landmark size={20} />, title: "Citizenship & Mobility", problem: "A single passport limits where you can live, work, and move freely." },
+        { icon: <HeartPulse size={20} />, title: "Healthcare Access", problem: "You're stuck with one country's healthcare system — long waits and limited options." },
+        { icon: <GraduationCap size={20} />, title: "Education Planning", problem: "Your children's education options are limited to one country's school system." }
+      ]
     }
   ];
 
   return (
-    <section ref={eduRef} id="education" className="py-20 px-6 md:px-12 bg-porcelain">
+    <section ref={eduRef} id="education" className="py-24 md:py-32 px-6 md:px-12 bg-porcelain relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="edu-header mb-14 text-center flex flex-col items-center px-4">
+        <div className="edu-header mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] w-full">
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] max-w-3xl">
             <span className="block text-ink">Most people don't know these problems exist</span>
             <span className="block text-ink md:mt-1">...until they're stuck.</span>
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-6">
-          {cards.map((card, idx) => (
-            <div key={idx} className="edu-card-wrapper h-full flex">
-              <div className="group flex flex-col bg-white p-8 rounded-[2rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-300 w-full relative overflow-hidden">
-                <div className="mb-8">
-                  <div className="w-12 h-12 rounded-full bg-porcelain flex items-center justify-center text-bronze mb-5">
-                    {card.icon}
-                  </div>
-                  <h4 className="text-xl font-sans font-medium text-ink leading-tight">{card.title}</h4>
-                </div>
-                
-                <div className="flex flex-col gap-6 flex-grow">
-                  <div>
-                    <span className="font-data text-[10px] uppercase tracking-widest text-bronze/80 mb-2 block">The Problem</span>
-                    <p className="text-graphite font-sans leading-relaxed text-[15px]">
-                      {card.problem}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+          {pillars.map((pillar, pIdx) => (
+            <div key={pIdx} className="edu-pillar flex flex-col">
+              <h4 className="font-drama italic text-3xl text-bronze mb-4">{pillar.title}</h4>
+              <div className="w-full h-px bg-bronze/20 mb-8"></div>
+              
+              <div className="flex flex-col gap-10">
+                {pillar.items.map((item, iIdx) => (
+                  <div key={iIdx} className="group pb-10 border-b border-graphite/5 last:border-0 last:pb-0">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-bronze group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
+                      <span className="font-sans font-medium text-ink text-base md:text-lg">{item.title}</span>
+                    </div>
+                    <p className="text-graphite font-sans leading-relaxed text-sm md:text-[15px] opacity-80 group-hover:opacity-100 transition-opacity">
+                      {item.problem}
                     </p>
                   </div>
-                  
-                  <div className="border-t border-graphite/5 transition-colors group-hover:border-bronze/20"></div>
-                  
-                  <div>
-                    <span className="font-data text-[10px] uppercase tracking-widest text-ink/40 mb-2 block transition-colors group-hover:text-bronze/80">The Solution</span>
-                    <p className="text-ink/90 font-sans leading-relaxed text-[15px]">
-                      {card.solution}
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           ))}
@@ -323,19 +283,22 @@ function WhatYouGet() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 max-w-5xl mx-auto">
+        <div className="flex flex-col max-w-5xl mx-auto border-t border-graphite/10">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-card-wrapper">
-              <div className="flex flex-col group bg-white p-8 md:p-10 rounded-[2rem] border border-graphite/5 transition-transform hover:-translate-y-[2px] duration-300 shadow-sm relative overflow-hidden h-full cursor-default">
-                <div className="absolute top-0 right-0 p-8">
-                  <span className="font-data text-6xl text-bronze/10 group-hover:text-bronze/20 transition-colors duration-500 font-bold">{item.num}</span>
+            <div key={idx} className="get-row-wrapper border-b border-graphite/10 py-12 md:py-16">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 group">
+                <div className="flex items-center gap-8 md:w-32 flex-shrink-0">
+                  <span className="font-data text-5xl md:text-7xl text-bronze/25 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
+                  <div className="hidden md:block w-px h-16 bg-bronze/15"></div>
                 </div>
-                <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 border border-graphite/10 relative z-10 group-hover:bg-bronze/10 transition-colors">
-                  {item.icon}
-                </div>
-                <div className="relative z-10 flex flex-col flex-grow">
-                  <h4 className="text-xl md:text-2xl font-sans font-medium mb-4 text-ink group-hover:text-bronze transition-colors">{item.title}</h4>
-                  <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[16px] max-w-xl">{item.desc}</p>
+                
+                <div className="flex-grow">
+                  <h4 className="text-xl md:text-2xl font-sans font-medium mb-3 text-ink group-hover:text-bronze transition-colors duration-300">
+                    {item.title}
+                  </h4>
+                  <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-3xl opacity-80 group-hover:opacity-100 transition-opacity">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             </div>
@@ -509,6 +472,32 @@ function HowItWorks() {
   );
 }
 
+function SocialTrustBand() {
+  return (
+    <section className="bg-ink py-16 px-6 relative z-10 overflow-hidden">
+      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
+      <div className="max-w-6xl mx-auto border-y border-surface/10 py-10 relative z-10">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
+          <div className="flex items-center gap-3 group">
+            <ShieldCheck size={20} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
+          <div className="flex items-center gap-3 group">
+            <Globe size={20} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
+          <div className="flex items-center gap-3 group">
+            <Lock size={20} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function About() {
   const aboutRef = useRef(null);
 
@@ -535,7 +524,7 @@ function About() {
 
           <div className="relative z-10 p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
             <div className="flex flex-col items-center md:items-start gap-8 flex-shrink-0">
-              <div className="w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden about-item ring-1 ring-bronze/30 shadow-2xl">
+              <div className="w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden about-item ring-2 ring-bronze/30 shadow-2xl">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
@@ -551,7 +540,7 @@ function About() {
                 Meet the Architect
               </h2>
               <h3 className="text-xl font-sans font-medium text-white mb-1">Martin Popiel, CPA</h3>
-              <p className="text-white/40 font-sans text-xs tracking-widest uppercase mb-8">Chartered Professional Accountant · Entrepreneur · Avid Traveler</p>
+              <p className="text-white/40 font-sans text-xs tracking-widest uppercase mb-8">Chartered Professional Accountant (CPA)</p>
               
               <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-5">
                 Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents — only to find a completely disconnected advisory world.
@@ -561,9 +550,18 @@ function About() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-white/60 border border-white/10 hover:border-bronze/40 transition-colors" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-ink/5 shadow-sm" style={{ background: '#F6F2EA' }}>
                   <ShieldCheck size={14} className="text-bronze"/> CPA Ontario
                 </span>
+                
+                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-white/60 border border-white/10" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                  <MapPin size={14} className="text-bronze"/> 40+ Countries
+                </span>
+
+                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-white/60 border border-white/10" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                  <Users size={14} className="text-bronze"/> Global Partner Network
+                </span>
+
                 <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-[#70a9e8] border border-[#70a9e8]/20 hover:border-[#70a9e8]/50 transition-colors" style={{ background: 'rgba(10,102,194,0.12)' }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
@@ -663,7 +661,7 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="bg-ink text-surface pt-24 pb-12 px-6 md:px-12 relative z-10 border-t border-surface/5 overflow-hidden">
+    <footer className="bg-ink text-surface pt-24 pb-12 px-6 md:px-12 relative z-10 border-t border-bronze/10 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20 border-b border-surface/10 pb-16">
         <div className="w-full md:w-1/3">
           <div className="font-sans font-semibold text-2xl tracking-tight mb-4">Blueprint Global</div>
@@ -717,6 +715,7 @@ export default function App() {
       <Education />
       
       <WhatYouGet />
+      <SocialTrustBand />
       
       <MidPageCTA 
         headline="Start Your Blueprint" 
