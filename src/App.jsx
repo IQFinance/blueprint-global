@@ -131,26 +131,32 @@ function TrustBand() {
   return (
     <section className="bg-ink text-surface/70 py-12 px-6 border-b border-surface/5 relative z-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-start md:items-center gap-12 md:gap-20 lg:gap-24">
-        <div className="flex flex-col items-start gap-1">
-          <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Approach</span>
-          <span className="text-xl md:text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
-            <ShieldCheck size={24} className="text-bronze flex-shrink-0" />
-            One Firm. The Full Picture.
-          </span>
+        <div className="flex items-start gap-4">
+          <ShieldCheck size={28} className="text-bronze flex-shrink-0 mt-1" />
+          <div className="flex flex-col">
+            <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60 mb-1">Approach</span>
+            <span className="text-xl md:text-2xl font-sans text-surface tracking-tight">
+              One Firm. The Full Picture.
+            </span>
+          </div>
         </div>
-        <div className="flex flex-col items-start gap-1">
-          <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Foundation</span>
-          <span className="text-xl md:text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
-            <Briefcase size={24} className="text-bronze flex-shrink-0" />
-            CPA-Led
-          </span>
+        <div className="flex items-start gap-4">
+          <Briefcase size={28} className="text-bronze flex-shrink-0 mt-1" />
+          <div className="flex flex-col">
+            <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60 mb-1">Foundation</span>
+            <span className="text-xl md:text-2xl font-sans text-surface tracking-tight">
+              CPA-Led
+            </span>
+          </div>
         </div>
-        <div className="flex flex-col items-start gap-1">
-          <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Priority</span>
-          <span className="text-xl md:text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
-            <FileText size={24} className="text-bronze flex-shrink-0" />
-            Compliance-First
-          </span>
+        <div className="flex items-start gap-4">
+          <FileText size={28} className="text-bronze flex-shrink-0 mt-1" />
+          <div className="flex flex-col">
+            <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60 mb-1">Priority</span>
+            <span className="text-xl md:text-2xl font-sans text-surface tracking-tight">
+              Compliance-First
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -238,7 +244,7 @@ function Education() {
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] w-full">
             <span className="block text-ink">Most people don't know these problems exist</span>
-            <span className="block text-ink md:mt-1">— until they're stuck.</span>
+            <span className="block text-ink md:mt-1">...until they're stuck.</span>
           </h3>
         </div>
 
