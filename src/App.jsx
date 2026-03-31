@@ -97,7 +97,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 md:px-12 mt-8 md:mt-0">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48 mt-8 md:mt-0">
         <div className="max-w-4xl">
           <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-10 md:mb-14">
             <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
@@ -130,25 +130,25 @@ function Hero() {
 function TrustBand() {
   return (
     <section className="bg-ink text-surface/70 py-12 px-6 border-b border-surface/5 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-center gap-12 md:gap-20 lg:gap-32">
-        <div className="flex flex-col items-center gap-1">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-start md:items-center gap-12 md:gap-20 lg:gap-24">
+        <div className="flex flex-col items-start gap-1">
           <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Approach</span>
-          <span className="text-2xl md:text-3xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
-            <ShieldCheck size={28} className="text-bronze flex-shrink-0" />
+          <span className="text-xl md:text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
+            <ShieldCheck size={24} className="text-bronze flex-shrink-0" />
             One Firm. The Full Picture.
           </span>
         </div>
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col items-start gap-1">
           <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Foundation</span>
-          <span className="text-2xl md:text-3xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
-            <Briefcase size={28} className="text-bronze flex-shrink-0" />
+          <span className="text-xl md:text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
+            <Briefcase size={24} className="text-bronze flex-shrink-0" />
             CPA-Led
           </span>
         </div>
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col items-start gap-1">
           <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Priority</span>
-          <span className="text-2xl md:text-3xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
-            <FileText size={28} className="text-bronze flex-shrink-0" />
+          <span className="text-xl md:text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
+            <FileText size={24} className="text-bronze flex-shrink-0" />
             Compliance-First
           </span>
         </div>
@@ -465,7 +465,7 @@ function HowItWorks() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto relative flex flex-col pb-32">
+      <div className="max-w-5xl mx-auto relative flex flex-col pb-16">
         {steps.map((step, idx) => (
           <div
             key={idx}
@@ -506,7 +506,7 @@ function About() {
   }, []);
 
   return (
-    <section id="about" ref={aboutRef} className="py-24 px-6 md:px-12 bg-porcelain relative z-20">
+    <section id="about" ref={aboutRef} className="pt-0 pb-24 px-6 md:px-12 bg-porcelain relative z-20">
       <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-16 border border-graphite/5 shadow-sm flex flex-col md:flex-row items-center gap-10 md:gap-20">
         <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden about-item ring-2 ring-bronze/30 shadow-md flex-shrink-0">
           <img
