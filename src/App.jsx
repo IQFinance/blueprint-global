@@ -359,49 +359,43 @@ function WhoThisIsFor() {
   }, []);
 
   const profiles = [
-    { icon: <Globe size={28} strokeWidth={1.5} />, label: "01", title: "Global Income", desc: "You earn income in more than one country and face redundant tax exposure." },
-    { icon: <Landmark size={28} strokeWidth={1.5} />, label: "02", title: "Second Passports", desc: "You seek a second passport or residency to expand your mobility and secure your future." },
-    { icon: <Coins size={28} strokeWidth={1.5} />, label: "03", title: "Digital Assets", desc: "You hold significant crypto and need a compliant, structural bridge to traditional finance." },
-    { icon: <Compass size={28} strokeWidth={1.5} />, label: "04", title: "Relocating", desc: "You're planning a strategic move abroad and need to cleanly transition your life." },
-    { icon: <Lock size={28} strokeWidth={1.5} />, label: "05", title: "Asset Protection", desc: "You want to insulate your wealth across trusted jurisdictions from localized risks." },
-    { icon: <GraduationCap size={28} strokeWidth={1.5} />, label: "06", title: "Family Planning", desc: "You need cross-border architecture for your family's education, healthcare, and succession." }
+    { icon: <Globe size={24} strokeWidth={1.5} />, label: "01", title: "Global Income", desc: "You earn income in more than one country and face redundant tax exposure." },
+    { icon: <Landmark size={24} strokeWidth={1.5} />, label: "02", title: "Second Passports", desc: "You seek a second passport or residency to expand your mobility and secure your future." },
+    { icon: <Coins size={24} strokeWidth={1.5} />, label: "03", title: "Digital Assets", desc: "You hold significant crypto and need a compliant, structural bridge to traditional finance." },
+    { icon: <Compass size={24} strokeWidth={1.5} />, label: "04", title: "Relocating", desc: "You're planning a strategic move abroad and need to cleanly transition your life." },
+    { icon: <Lock size={24} strokeWidth={1.5} />, label: "05", title: "Asset Protection", desc: "You want to insulate your wealth across trusted jurisdictions from localized risks." },
+    { icon: <GraduationCap size={24} strokeWidth={1.5} />, label: "06", title: "Family Planning", desc: "You need cross-border architecture for your family's education, healthcare, and succession." }
   ];
 
   return (
-    <section ref={whoRef} className="py-32 px-6 md:px-12 bg-ink relative z-10 overflow-hidden text-surface">
-      <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(156, 123, 82, 0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(156, 123, 82, 0.07) 0%, transparent 50%)' }}></div>
-      
+    <section ref={whoRef} className="py-24 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 overflow-hidden">
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="who-header text-center mb-20 flex flex-col items-center">
+        <div className="who-header text-center mb-16 md:mb-20 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">Who This Is For</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-white max-w-2xl">
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink max-w-2xl">
             This is for you if...
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
           {profiles.map((profile, idx) => (
             <div key={idx} className="who-card-wrapper h-full">
-              <div className="group relative h-full flex flex-col p-8 rounded-[2rem] border border-white/8 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30"
-                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)', backdropFilter: 'blur(12px)' }}>
-                {/* Glow effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[2rem]" style={{ background: 'radial-gradient(circle at 50% 0%, rgba(156,123,82,0.12) 0%, transparent 70%)' }}></div>
-                
-                <div className="relative z-10 flex items-start justify-between mb-8">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-bronze border border-bronze/20 group-hover:border-bronze/50 group-hover:bg-bronze/10 transition-all duration-300" style={{ background: 'rgba(156,123,82,0.08)' }}>
+              <div className="group bg-white border border-graphite/5 p-8 rounded-[2rem] hover:shadow-md transition-all duration-300 h-full flex flex-col cursor-default relative overflow-hidden">
+                <div className="relative z-10 mb-8 flex justify-between items-start">
+                  <div className="w-12 h-12 rounded-full bg-porcelain flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300">
                     {profile.icon}
                   </div>
-                  <span className="font-data text-3xl text-white/8 group-hover:text-white/15 transition-colors duration-300">{profile.label}</span>
+                  <span className="font-data text-xs tracking-widest text-graphite/20 group-hover:text-bronze/40 transition-colors">{profile.label}</span>
                 </div>
                 
-                <h4 className="relative z-10 text-xl font-sans font-medium text-white mb-3">{profile.title}</h4>
-                <p className="relative z-10 text-surface/55 font-sans leading-relaxed text-[15px] group-hover:text-surface/80 transition-colors duration-300 flex-grow">
+                <h4 className="text-xl font-sans font-medium text-ink mb-3 relative z-10">{profile.title}</h4>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] group-hover:text-ink transition-colors duration-300 relative z-10 flex-grow">
                   {profile.desc}
                 </p>
                 
-                <div className="relative z-10 mt-6 pt-6 border-t border-white/8 flex items-center gap-2">
-                  <CheckCircle size={14} className="text-bronze/60 group-hover:text-bronze transition-colors duration-300" />
-                  <span className="text-[11px] font-data uppercase tracking-wider text-white/30 group-hover:text-white/50 transition-colors duration-300">Blueprint can help</span>
+                <div className="mt-8 pt-8 border-t border-graphite/5 flex items-center gap-2 relative z-10">
+                  <CheckCircle size={14} className="text-bronze/60 group-hover:text-bronze transition-colors" />
+                  <span className="text-[10px] font-data uppercase tracking-wider text-graphite/40 group-hover:text-graphite/60 transition-colors">Blueprint Specialist Access</span>
                 </div>
               </div>
             </div>
@@ -548,10 +542,10 @@ function About() {
                 Meet the Architect
               </h2>
               <h3 className="text-xl font-sans font-medium text-white mb-1">Martin Popiel, CPA</h3>
-              <p className="text-white/40 font-sans text-xs tracking-widest uppercase mb-8">Chartered Professional Accountant · Entrepreneur · Digital Nomad</p>
+              <p className="text-white/40 font-sans text-xs tracking-widest uppercase mb-8">Chartered Professional Accountant · Entrepreneur · Avid Traveler</p>
               
               <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-5">
-                Martin built Blueprint after living the problem. Multiple citizenships, residencies across continents, multinational businesses, three languages, and 40+ countries later — he learned one thing: the international advisory world is completely disconnected.
+                Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents — only to find a completely disconnected advisory world.
               </p>
               <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
                 One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed — one team that sees the full picture and coordinates your entire global structure under one roof.
