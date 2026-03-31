@@ -279,23 +279,23 @@ function WhatYouGet() {
           </h3>
         </div>
 
-        <div className="flex flex-col max-w-5xl mx-auto border-t border-graphite/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-row-wrapper border-b border-graphite/10 py-12 md:py-16">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 group">
-                <div className="flex items-center gap-8 md:w-32 flex-shrink-0">
-                  <span className="font-data text-5xl md:text-7xl text-bronze/25 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
-                  <div className="hidden md:block w-px h-16 bg-bronze/15"></div>
+            <div key={idx} className="get-card-wrapper h-full">
+              <div className="bg-white/50 backdrop-blur-sm border border-ink/[0.05] rounded-3xl p-8 lg:p-10 h-full flex flex-col group hover:bg-white hover:border-bronze/10 hover:shadow-xl hover:shadow-bronze/[0.03] transition-all duration-500">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="w-12 h-12 rounded-xl bg-ink/5 flex items-center justify-center text-bronze group-hover:bg-bronze group-hover:text-white transition-colors duration-500">
+                    {item.icon}
+                  </div>
+                  <span className="font-data text-2xl text-bronze/20 group-hover:text-bronze/40 transition-colors">{item.num}</span>
                 </div>
                 
-                <div className="flex-grow">
-                  <h4 className="text-xl md:text-2xl font-sans font-medium mb-3 text-ink group-hover:text-bronze transition-colors duration-300">
-                    {item.title}
-                  </h4>
-                  <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-3xl opacity-80 group-hover:opacity-100 transition-opacity">
-                    {item.desc}
-                  </p>
-                </div>
+                <h4 className="text-xl font-sans font-medium mb-4 text-ink group-hover:text-bronze transition-colors duration-300">
+                  {item.title}
+                </h4>
+                <p className="text-graphite/70 font-sans leading-relaxed text-[15px] group-hover:text-graphite transition-colors">
+                  {item.desc}
+                </p>
               </div>
             </div>
           ))}
