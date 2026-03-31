@@ -90,7 +90,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[80dvh] pb-4 md:pb-16 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-32 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-screen pb-4 md:pb-16 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-32 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -107,7 +107,7 @@ function Hero() {
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text text-[15px] md:text-[1.35rem] text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-8 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-[1.35rem] text-porcelain/80 font-sans leading-relaxed max-w-2xl md:max-w-none md:whitespace-nowrap mb-8 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -129,18 +129,18 @@ function TrustBand() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-16">
           <div className="flex items-center gap-3 group">
-            <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[10px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">CPA-Led Coordination</span>
+            <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
+            <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
-            <Globe size={15} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[10px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Multi-Jurisdictional Network</span>
+            <Globe size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
+            <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
-            <Lock size={15} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[10px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Compliance-First Approach</span>
+            <Lock size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
+            <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Compliance-First Approach</span>
           </div>
         </div>
       </div>
@@ -299,6 +299,9 @@ function WhoThisIsFor() {
   const whoRef = useRef(null);
 
   useEffect(() => {
+    // Kill any existing triggers to prevent conflicts
+    ScrollTrigger.getAll().filter(st => st.vars.trigger === whoRef.current).forEach(st => st.kill());
+
     let ctx = gsap.context(() => {
       // Header animation
       gsap.from('.who-header', {
@@ -317,29 +320,29 @@ function WhoThisIsFor() {
       gsap.from('.who-card-wrapper', {
         scrollTrigger: { 
           trigger: whoRef.current, 
-          start: 'top 75%',
+          start: 'top 70%',
           toggleActions: 'play none none none'
         },
-        y: 50, 
+        y: 60, 
         opacity: 0, 
-        duration: 1, 
-        stagger: 0.15, 
-        ease: 'power3.out'
+        duration: 1.2, 
+        stagger: 0.2, 
+        ease: 'power4.out'
       });
 
-      // Icon pop animation
-      gsap.from('.who-icon', {
+      // Icon pop animation - explicit targeting
+      gsap.from('.who-icon-inner', {
         scrollTrigger: { 
           trigger: whoRef.current, 
-          start: 'top 70%',
+          start: 'top 65%',
           toggleActions: 'play none none none'
         },
         scale: 0, 
         opacity: 0, 
         duration: 0.8, 
-        stagger: 0.15, 
-        ease: 'back.out(1.7)',
-        delay: 0.2
+        stagger: 0.2, 
+        ease: 'back.out(2)',
+        delay: 0.4
       });
     }, whoRef);
     return () => ctx.revert();
@@ -368,12 +371,12 @@ function WhoThisIsFor() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
           {profiles.map((profile, idx) => (
-            <div key={idx} className="who-card-wrapper h-full sticky md:relative mb-4 md:mb-0" style={{ top: `calc(100px + ${idx * 15}px)` }}>
+            <div key={idx} className="who-card-wrapper h-full sticky md:static mb-4 md:mb-0" style={{ top: `calc(100px + ${idx * 15}px)` }}>
               <div className="group relative h-full flex flex-col p-8 rounded-[2rem] border border-white/10 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30"
                 style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)', backdropFilter: 'blur(12px)' }}>
                 
                 <div className="relative z-10 flex items-start justify-between mb-8">
-                  <div className="who-icon w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                  <div className="who-icon-inner w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
                     {profile.icon}
                   </div>
                   <span className="font-data text-xs tracking-widest text-white/20 group-hover:text-bronze/40 transition-colors">{profile.label}</span>
@@ -398,8 +401,16 @@ function HowItWorks() {
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from('.how-step', {
-        scrollTrigger: { trigger: howRef.current, start: 'top 75%' },
-        y: 40, opacity: 0, duration: 1, stagger: 0.2, ease: 'power3.out'
+        scrollTrigger: { 
+          trigger: howRef.current, 
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        y: 40, 
+        opacity: 0, 
+        duration: 1, 
+        stagger: 0.2, 
+        ease: 'power3.out'
       });
     }, howRef);
     return () => ctx.revert();
@@ -444,7 +455,7 @@ function HowItWorks() {
     },
     {
       num: "03",
-      title: "You live it.",
+      title: "Maintain",
       subtitle: "Ongoing optimization.",
       desc: "As laws and your life evolve, we ensure your structure remains compliant and optimized. One partner for the long-term management of your international life.",
       svg: (
@@ -467,7 +478,7 @@ function HowItWorks() {
       <div className="max-w-6xl mx-auto mb-12 md:mb-16">
         <div className="who-header text-center mb-12 md:mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-5">How It Works</h2>
-          <h3 className="text-3xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. <span className="text-bronze">You live it.</span></h3>
+          <h3 className="text-3xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. <span className="text-bronze">Maintain.</span></h3>
         </div>
       </div>
 
