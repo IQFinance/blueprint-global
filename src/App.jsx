@@ -100,14 +100,8 @@ function Hero() {
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-4xl">
           <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-10 md:mb-12">
-            <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
-            <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg mt-1">
-              to <span className="relative inline-block text-white font-semibold">
-                one
-                <span className="absolute -bottom-1 pb-1 left-0 w-full h-[2px] bg-bronze/60 rounded-full shadow-[0_0_8px_rgba(156,123,82,0.4)]"></span>
-              </span> country.
-            </span>
-            <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
+            <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your life is tied to <span className="text-white font-semibold relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[2px] bg-bronze/60"></span></span> country...</span>
+            <span className="block hero-text font-sans font-medium text-bronze drop-shadow-lg mt-1">...it doesn't have to be.</span>
           </h1>
           
 
