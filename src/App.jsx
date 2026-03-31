@@ -359,10 +359,7 @@ function WhoThisIsFor() {
                   {profile.desc}
                 </p>
                 
-                <div className="mt-8 pt-8 border-t border-white/10 flex items-center gap-2 relative z-10">
-                  <CheckCircle size={14} className="text-bronze/60 group-hover:text-bronze transition-colors" />
-                  <span className="text-[10px] font-data uppercase tracking-wider text-white/30 group-hover:text-white/50 transition-colors">Blueprint Specialist Access</span>
-                </div>
+
               </div>
             </div>
           ))}
