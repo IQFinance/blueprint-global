@@ -220,7 +220,7 @@ function Education() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
           {pillars.map((pillar, pIdx) => (
             <div key={pIdx} className="edu-pillar flex flex-col">
-              <h4 className="font-drama italic text-3xl text-bronze mb-4">{pillar.title}</h4>
+              <h4 className="font-sans font-bold text-2xl lg:text-3xl text-bronze mb-4 tracking-tight tracking-tight uppercase lg:text-3xl">{pillar.title}</h4>
               <div className="w-full h-px bg-bronze/20 mb-8"></div>
               
               <div className="flex flex-col gap-10">
