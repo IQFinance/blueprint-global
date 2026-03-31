@@ -34,8 +34,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[2rem] px-4 md:px-6 py-3 flex items-center justify-between w-[90%] max-w-6xl ${scrolled ? 'bg-porcelain/90 backdrop-blur-md shadow-sm border border-graphite/5' : 'bg-transparent'}`}>
-        <div className={`font-sans font-semibold text-xl tracking-tight ${scrolled ? 'text-ink' : 'text-porcelain'} transition-colors duration-500`}>Blueprint Global</div>
+      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[2rem] px-6 py-3 flex items-center justify-between w-[92%] md:w-[90%] max-w-6xl ${scrolled ? 'bg-porcelain/90 backdrop-blur-md shadow-sm border border-graphite/5' : 'bg-transparent'}`}>
+        <div className={`font-sans font-semibold text-lg md:text-xl tracking-tight ${scrolled ? 'text-ink' : 'text-porcelain'} transition-colors duration-500`}>Blueprint Global</div>
         
         {/* Centered Desktop Links */}
         <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-sm font-medium ${scrolled ? 'text-ink' : 'text-porcelain/90'} transition-colors duration-500`}>
@@ -43,14 +43,14 @@ function Navbar() {
           <a href="#how-it-works" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">How It Works</a>
           <a href="#about" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">About</a>
         </div>
-        <div className="flex items-center gap-2 md:gap-4">
+        <div className="flex items-center gap-4">
         <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
-        <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-4 py-2 md:px-5 md:py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
-          <span className="truncate">Try the Demo</span>
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform flex-shrink-0" />
+        <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-4 md:px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
+          <span>Try the Demo</span>
+          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </a>
       </div>
-        <button className={`md:hidden p-2 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'}`} onClick={() => setMenuOpen(true)}>
+        <button className={`md:hidden p-3 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'}`} onClick={() => setMenuOpen(true)}>
           <Menu size={24} />
         </button>
       </nav>
@@ -89,7 +89,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[70dvh] md:min-h-[78dvh] lg:min-h-[80dvh] pb-8 md:pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[78dvh] lg:min-h-[80dvh] pb-8 md:pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -101,16 +101,16 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-none">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl md:whitespace-nowrap">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.15] md:leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[4px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text text-lg md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-5xl md:whitespace-nowrap mb-10 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-base md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-5xl mb-10 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
-          <div className="hero-text flex flex-col sm:flex-row items-center sm:items-start gap-5">
+          <div className="hero-text flex flex-col sm:flex-row items-stretch sm:items-start gap-5">
             <a href="https://app.blueprintglobal.io/onboarding" className="w-full sm:w-auto group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5 relative overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">Try the Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" /></span>
             </a>
@@ -123,23 +123,23 @@ function Hero() {
 
 function TrustBand() {
   return (
-    <section className="bg-ink py-12 md:py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
+    <section className="bg-ink py-10 md:py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16">
-          <div className="flex items-center gap-3 group">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:flex md:flex-row md:justify-center md:items-center md:gap-16">
+          <div className="flex items-center gap-3 group justify-center sm:justify-start">
             <ShieldCheck size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[11px] uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
+            <span className="font-data text-[11px] md:text-[11px] whitespace-normal text-center sm:text-left sm:whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group">
+          <div className="flex items-center gap-3 group justify-center sm:justify-start">
             <Globe size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[11px] uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
+            <span className="font-data text-[11px] md:text-[11px] whitespace-normal text-center sm:text-left sm:whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group">
+          <div className="flex items-center gap-3 group justify-center sm:justify-start">
             <Lock size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[11px] uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
+            <span className="font-data text-[11px] md:text-[11px] whitespace-normal text-center sm:text-left sm:whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
           </div>
         </div>
       </div>
@@ -202,10 +202,10 @@ function Education() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
+        <div className="flex flex-col md:grid md:grid-cols-3 md:gap-12 lg:gap-20">
           {pillars.map((pillar, pIdx) => (
-            <div key={pIdx} className="edu-pillar flex flex-col border-b border-graphite/10 last:border-b-0 md:border-b-0 pb-12 last:pb-0 md:pb-0">
-              <h4 className="font-sans font-bold text-xl md:text-2xl text-bronze mb-4 tracking-tight uppercase md:whitespace-nowrap text-center">{pillar.title}</h4>
+            <div key={pIdx} className="edu-pillar flex flex-col py-10 border-b border-graphite/10 last:border-b-0 md:py-0 md:border-b-0">
+              <h4 className="font-sans font-bold text-xl md:text-2xl text-bronze mb-4 tracking-tight uppercase whitespace-nowrap text-center">{pillar.title}</h4>
               <div className="w-16 h-px bg-bronze/30 mb-8 mx-auto"></div>
               
               <div className="flex flex-col gap-10">
@@ -271,7 +271,7 @@ function WhatYouGet() {
         <div className="flex flex-col max-w-5xl mx-auto border-t border-ink/5">
           {deliverables.map((item, idx) => (
             <div key={idx} className="get-row-wrapper border-b border-ink/5 py-8 md:py-10 group hover:bg-ink/[0.012] transition-colors">
-              <div className="flex flex-row items-start gap-6 md:gap-10 group">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 group">
                 <div className="flex items-center gap-6 md:w-24 flex-shrink-0">
                   <span className="font-data text-3xl md:text-5xl text-bronze/20 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
                   <div className="w-px h-10 bg-bronze/15 hidden md:block group-hover:bg-bronze transition-colors"></div>
@@ -332,7 +332,7 @@ function WhoThisIsFor() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 relative z-10">
           {profiles.map((profile, idx) => (
             <div key={idx} className="who-card-wrapper h-full">
               <div className="group relative h-full flex flex-col p-6 md:p-8 rounded-[2rem] border border-white/10 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30"
@@ -402,4 +402,294 @@ function HowItWorks() {
       num: "03",
       title: "You live it.",
       subtitle: "Ongoing optimization.",
-      desc: "
+      desc: "As laws and your life evolve, we ensure your structure remains compliant and optimized. One partner for the long-term management of your international life.",
+      svg: (
+        <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
+          <path d="M100 50 A 50 50 0 0 1 143.3 125" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M143.3 125 L135 125 M143.3 125 L147 118" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <path d="M143.3 125 A 50 50 0 0 1 56.7 125" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M56.7 125 L65 125 M56.7 125 L53 132" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <path d="M56.7 125 A 50 50 0 0 1 100 50" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M100 50 L100 58 M100 50 L93 46" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <rect x="90" y="85" width="20" height="25" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M96 92 L104 92 M96 98 L104 98" stroke="#9C7B52" strokeWidth="1" />
+        </svg>
+      )
+    }
+  ];
+
+  return (
+    <section id="how-it-works" className="bg-porcelain pt-16 md:pt-32 pb-16 md:pb-32 px-6 md:px-12 relative z-10 scroll-mt-24">
+      <div className="max-w-6xl mx-auto mb-16">
+        <div className="who-header text-center mb-16 flex flex-col items-center">
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">How It Works</h2>
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. <span className="text-bronze italic">You live it.</span></h3>
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto relative flex flex-col pb-16">
+        {steps.map((step, idx) => (
+          <div
+            key={idx}
+            className="w-full bg-surface rounded-[3rem] shadow-sm border border-graphite/5 p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-16 transform relative overflow-hidden mb-8 md:sticky group"
+            style={{
+              top: `calc(120px + ${idx * 30}px)`
+            }}
+          >
+            <div className="w-full md:w-1/2 relative z-10">
+              <span className="font-data text-5xl text-bronze/20 mb-6 block transition-colors duration-700 group-hover:text-bronze/40">{step.num}</span>
+              <h4 className="text-3xl font-sans font-medium mb-2 text-ink">{step.title}</h4>
+              <p className="text-bronze font-sans text-lg mb-6">{step.subtitle}</p>
+              <p className="text-graphite font-sans leading-relaxed text-lg">{step.desc}</p>
+            </div>
+            <div className={`w-full md:w-1/2 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden relative z-10 hidden md:flex items-center justify-center border border-graphite/10 bg-[#0E1014]`}>
+              <div className="w-48 h-48 md:w-64 md:h-64">
+                {step.svg}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function About() {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from('.about-item', {
+        scrollTrigger: { trigger: aboutRef.current, start: 'top 85%' },
+        y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
+      });
+    }, aboutRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section id="about" ref={aboutRef} className="py-16 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 scroll-mt-24">
+      <div className="max-w-5xl mx-auto">
+        {/* Main card */}
+        <div className="about-item relative rounded-[2.5rem] overflow-hidden border border-graphite/8 shadow-xl"
+          style={{ background: 'linear-gradient(150deg, #1a1c1f 0%, #16181B 60%, #1e1a15 100%)' }}>
+          
+          {/* Subtle bronze glow top-right */}
+          <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
+
+              <div className="relative z-10 p-6 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            {/* Photo Column */}
+            <div className="w-full max-w-xs mx-auto md:w-[310px] md:max-w-none md:mx-0 flex-shrink-0">
+              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
+                <img
+                  src="/martin.jpg"
+                  alt="Martin Popiel - Founder"
+                  className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85] group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent pointer-events-none"></div>
+              </div>
+            </div>
+
+            {/* Content Column */}
+            <div className="about-item flex-grow pt-2 flex flex-col">
+              <span className="font-data text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-4 block">The Architect</span>
+              
+              <div className="mb-8">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-2">
+                  Martin Popiel, CPA
+                </h2>
+                <p className="text-white/40 font-sans text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
+              </div>
+              
+              <div className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-8">
+                <p>
+                  Martin built Blueprint after navigating the friction of multinational business across three continents. Frustrated by a disconnected advisory world—one firm for tax, another for residency, none of them talking—he created the firm he wished existed: a single team that coordinates your entire global structure under one roof.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-x-2.5 gap-y-3">
+                {[
+                  { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
+                  { icon: <Globe size={14} />, label: "3 Languages" },
+                  { icon: <MapPin size={14} />, label: "40+ Countries" },
+                  { icon: <Users size={14} />, label: "Global Partner Network" }
+                ].map((badge, i) => (
+                  <span key={i} className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
+                    <span className="text-bronze">{badge.icon}</span>
+                    {badge.label}
+                  </span>
+                ))}
+                
+                <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" 
+                  className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/90 border border-[#0a66c2]/30 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FAQ() {
+  const faqRef = useRef(null);
+  const [openIdx, setOpenIdx] = React.useState(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from('.faq-header', {
+        scrollTrigger: { trigger: faqRef.current, start: 'top 80%' },
+        y: 30, opacity: 0, duration: 1, ease: 'power3.out'
+      });
+      gsap.from('.faq-item', {
+        scrollTrigger: { trigger: faqRef.current, start: 'top 70%' },
+        y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
+      });
+    }, faqRef);
+    return () => ctx.revert();
+  }, []);
+
+  const questions = [
+    {
+      icon: <Scale size={18} className="text-bronze flex-shrink-0" />,
+      q: "Is this legal?",
+      a: "Yes, fully. Every structure we coordinate is built on established legal frameworks, implemented by licensed professionals in each jurisdiction. We work with tax attorneys, immigration lawyers, and banking compliance officers to ensure everything is transparent and above board."
+    },
+    {
+      icon: <Clock size={18} className="text-bronze flex-shrink-0" />,
+      q: "How long does this take?",
+      a: "It depends on your situation. Some structures can be in place within 6 months. More complex, multi-jurisdiction roadmaps can take a year or longer. We scope the timeline during your initial assessment."
+    },
+    {
+      icon: <Coins size={18} className="text-bronze flex-shrink-0" />,
+      q: "How much does it cost?",
+      a: "It depends on the scope. A single residency application is different from a full multi-jurisdiction structure. We provide a clear quote after the initial assessment: no hidden fees, no hourly billing surprises."
+    },
+    {
+      icon: <Users size={18} className="text-bronze flex-shrink-0" />,
+      q: "I already have an accountant and lawyer. Do I still need this?",
+      a: "Probably. Your local accountant and lawyer are great for domestic matters. But cross-border structuring requires coordination across multiple jurisdictions: that's the gap Blueprint fills. We work alongside your existing team, not against them."
+    },
+    {
+      icon: <RefreshCw size={18} className="text-bronze flex-shrink-0" />,
+      q: "What if my situation changes after we build the structure?",
+      a: "That's what the Maintain phase is for. Laws change, life changes. We handle renewals, annual filings, and structural adjustments so everything stays current and compliant."
+    }
+  ];
+
+  return (
+    <section id="faq" ref={faqRef} className="py-16 md:py-32 px-6 md:px-12 bg-ink text-surface relative z-10 border-t border-surface/5 scroll-mt-24">
+      <div className="max-w-3xl mx-auto">
+        <div className="faq-header mb-16 text-center">
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">FAQ</h2>
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-surface">Common Questions</h3>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          {questions.map((item, idx) => {
+            const isOpen = openIdx === idx;
+            return (
+              <div 
+                key={idx} 
+                className={`faq-item border ${isOpen ? 'border-surface/20 bg-surface/[0.04]' : 'border-surface/10 bg-surface/[0.01] hover:bg-surface/[0.03]'} rounded-2xl transition-colors cursor-pointer overflow-hidden`}
+                onClick={() => setOpenIdx(isOpen ? null : idx)}
+              >
+                <div className="flex items-center justify-between p-6">
+                  <div className="flex items-center gap-4 text-surface">
+                    {item.icon}
+                    <h4 className="text-lg md:text-xl font-sans font-medium">{item.q}</h4>
+                  </div>
+                  <ChevronDown size={20} className={`text-surface/40 transform transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                </div>
+                <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                  <div className="overflow-hidden">
+                    <p className="text-surface/60 font-sans leading-relaxed text-[15px] p-6 pt-0 pl-[52px]">{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="bg-ink text-surface pt-24 pb-12 px-6 md:px-12 relative z-10 border-t border-bronze/10 overflow-hidden">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20 border-b border-surface/10 pb-16">
+        <div className="w-full md:w-1/3">
+          <div className="font-sans font-semibold text-2xl tracking-tight mb-4">Blueprint Global</div>
+          <p className="font-sans text-surface/60 text-[15px] leading-relaxed max-w-sm">
+            One firm. One plan. Your entire international structure: designed, built, and maintained under one roof.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-10 md:gap-32">
+          <div className="flex flex-col gap-4">
+            <span className="font-data text-xs uppercase tracking-widest text-bronze mb-2">Services</span>
+            <a href="#education" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">What We Do</a>
+            <a href="#how-it-works" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">How It Works</a>
+            <a href="#about" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">About</a>
+          </div>
+          <div className="flex flex-col gap-4">
+            <span className="font-data text-xs uppercase tracking-widest text-bronze mb-2">Platform</span>
+            <a href="https://app.blueprintglobal.io/onboarding" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">Try the Demo</a>
+            <a href="https://app.blueprintglobal.io/dashboard" className="font-sans text-[15px] text-surface/80 hover:text-white transition-colors">Client Login</a>
+          </div>
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto mb-8">
+        <p className="font-sans text-surface/30 text-xs leading-relaxed max-w-4xl">
+          Blueprint Global coordinates international structuring and project-manages the implementation process. We do not provide tax, legal, investment, or immigration advice. All advisory services are delivered by licensed professionals in their respective jurisdictions. Past outcomes do not guarantee future results. Each client's structure depends on their individual circumstances.
+        </p>
+      </div>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-sans text-surface/40">
+        <p>&copy; {new Date().getFullYear()} Blueprint Group LLC. All rights reserved.</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-surface transition-colors">Privacy Policy</a>
+          <a href="#" className="hover:text-surface transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function BlueprintThread() {
+  return (
+    <div className="hidden md:block fixed left-[60px] lg:left-[80px] top-0 h-screen w-px bg-bronze/15 z-0 pointer-events-none"></div>
+  );
+}
+
+export default function App() {
+  return (
+    <div className="bg-ink min-h-screen font-sans selection:bg-bronze/30 selection:text-white">
+      <BlueprintThread />
+      <Navbar />
+      <Hero />
+      <TrustBand />
+      <Education />
+      
+      <WhatYouGet />
+      
+      <MidPageCTA 
+        headline="Start Your Blueprint" 
+        buttonText="Start Your Blueprint"
+        buttonLink="https://app.blueprintglobal.io/onboarding"
+        subheadline="Built for globally mobile founders and families."
+        dark 
+      />
+      
+      <WhoThisIsFor />
+      <HowItWorks />
+      
+      <About />
+      <FAQ />
+      <Footer />
+    </div>
+  );
+}

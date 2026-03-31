@@ -89,7 +89,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[85dvh] lg:min-h-[80dvh] pb-8 md:pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[70dvh] lg:min-h-[80dvh] pb-4 md:pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-24 lg:pt-32 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -123,21 +123,21 @@ function Hero() {
 
 function TrustBand() {
   return (
-    <section className="bg-ink py-10 md:py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
+    <section className="bg-ink py-12 md:py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:flex md:flex-row md:justify-center md:items-center md:gap-16">
-          <div className="flex items-center gap-3 group justify-center sm:justify-start">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+          <div className="flex items-center gap-3 group">
             <ShieldCheck size={18} className="text-bronze group-hover:scale-110 transition-transform" />
             <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group justify-center sm:justify-start">
+          <div className="flex items-center gap-3 group">
             <Globe size={18} className="text-bronze group-hover:scale-110 transition-transform" />
             <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group justify-center sm:justify-start">
+          <div className="flex items-center gap-3 group">
             <Lock size={18} className="text-bronze group-hover:scale-110 transition-transform" />
             <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
           </div>
@@ -240,7 +240,7 @@ function WhatYouGet() {
         scrollTrigger: { trigger: getRef.current, start: 'top 80%' },
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
-      gsap.from('.get-card-wrapper', {
+      gsap.from('.get-row-wrapper', {
         scrollTrigger: { trigger: getRef.current, start: 'top 70%' },
         y: 40, opacity: 0, duration: 1, stagger: 0.12, ease: 'power3.out'
       });
@@ -249,12 +249,12 @@ function WhatYouGet() {
   }, []);
 
   const deliverables = [
-    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "STRATEGIC BLUEPRINT", desc: "A custom roadmap for your international life. No generic templates—just a clear plan built for your specific situation." },
-    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "GLOBAL BANKING", desc: "We take care of opening bank accounts abroad. We get you verified and set up in the world's most stable countries." },
-    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "ENTITY SETUP", desc: "We set up and coordinate your companies or trusts. We make sure everything is registered correctly and works for you." },
-    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "RESIDENCY & CITIZENSHIP", desc: "We handle the paperwork for your new residency or citizenship. We work with local experts so you don't have to." },
-    { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "COMPLIANCE & REPORTING", desc: "We track your global tax filings and reports. We stay on top of the rules so your structure stays legal and safe." },
-    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "ONGOING SUPPORT", desc: "As laws and your life change, we update your structure. We make sure your international setup stays efficient and secure." },
+    { num: '01', icon: <Map className="text-bronze" size={20} strokeWidth={1.5} />, title: "STRATEGIC BLUEPRINT", desc: "A custom roadmap for your international life. No generic templates—just a clear plan built for your specific situation." },
+    { num: '02', icon: <Landmark className="text-bronze" size={20} strokeWidth={1.5} />, title: "GLOBAL BANKING", desc: "We take care of opening bank accounts abroad. We get you verified and set up in the world's most stable countries." },
+    { num: '03', icon: <Building2 className="text-bronze" size={20} strokeWidth={1.5} />, title: "ENTITY SETUP", desc: "We set up and coordinate your companies or trusts. We make sure everything is registered correctly and works for you." },
+    { num: '04', icon: <FileCheck className="text-bronze" size={20} strokeWidth={1.5} />, title: "RESIDENCY & CITIZENSHIP", desc: "We handle the paperwork for your new residency or citizenship. We work with local experts so you don't have to." },
+    { num: '05', icon: <ShieldCheck className="text-bronze" size={20} strokeWidth={1.5} />, title: "COMPLIANCE & REPORTING", desc: "We track your global tax filings and reports. We stay on top of the rules so your structure stays legal and safe." },
+    { num: '06', icon: <Settings className="text-bronze" size={20} strokeWidth={1.5} />, title: "ONGOING SUPPORT", desc: "As laws and your life change, we update your structure. We make sure your international setup stays efficient and secure." },
   ];
 
   return (
@@ -262,7 +262,7 @@ function WhatYouGet() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12 md:mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-5">What You Get</h2>
-          <h3 className="text-[1.75rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
+          <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink">Strategic implementation.</span>
             <span className="block text-bronze mt-2 md:mt-4 font-medium">Everything, coordinated.</span>
           </h3>
@@ -270,18 +270,18 @@ function WhatYouGet() {
 
         <div className="flex flex-col max-w-5xl mx-auto border-t border-ink/5">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-row-wrapper border-b border-ink/5 py-8 md:py-10 group hover:bg-ink/[0.012] transition-colors">
-              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 group">
-                <div className="flex items-center gap-6 md:w-24 flex-shrink-0">
-                  <span className="font-data text-4xl md:text-5xl text-bronze/20 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
-                  <div className="w-px h-10 bg-bronze/15 hidden md:block group-hover:bg-bronze transition-colors"></div>
+            <div key={idx} className="get-row-wrapper border-b border-ink/5 py-6 md:py-8 group hover:bg-ink/[0.012] transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 group">
+                <div className="flex items-center gap-4 md:w-24 flex-shrink-0">
+                  <span className="font-data text-3xl md:text-5xl text-bronze/20 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
+                  <div className="w-px h-8 bg-bronze/15 hidden md:block group-hover:bg-bronze transition-colors"></div>
                 </div>
                 
                 <div className="flex-grow">
-                  <h4 className="text-xl md:text-2xl font-sans font-bold text-bronze mb-2 tracking-tight uppercase group-hover:text-bronze/80 transition-colors duration-300">
+                  <h4 className="text-lg md:text-2xl font-sans font-bold text-bronze mb-1 tracking-tight uppercase group-hover:text-bronze/80 transition-colors duration-300">
                     {item.title}
                   </h4>
-                  <p className="text-graphite/70 font-sans leading-relaxed text-[15px] md:text-[17px] max-w-4xl group-hover:text-graphite transition-colors">
+                  <p className="text-graphite/70 font-sans leading-relaxed text-sm md:text-[17px] max-w-4xl group-hover:text-graphite transition-colors">
                     {item.desc}
                   </p>
                 </div>
@@ -361,6 +361,18 @@ function WhoThisIsFor() {
 }
 
 function HowItWorks() {
+  const howRef = useRef(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from('.how-step', {
+        scrollTrigger: { trigger: howRef.current, start: 'top 75%' },
+        y: 40, opacity: 0, duration: 1, stagger: 0.2, ease: 'power3.out'
+      });
+    }, howRef);
+    return () => ctx.revert();
+  }, []);
+
   const steps = [
     {
       num: "01",
@@ -419,7 +431,7 @@ function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-porcelain pt-16 md:pt-32 pb-16 md:pb-32 px-6 md:px-12 relative z-10 scroll-mt-24">
+    <section id="how-it-works" ref={howRef} className="bg-porcelain pt-16 md:pt-32 pb-16 md:pb-32 px-6 md:px-12 relative z-10 scroll-mt-24">
       <div className="max-w-6xl mx-auto mb-12 md:mb-16">
         <div className="who-header text-center mb-12 md:mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-5">How It Works</h2>
@@ -431,7 +443,7 @@ function HowItWorks() {
         {steps.map((step, idx) => (
           <div
             key={idx}
-            className="w-full bg-surface rounded-[2.5rem] md:rounded-[3rem] shadow-sm border border-graphite/5 p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-16 transform relative overflow-hidden mb-6 md:mb-8 md:sticky group"
+            className="how-step w-full bg-surface rounded-[2.5rem] md:rounded-[3rem] shadow-sm border border-graphite/5 p-8 md:p-16 flex flex-col md:flex-row items-center gap-8 md:gap-16 transform relative overflow-hidden mb-6 md:mb-8 sticky group"
             style={{
               top: `calc(100px + ${idx * 20}px)`
             }}
@@ -468,19 +480,19 @@ function About() {
   }, []);
 
   return (
-    <section id="about" ref={aboutRef} className="py-16 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 scroll-mt-24">
+    <section id="about" ref={aboutRef} className="py-20 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 scroll-mt-24">
       <div className="max-w-5xl mx-auto">
         {/* Main card */}
-        <div className="about-item relative rounded-[2.5rem] overflow-hidden border border-graphite/8 shadow-xl"
+        <div className="about-item relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-graphite/8 shadow-xl"
           style={{ background: 'linear-gradient(150deg, #1a1c1f 0%, #16181B 60%, #1e1a15 100%)' }}>
           
           {/* Subtle bronze glow top-right */}
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-              <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+          <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
             {/* Photo Column */}
-            <div className="w-full md:w-[310px] flex-shrink-0">
+            <div className="w-full md:w-[240px] flex-shrink-0">
               <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
                 <img
                   src="/martin.jpg"
@@ -493,18 +505,21 @@ function About() {
 
             {/* Content Column */}
             <div className="about-item flex-grow pt-2 flex flex-col">
-              <span className="font-data text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-4 block">The Architect</span>
+              <span className="font-data text-[14px] md:text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-4 block">The Architect</span>
               
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-2">
                   Martin Popiel, CPA
                 </h2>
-                <p className="text-white/40 font-sans text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
+                <p className="text-white/40 font-sans text-[12px] md:text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
               </div>
               
               <div className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-8">
+                <p className="mb-6">
+                  Martin holds multiple citizenships and manages residencies across three continents. He didn't study international structuring — he lives inside it.
+                </p>
                 <p>
-                  Martin built Blueprint after navigating the friction of multinational business across three continents. Frustrated by a disconnected advisory world—one firm for tax, another for residency, none of them talking—he created the firm he wished existed: a single team that coordinates your entire global structure under one roof.
+                  He built Blueprint because no single firm could see his full picture — one for tax, another for residency, another for banking, none of them talking. Blueprint is the team that coordinates everything under one roof.
                 </p>
               </div>
 
@@ -512,8 +527,7 @@ function About() {
                 {[
                   { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
                   { icon: <Globe size={14} />, label: "3 Languages" },
-                  { icon: <MapPin size={14} />, label: "40+ Countries" },
-                  { icon: <Users size={14} />, label: "Global Partner Network" }
+                  { icon: <MapPin size={14} />, label: "40+ Countries" }
                 ].map((badge, i) => (
                   <span key={i} className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
                     <span className="text-bronze">{badge.icon}</span>
