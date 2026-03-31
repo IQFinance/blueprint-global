@@ -340,9 +340,9 @@ function WhoThisIsFor() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
           {profiles.map((profile, idx) => (
-            <div key={idx} className="who-card-wrapper h-full">
+            <div key={idx} className="who-card-wrapper h-full sticky md:relative mb-4 md:mb-0" style={{ top: `calc(100px + ${idx * 15}px)` }}>
               <div className="group relative h-full flex flex-col p-8 rounded-[2rem] border border-white/10 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30"
-                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)', backdropFilter: 'blur(10px)' }}>
+                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)', backdropFilter: 'blur(12px)' }}>
                 
                 <div className="relative z-10 flex items-start justify-between mb-8">
                   <div className="who-icon w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
@@ -355,8 +355,6 @@ function WhoThisIsFor() {
                 <p className="text-surface/60 font-sans leading-relaxed text-[15px] group-hover:text-surface/90 transition-colors duration-300 relative z-10 flex-grow">
                   {profile.desc}
                 </p>
-                
-
               </div>
             </div>
           ))}
