@@ -90,7 +90,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-screen pb-4 md:pb-16 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-32 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[85vh] pb-4 md:pb-12 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -100,7 +100,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48 mt-auto pb-10 md:pb-0">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48 mt-auto pb-10 md:pb-24">
         <div className="max-w-none">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
@@ -193,17 +193,17 @@ function Education() {
   ];
 
   return (
-    <section ref={eduRef} id="education" className="py-20 md:py-32 px-6 md:px-12 bg-porcelain relative overflow-hidden">
+    <section ref={eduRef} id="education" className="py-12 md:py-32 px-6 md:px-12 bg-porcelain relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="edu-header mb-16 md:mb-20 text-center flex flex-col items-center">
+        <div className="edu-header mb-8 md:mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What We Do</h2>
-          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
-            <span className="block text-ink mb-4 md:mb-6">We build your international life.</span>
+          <h3 className="text-[1.65rem] sm:text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
+            <span className="block text-ink mb-4 md:mb-6 whitespace-nowrap">We build your international life.</span>
             <span className="block text-bronze text-[2.2rem] md:text-6xl lg:text-[64px] font-medium">You live it.</span>
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 lg:gap-20">
           {pillars.map((pillar, pIdx) => (
             <div key={pIdx} className="edu-pillar flex flex-col">
               <h4 className="font-sans font-bold text-xl md:text-2xl text-bronze mb-4 tracking-tight uppercase whitespace-nowrap text-center">{pillar.title}</h4>
@@ -211,7 +211,7 @@ function Education() {
               
               <div className="flex flex-col gap-10">
                 {pillar.items.map((item, iIdx) => (
-                  <div key={iIdx} className="group pb-10 border-b border-graphite/5 last:border-0 last:pb-0">
+                  <div key={iIdx} className="group pb-6 border-b border-graphite/5 last:border-0 last:pb-0">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-bronze group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
                       <span className="font-sans font-medium text-ink text-base md:text-lg">{item.title}</span>
@@ -259,19 +259,19 @@ function WhatYouGet() {
   ];
 
   return (
-    <section id="what-you-get" ref={getRef} className="py-20 md:py-32 px-6 md:px-12 bg-porcelain scroll-mt-24">
+    <section id="what-you-get" ref={getRef} className="py-12 md:py-32 px-6 md:px-12 bg-porcelain scroll-mt-24">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 md:mb-16 flex flex-col items-center">
+        <div className="text-center mb-8 md:mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
           <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
-            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-bold">Everything, coordinated.</span>
+            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-medium md:font-bold">Everything, coordinated.</span>
           </h3>
         </div>
 
         <div className="flex flex-col max-w-5xl mx-auto border-t border-ink/5">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-row-wrapper border-b border-ink/5 py-6 md:py-8 group hover:bg-ink/[0.012] transition-colors">
+            <div key={idx} className="get-row-wrapper border-b border-ink/5 py-4 md:py-8 group hover:bg-ink/[0.012] transition-colors">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 group">
                 <div className="flex items-center gap-4 md:w-24 flex-shrink-0">
                   <span className="font-data text-3xl md:text-5xl text-bronze/20 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
