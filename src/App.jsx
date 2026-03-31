@@ -300,18 +300,46 @@ function WhoThisIsFor() {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
+      // Header animation
       gsap.from('.who-header', {
-        scrollTrigger: { trigger: whoRef.current, start: 'top 80%' },
-        y: 30, opacity: 0, duration: 1, ease: 'power3.out'
+        scrollTrigger: { 
+          trigger: whoRef.current, 
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        },
+        y: 30, 
+        opacity: 0, 
+        duration: 1, 
+        ease: 'power3.out'
       });
+
+      // Card animations - targeting the wrapper
       gsap.from('.who-card-wrapper', {
-        scrollTrigger: { trigger: whoRef.current, start: 'top 75%' },
-        y: 40, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out'
+        scrollTrigger: { 
+          trigger: whoRef.current, 
+          start: 'top 75%',
+          toggleActions: 'play none none none'
+        },
+        y: 50, 
+        opacity: 0, 
+        duration: 1, 
+        stagger: 0.15, 
+        ease: 'power3.out'
       });
-      // Subtle scale-in on the icon circles
+
+      // Icon pop animation
       gsap.from('.who-icon', {
-        scrollTrigger: { trigger: whoRef.current, start: 'top 70%' },
-        scale: 0.5, opacity: 0, duration: 0.6, stagger: 0.12, ease: 'back.out(1.7)'
+        scrollTrigger: { 
+          trigger: whoRef.current, 
+          start: 'top 70%',
+          toggleActions: 'play none none none'
+        },
+        scale: 0, 
+        opacity: 0, 
+        duration: 0.8, 
+        stagger: 0.15, 
+        ease: 'back.out(1.7)',
+        delay: 0.2
       });
     }, whoRef);
     return () => ctx.revert();
