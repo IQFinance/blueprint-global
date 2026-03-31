@@ -1,21 +1,22 @@
 import React, { useEffect, useRef } from 'react';
-import { ShieldCheck, Globe, Briefcase, ArrowRight, Compass, Network, Vault, Landmark, Lock, Coins, HeartPulse, GraduationCap, Scale, CheckCircle, FileText, MapPin } from 'lucide-react';
+import { ShieldCheck, Globe, Briefcase, ArrowRight, Compass, Network, Vault, Landmark, Lock, Coins, HeartPulse, GraduationCap, Scale, CheckCircle, FileText, MapPin, Menu, X, ChevronDown, Clock, Users, RefreshCw } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function MidPageCTA({ headline, dark = false }) {
+function MidPageCTA({ headline, subheadline, buttonText = "Try the Demo", buttonLink = "https://app.blueprintglobal.io/onboarding", dark = false }) {
   const bg = dark ? 'bg-ink border-surface/10' : 'bg-porcelain border-graphite/10';
-  const sub = dark ? 'text-surface/60' : 'text-graphite';
+  const textPrimary = dark ? 'text-surface' : 'text-ink';
+  const textSub = dark ? 'text-surface/60' : 'text-graphite';
   return (
-    <section className={`${bg} py-12 px-6 md:px-12 border-t border-b relative z-10`}>
+    <section className={`${bg} py-20 px-6 md:px-12 border-t border-b relative z-10`}>
       <div className="max-w-3xl mx-auto text-center">
-        <p className={`${sub} font-sans text-lg mb-6`}>{headline}</p>
-        <a href="https://app.blueprintglobal.io/onboarding" className="inline-flex items-center gap-2 bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:scale-[1.02] transition-transform shadow-sm">
-          Try the Demo <ArrowRight size={16} />
+        <h3 className={`font-sans ${textPrimary} mb-10 ${dark ? 'text-4xl md:text-5xl font-medium tracking-tight' : 'text-2xl md:text-3xl font-medium'}`}>{headline}</h3>
+        <a href={buttonLink} className="group inline-flex items-center gap-2 bg-bronze text-white px-8 py-4 rounded-[2rem] text-sm font-medium hover:bg-bronze/90 transition-all shadow-lg shadow-bronze/20">
+          {buttonText} <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </a>
-        <p className={`${sub} font-data text-xs uppercase tracking-widest mt-6 opacity-60`}>Free. No account required.</p>
+        {subheadline && <p className={`${textSub} font-data text-xs uppercase tracking-widest mt-6 opacity-80`}>{subheadline}</p>}
       </div>
     </section>
   );
@@ -23,6 +24,7 @@ function MidPageCTA({ headline, dark = false }) {
 
 function Navbar() {
   const [scrolled, setScrolled] = React.useState(false);
+  const [menuOpen, setMenuOpen] = React.useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -31,21 +33,41 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-40 transition-all duration-500 rounded-[2rem] px-6 py-3 flex items-center justify-between w-[90%] max-w-6xl ${scrolled ? 'bg-porcelain/90 backdrop-blur-md shadow-sm border border-graphite/5' : 'bg-transparent'}`}>
-      <div className={`font-sans font-semibold text-xl tracking-tight ${scrolled ? 'text-ink' : 'text-porcelain'} transition-colors duration-500`}>Blueprint Global</div>
-      <div className={`hidden md:flex items-center gap-8 text-sm font-medium ${scrolled ? 'text-ink' : 'text-porcelain/90'} transition-colors duration-500`}>
-        <a href="#education" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">What We Do</a>
-        <a href="#how-it-works" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">How It Works</a>
-        <a href="#about" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">About</a>
-      </div>
-      <div className="flex items-center gap-4">
+    <>
+      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-[2rem] px-6 py-3 flex items-center justify-between w-[90%] max-w-6xl ${scrolled ? 'bg-porcelain/90 backdrop-blur-md shadow-sm border border-graphite/5' : 'bg-transparent'}`}>
+        <div className={`font-sans font-semibold text-xl tracking-tight ${scrolled ? 'text-ink' : 'text-porcelain'} transition-colors duration-500`}>Blueprint Global</div>
+        <div className={`hidden md:flex items-center gap-8 text-sm font-medium ${scrolled ? 'text-ink' : 'text-porcelain/90'} transition-colors duration-500`}>
+          <a href="#education" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">What We Do</a>
+          <a href="#how-it-works" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">How It Works</a>
+          <a href="#about" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">About</a>
+        </div>
+        <div className="flex items-center gap-4">
         <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
-        <a href="https://app.blueprintglobal.io/onboarding" className="bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform shadow-sm">
+        <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
           <span>Try the Demo</span>
-          <ArrowRight size={16} />
+          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </a>
       </div>
-    </nav>
+        <button className={`md:hidden p-1 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'}`} onClick={() => setMenuOpen(true)}>
+          <Menu size={24} />
+        </button>
+      </nav>
+
+      <div className={`fixed inset-0 bg-ink z-50 transition-transform duration-500 flex flex-col pt-24 px-8 ${menuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
+        <button className="absolute top-8 right-8 text-surface p-2" onClick={() => setMenuOpen(false)}>
+          <X size={28} />
+        </button>
+        <div className="flex flex-col gap-8 text-2xl font-sans font-medium text-surface">
+          <a href="#education" onClick={() => setMenuOpen(false)} className="border-b border-surface/10 pb-4 hover:text-bronze transition-colors">What We Do</a>
+          <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="border-b border-surface/10 pb-4 hover:text-bronze transition-colors">How It Works</a>
+          <a href="#about" onClick={() => setMenuOpen(false)} className="border-b border-surface/10 pb-4 hover:text-bronze transition-colors">About</a>
+          <a href="https://app.blueprintglobal.io/dashboard" onClick={() => setMenuOpen(false)} className="text-bronze mt-4">Client Login</a>
+          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-6 py-4 rounded-[2rem] text-lg mt-4 flex items-center justify-between hover:bg-white transition-colors">
+            Try the Demo <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -76,25 +98,25 @@ function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mt-[-5dvh]">
-        <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-6 text-balance">
-          <span className="block hero-text font-sans font-medium">Your entire life is tied to one country.</span>
-          <span className="block hero-text font-sans font-medium mt-2">It doesn't have to be.</span>
+        <h1 className="text-5xl md:text-7xl lg:text-[6rem] leading-[1.05] tracking-tight mb-6 text-balance">
+          <span className="block hero-text font-sans font-medium bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">Your entire life is tied</span>
+          <span className="block hero-text font-sans font-medium text-surface mt-1 md:mt-2">to one country. <span className="text-white/40">It doesn't have to be.</span></span>
         </h1>
         <p className="hero-text font-drama italic text-2xl md:text-3xl text-bronze mb-6 max-w-3xl">
           We build your international life. You live it.
         </p>
-        <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-10">
+        <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-12">
           Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families. Legally, under one roof.
         </p>
-        <div className="hero-text flex gap-4">
-          <a href="https://app.blueprintglobal.io/onboarding" className="bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:scale-[1.02] transition-transform">
+        <div className="hero-text flex flex-col sm:flex-row gap-4">
+          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5">
             Try the Demo
-            <ArrowRight size={16} />
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a href="#how-it-works" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/10 hover:border-white transition-all">
+            See How It Works
           </a>
         </div>
-        <p className="hero-text text-xs text-porcelain/40 font-sans mt-4 max-w-lg">
-          Blueprint Global coordinates international structuring. We do not provide tax, legal, or investment advice. All structures are implemented by licensed professionals in their respective jurisdictions.
-        </p>
       </div>
     </section>
   );
@@ -106,15 +128,24 @@ function TrustBand() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight">One Firm. The Full Picture.</span>
+          <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight flex items-center gap-2">
+            <ShieldCheck size={20} className="text-bronze flex-shrink-0" />
+            One Firm. The Full Picture.
+          </span>
         </div>
         <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">CPA-Led</span>
+          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
+            <Briefcase size={20} className="text-bronze flex-shrink-0" />
+            CPA-Led
+          </span>
         </div>
         <div className="flex flex-col w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
-          <span className="text-3xl font-sans mt-2 text-surface tracking-tight">Compliance-First</span>
+          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
+            <FileText size={20} className="text-bronze flex-shrink-0" />
+            Compliance-First
+          </span>
         </div>
       </div>
     </section>
@@ -203,20 +234,30 @@ function Education() {
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Most people don't know these problems exist — until they're stuck.</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-6">
           {cards.map((card, idx) => (
-            <div key={idx} className="edu-card flex flex-col h-full bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-              <div className="w-14 h-14 rounded-full bg-porcelain flex items-center justify-center mb-8 text-bronze">
-                {card.icon}
+            <div key={idx} className="edu-card group flex flex-col bg-white p-6 rounded-[2rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 overflow-hidden cursor-default">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-porcelain flex items-center justify-center text-bronze flex-shrink-0">
+                  {card.icon}
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-sans font-medium text-ink">{card.title}</h4>
+                  <p className="text-graphite text-xs line-clamp-1 mt-0.5 group-hover:hidden transition-all">{card.problem}</p>
+                </div>
               </div>
-              <h4 className="text-2xl font-sans font-medium mb-4 text-ink">{card.title}</h4>
-              <div className="h-px w-full bg-graphite/10 mb-5"></div>
-              <p className="text-graphite font-sans leading-relaxed text-[15px] mb-4">
-                <span className="font-medium text-ink">The problem:</span> {card.problem}
-              </p>
-              <p className="text-graphite font-sans leading-relaxed text-[15px] flex-grow">
-                <span className="font-medium text-ink">What we do:</span> {card.solution}
-              </p>
+              <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                <div className="overflow-hidden">
+                  <div className="pt-5 mt-4 border-t border-graphite/5">
+                    <p className="text-graphite font-sans leading-relaxed text-[14px] mb-3">
+                      <span className="font-medium text-ink">The problem:</span> {card.problem}
+                    </p>
+                    <p className="text-graphite font-sans leading-relaxed text-[14px]">
+                      <span className="font-medium text-ink">What we do:</span> {card.solution}
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -225,40 +266,7 @@ function Education() {
   );
 }
 
-function Bridge() {
-  const bridgeRef = useRef(null);
 
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from('.bridge-text', {
-        scrollTrigger: { trigger: bridgeRef.current, start: 'top 75%' },
-        y: 40, opacity: 0, duration: 1.2, stagger: 0.1, ease: 'power3.out'
-      });
-    }, bridgeRef);
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <section ref={bridgeRef} className="relative py-24 px-6 md:px-12 bg-ink text-surface overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop"
-          alt="Abstract architecture texture"
-          className="w-full h-full object-cover opacity-[0.08]"
-        />
-      </div>
-      <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <p className="bridge-text font-sans text-xl md:text-3xl text-surface/60 font-light mb-8 max-w-3xl mx-auto leading-relaxed">
-          Knowing the problems is step one.
-        </p>
-        <p className="bridge-text font-drama italic text-4xl md:text-6xl text-bronze mb-12 max-w-4xl mx-auto leading-tight">
-          Here's what you actually walk away with.
-        </p>
-        <div className="bridge-text h-16 w-px bg-bronze/50 mx-auto"></div>
-      </div>
-    </section>
-  );
-}
 
 function WhatYouGet() {
   const getRef = useRef(null);
@@ -318,15 +326,65 @@ function WhatYouGet() {
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Tangible outcomes. Not just advice.</h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-10 max-w-4xl mx-auto">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-card bg-white p-10 rounded-[2.5rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-transform duration-500">
-              <span className="font-data text-4xl text-bronze/20 mb-4 block">{item.num}</span>
-              <h4 className="text-xl font-sans font-medium mb-4 text-ink">{item.title}</h4>
-              <div className="h-px w-full bg-graphite/10 mb-5"></div>
-              <p className="text-graphite font-sans leading-relaxed text-[15px]">{item.desc}</p>
+            <div key={idx} className="get-card flex flex-col md:flex-row items-start gap-6 md:gap-10 group bg-white md:bg-transparent p-8 md:p-0 rounded-[2rem] md:rounded-none border border-graphite/5 md:border-transparent">
+              <span className="font-data text-5xl md:text-6xl text-bronze/30 group-hover:text-bronze/70 transition-colors duration-500 w-20 flex-shrink-0">{item.num}</span>
+              <div className="hidden md:block w-px h-full min-h-[80px] bg-bronze/10 flex-shrink-0 mt-2"></div>
+              <div className="flex-grow md:pt-2">
+                <h4 className="text-xl md:text-2xl font-sans font-medium mb-3 text-ink">{item.title}</h4>
+                <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-lg max-w-2xl">{item.desc}</p>
+              </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SocialProof() {
+  const proofRef = useRef(null);
+  
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from('.proof-stat', {
+        scrollTrigger: { trigger: proofRef.current, start: 'top 85%' },
+        y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
+      });
+    }, proofRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section ref={proofRef} className="bg-ink py-20 px-6 border-t border-b border-surface/5 relative z-10 w-full overflow-hidden">
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
+        {/* Minimal Map SVG representation via dots */}
+        <div className="relative w-full max-w-lg h-32 mb-8 opacity-20 hidden md:block">
+          <svg viewBox="0 0 400 200" className="w-full h-full fill-none stroke-surface stroke-[0.5]">
+            <path d="M50 50 Q 80 40 100 80 T 150 150 T 250 80 T 350 100" />
+            <circle cx="80" cy="70" r="3" className="fill-bronze stroke-none" />
+            <circle cx="140" cy="90" r="3" className="fill-bronze stroke-none" />
+            <circle cx="210" cy="120" r="3" className="fill-bronze stroke-none" />
+            <circle cx="280" cy="60" r="3" className="fill-bronze stroke-none" />
+            <circle cx="320" cy="110" r="3" className="fill-bronze stroke-none" />
+            <circle cx="360" cy="140" r="3" className="fill-bronze stroke-none" />
+          </svg>
+        </div>
+        <p className="font-data text-xs uppercase tracking-widest text-surface/40 mb-10 text-center">Active across 9 jurisdictions on 5 continents</p>
+        <div className="flex flex-wrap justify-center gap-12 md:gap-24 text-center">
+          <div className="proof-stat flex flex-col">
+            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">40+</span>
+            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Countries</span>
+          </div>
+          <div className="proof-stat flex flex-col">
+            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">9</span>
+            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Jurisdictions</span>
+          </div>
+          <div className="proof-stat flex flex-col">
+            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">200+</span>
+            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Structures Designed</span>
+          </div>
         </div>
       </div>
     </section>
@@ -360,8 +418,9 @@ function WhoThisIsFor() {
   ];
 
   return (
-    <section ref={whoRef} className="bg-ink pt-20 pb-24 px-6 md:px-12 relative z-10 border-t border-surface/5">
-      <div className="max-w-4xl mx-auto">
+    <section ref={whoRef} className="bg-ink bg-gradient-to-b from-ink via-[#111316] to-[#0A0B0C] pt-20 pb-24 px-6 md:px-12 relative z-10 border-t border-surface/5 overflow-hidden">
+      <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")', backgroundRepeat: 'repeat' }}></div>
+      <div className="max-w-4xl mx-auto relative z-10">
         <div className="who-header mb-16">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">Who This Is For</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-surface max-w-3xl">
@@ -389,24 +448,54 @@ function HowItWorks() {
       title: "Map",
       subtitle: "We learn your situation.",
       desc: "We start with a detailed assessment: where you live, where your income comes from, what you own, and where you want to go. No recommendations until we understand the full picture.",
-      keyword: "MAP",
-      gradient: "from-bronze/20 via-bronze/5 to-transparent"
+      svg: (
+        <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
+          <circle cx="100" cy="100" r="40" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <circle cx="100" cy="100" r="60" fill="none" stroke="#9C7B52" strokeWidth="1" strokeDasharray="4 4"/>
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#9C7B52" strokeWidth="1" opacity="0.5"/>
+          <circle cx="100" cy="60" r="3" fill="#9C7B52" />
+          <circle cx="160" cy="100" r="3" fill="#9C7B52" />
+          <circle cx="50" cy="130" r="3" fill="#9C7B52" />
+          <circle cx="120" cy="170" r="3" fill="#9C7B52" />
+          <path d="M100 100 L160 100" stroke="#9C7B52" strokeWidth="1" opacity="0.3" />
+          <path d="M100 100 L50 130" stroke="#9C7B52" strokeWidth="1" opacity="0.3" />
+        </svg>
+      )
     },
     {
       num: "02",
       title: "Build",
       subtitle: "We design and execute your structure.",
       desc: "We create your custom blueprint — then execute it. Bank accounts, entities, residency applications, compliance filings. Everything coordinated by one team, in the right sequence.",
-      keyword: "BUILD",
-      gradient: "from-bronze/15 via-ink/10 to-transparent"
+      svg: (
+        <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
+          <rect x="80" y="40" width="40" height="30" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <rect x="40" y="100" width="30" height="40" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <rect x="85" y="100" width="30" height="40" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <rect x="130" y="100" width="30" height="40" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M100 70 L100 85 M100 85 L55 85 L55 100 M100 85 L145 85 L145 100" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <circle cx="100" cy="160" r="15" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M100 140 L100 145" stroke="#9C7B52" strokeWidth="1" />
+        </svg>
+      )
     },
     {
       num: "03",
       title: "Maintain",
       subtitle: "We keep it running.",
       desc: "Laws change. Your life changes. We handle renewals, annual filings, and adjustments so your structure stays current and compliant — without you having to track it all yourself.",
-      keyword: "MAINTAIN",
-      gradient: "from-ink/30 via-bronze/10 to-transparent"
+      svg: (
+        <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
+          <path d="M100 50 A 50 50 0 0 1 143.3 125" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M143.3 125 L135 125 M143.3 125 L147 118" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <path d="M143.3 125 A 50 50 0 0 1 56.7 125" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M56.7 125 L65 125 M56.7 125 L53 132" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <path d="M56.7 125 A 50 50 0 0 1 100 50" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M100 50 L100 58 M100 50 L93 46" stroke="#9C7B52" strokeWidth="1" fill="none" />
+          <rect x="90" y="85" width="20" height="25" fill="none" stroke="#9C7B52" strokeWidth="1" />
+          <path d="M96 92 L104 92 M96 98 L104 98" stroke="#9C7B52" strokeWidth="1" />
+        </svg>
+      )
     }
   ];
 
@@ -432,8 +521,10 @@ function HowItWorks() {
               <p className="text-bronze font-sans text-lg mb-6">{step.subtitle}</p>
               <p className="text-graphite font-sans leading-relaxed text-lg">{step.desc}</p>
             </div>
-            <div className={`w-full md:w-1/2 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden relative z-10 hidden md:flex items-center justify-center border border-graphite/10 bg-[#0E1014] bg-gradient-to-br ${step.gradient}`}>
-              <span className="font-data text-[4rem] md:text-[5rem] tracking-[0.3em] uppercase text-surface/[0.07] select-none">{step.keyword}</span>
+            <div className={`w-full md:w-1/2 h-[300px] md:h-[400px] rounded-[2rem] overflow-hidden relative z-10 hidden md:flex items-center justify-center border border-graphite/10 bg-[#0E1014]`}>
+              <div className="w-48 h-48 md:w-64 md:h-64">
+                {step.svg}
+              </div>
             </div>
           </div>
         ))}
@@ -457,8 +548,8 @@ function About() {
 
   return (
     <section id="about" ref={aboutRef} className="py-24 px-6 md:px-12 bg-porcelain relative z-20">
-      <div className="max-w-4xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col md:flex-row items-start gap-8 md:gap-12">
-        <div className="w-24 h-24 md:w-36 md:h-36 rounded-full overflow-hidden about-item ring-4 ring-porcelain shadow-sm flex-shrink-0">
+      <div className="max-w-5xl mx-auto bg-white rounded-[2.5rem] p-8 md:p-12 border border-graphite/5 shadow-sm flex flex-col md:flex-row items-start gap-8 md:gap-12">
+        <div className="w-40 h-40 md:w-52 md:h-52 rounded-full overflow-hidden about-item ring-2 ring-bronze/30 shadow-sm flex-shrink-0">
           <img
             src="/martin.jpg"
             alt="Martin Popiel - Founder"
@@ -479,13 +570,20 @@ function About() {
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-8">
             Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure every structure holds up.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
+          <div className="flex flex-wrap gap-3 mt-4">
+            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
+              <ShieldCheck size={14} className="text-bronze"/> CPA Ontario
+            </span>
+            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
               <MapPin size={14} className="text-bronze"/> 40+ Countries
             </span>
-            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5">
+            <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
               <Network size={14} className="text-bronze"/> Global Partner Network
             </span>
+            <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#0A66C2]/10 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-[#0A66C2] border border-[#0A66C2]/20 hover:bg-[#0A66C2]/20 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
@@ -495,6 +593,7 @@ function About() {
 
 function FAQ() {
   const faqRef = useRef(null);
+  const [openIdx, setOpenIdx] = React.useState(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -512,42 +611,64 @@ function FAQ() {
 
   const questions = [
     {
+      icon: <Scale size={18} className="text-bronze flex-shrink-0" />,
       q: "Is this legal?",
       a: "Yes. Everything we coordinate is fully legal and compliant. We work with licensed professionals in every jurisdiction — tax attorneys, immigration lawyers, banking compliance officers. There are no grey areas."
     },
     {
+      icon: <Clock size={18} className="text-bronze flex-shrink-0" />,
       q: "How long does this take?",
       a: "It depends on your situation. Some structures can be in place within 6 months. More complex, multi-jurisdiction roadmaps can take a year or longer. We scope the timeline during your initial assessment."
     },
     {
+      icon: <Coins size={18} className="text-bronze flex-shrink-0" />,
       q: "How much does it cost?",
       a: "It depends on the scope. A single residency application is different from a full multi-jurisdiction structure. We provide a clear quote after the initial assessment — no hidden fees, no hourly billing surprises."
     },
     {
+      icon: <Users size={18} className="text-bronze flex-shrink-0" />,
       q: "I already have an accountant and lawyer. Do I still need this?",
       a: "Probably. Your local accountant and lawyer are great for domestic matters. But cross-border structuring requires coordination across multiple jurisdictions — that's the gap Blueprint fills. We work alongside your existing team, not against them."
     },
     {
+      icon: <RefreshCw size={18} className="text-bronze flex-shrink-0" />,
       q: "What if my situation changes after we build the structure?",
       a: "That's what the Maintain phase is for. Laws change, life changes. We handle renewals, annual filings, and structural adjustments so everything stays current and compliant."
     }
   ];
 
   return (
-    <section ref={faqRef} className="py-32 px-6 md:px-12 bg-ink text-surface">
-      <div className="max-w-4xl mx-auto">
-        <div className="faq-header mb-16">
+    <section ref={faqRef} className="py-32 px-6 md:px-12 bg-ink text-surface relative z-10 border-t border-surface/5">
+      <div className="max-w-3xl mx-auto">
+        <div className="faq-header mb-16 text-center">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">FAQ</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-surface">Common Questions</h3>
         </div>
 
-        <div className="flex flex-col gap-10">
-          {questions.map((item, idx) => (
-            <div key={idx} className="faq-item border-b border-surface/10 pb-10">
-              <h4 className="text-xl font-sans font-medium text-surface mb-3">{item.q}</h4>
-              <p className="text-surface/60 font-sans leading-relaxed text-[15px]">{item.a}</p>
-            </div>
-          ))}
+        <div className="flex flex-col gap-4">
+          {questions.map((item, idx) => {
+            const isOpen = openIdx === idx;
+            return (
+              <div 
+                key={idx} 
+                className={`faq-item border ${isOpen ? 'border-surface/20 bg-surface/[0.04]' : 'border-surface/10 bg-surface/[0.01] hover:bg-surface/[0.03]'} rounded-2xl transition-colors cursor-pointer overflow-hidden`}
+                onClick={() => setOpenIdx(isOpen ? null : idx)}
+              >
+                <div className="flex items-center justify-between p-6">
+                  <div className="flex items-center gap-4 text-surface">
+                    {item.icon}
+                    <h4 className="text-lg md:text-xl font-sans font-medium">{item.q}</h4>
+                  </div>
+                  <ChevronDown size={20} className={`text-surface/40 transform transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
+                </div>
+                <div className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+                  <div className="overflow-hidden">
+                    <p className="text-surface/60 font-sans leading-relaxed text-[15px] p-6 pt-0 pl-[52px]">{item.a}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -556,7 +677,7 @@ function FAQ() {
 
 function Footer() {
   return (
-    <footer className="bg-ink text-surface pt-24 pb-12 px-6 md:px-12 rounded-t-[3rem] mt-[-3rem] relative z-20 overflow-hidden">
+    <footer className="bg-ink text-surface pt-24 pb-12 px-6 md:px-12 relative z-10 border-t border-surface/5 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12 mb-20 border-b border-surface/10 pb-16">
         <div className="w-full md:w-1/3">
           <div className="font-sans font-semibold text-2xl tracking-tight mb-4">Blueprint Global</div>
@@ -584,7 +705,7 @@ function Footer() {
         </p>
       </div>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-sans text-surface/40">
-        <p>&copy; {new Date().getFullYear()} Blueprint Group LLC. All rights reserved. CPA Ontario, Canada.</p>
+        <p>&copy; {new Date().getFullYear()} Blueprint Group LLC. All rights reserved.</p>
         <div className="flex gap-6">
           <a href="#" className="hover:text-surface transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-surface transition-colors">Terms of Service</a>
@@ -594,20 +715,44 @@ function Footer() {
   );
 }
 
+function BlueprintThread() {
+  return (
+    <div className="hidden md:block fixed left-[60px] lg:left-[80px] top-0 h-screen w-px bg-bronze/15 z-0 pointer-events-none"></div>
+  );
+}
+
 export default function App() {
   return (
-    <div className="bg-ink min-h-screen">
+    <div className="bg-ink min-h-screen font-sans selection:bg-bronze/30 selection:text-white">
+      <BlueprintThread />
       <Navbar />
       <Hero />
       <TrustBand />
       <Education />
-      <MidPageCTA headline="These problems are solvable. Here's what you walk away with." />
-      <Bridge />
+      <MidPageCTA 
+        headline="These problems are solvable. Here's what you walk away with." 
+        buttonText="Try the Demo"
+        subheadline="Free. No account required."
+      />
+      
       <WhatYouGet />
-      <MidPageCTA headline="Sound like what you need? Let's talk." dark />
+      <SocialProof />
+      
+      <MidPageCTA 
+        headline="Start Your Blueprint" 
+        buttonText="Start Your Blueprint"
+        subheadline="Used by entrepreneurs across 40+ countries."
+        dark 
+      />
+      
       <WhoThisIsFor />
       <HowItWorks />
-      <MidPageCTA headline="Ready to start mapping your structure?" />
+      
+      <MidPageCTA 
+        headline="Ready to start mapping your structure?" 
+        buttonText="Try the Demo"
+        subheadline="It takes 5 minutes."
+      />
       <About />
       <FAQ />
       <Footer />
