@@ -129,34 +129,28 @@ function Hero() {
 
 function TrustBand() {
   return (
-    <section className="bg-ink text-surface/70 py-12 px-6 border-b border-surface/5 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-start md:items-center gap-12 md:gap-20 lg:gap-24">
-        <div className="flex items-start gap-4">
-          <ShieldCheck size={28} className="text-bronze flex-shrink-0 mt-1" />
-          <div className="flex flex-col">
-            <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60 mb-1">Approach</span>
-            <span className="text-xl md:text-2xl font-sans text-surface tracking-tight">
-              One Firm. The Full Picture.
-            </span>
-          </div>
+    <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
+        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
+          <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight flex items-center gap-2">
+            <ShieldCheck size={20} className="text-bronze flex-shrink-0" />
+            One Firm. The Full Picture.
+          </span>
         </div>
-        <div className="flex items-start gap-4">
-          <Briefcase size={28} className="text-bronze flex-shrink-0 mt-1" />
-          <div className="flex flex-col">
-            <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60 mb-1">Foundation</span>
-            <span className="text-xl md:text-2xl font-sans text-surface tracking-tight">
-              CPA-Led
-            </span>
-          </div>
+        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
+          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
+            <Briefcase size={20} className="text-bronze flex-shrink-0" />
+            CPA-Led
+          </span>
         </div>
-        <div className="flex items-start gap-4">
-          <FileText size={28} className="text-bronze flex-shrink-0 mt-1" />
-          <div className="flex flex-col">
-            <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60 mb-1">Priority</span>
-            <span className="text-xl md:text-2xl font-sans text-surface tracking-tight">
-              Compliance-First
-            </span>
-          </div>
+        <div className="flex flex-col w-full md:w-1/3 md:pl-8">
+          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
+          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
+            <FileText size={20} className="text-bronze flex-shrink-0" />
+            Compliance-First
+          </span>
         </div>
       </div>
     </section>
@@ -692,13 +686,6 @@ export default function App() {
       <Hero />
       <TrustBand />
       <Education />
-      <MidPageCTA
-        headline={<span>These problems are solvable.<br className="hidden md:block" /> Here's what you walk away with.</span>}
-        buttonText="Try the Demo"
-        buttonLink="https://app.blueprintglobal.io/onboarding"
-        subheadline="Free. No account required."
-        bg="bg-porcelain"
-      />
       
       <WhatYouGet />
       
@@ -706,7 +693,7 @@ export default function App() {
         headline="Start Your Blueprint" 
         buttonText="Start Your Blueprint"
         buttonLink="https://app.blueprintglobal.io/onboarding"
-        subheadline="Used by entrepreneurs across 40+ countries."
+        subheadline="Built for globally mobile founders and families."
         dark 
       />
       
