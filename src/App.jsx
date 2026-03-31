@@ -131,21 +131,21 @@ function TrustBand() {
   return (
     <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
+        <div className="flex flex-col items-center text-center md:border-r border-surface/10 w-full md:w-1/3">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight flex items-center gap-2">
             <ShieldCheck size={20} className="text-bronze flex-shrink-0" />
             One Firm. The Full Picture.
           </span>
         </div>
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
+        <div className="flex flex-col items-center text-center md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
             <Briefcase size={20} className="text-bronze flex-shrink-0" />
             CPA-Led
           </span>
         </div>
-        <div className="flex flex-col w-full md:w-1/3 md:pl-8">
+        <div className="flex flex-col items-center text-center w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
             <FileText size={20} className="text-bronze flex-shrink-0" />
@@ -235,7 +235,7 @@ function Education() {
     <section ref={eduRef} id="education" className="py-20 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-14 text-center flex flex-col items-center px-4">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] w-full">
             <span className="block text-ink">Most people don't know these problems exist</span>
             <span className="block text-ink md:mt-1">...until they're stuck.</span>
@@ -311,7 +311,7 @@ function WhatYouGet() {
     <section ref={getRef} className="py-20 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What You Get</h2>
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-2xl">
             Tangible outcomes.<br/>
             <span className="text-bronze/80">Not just advice.</span>
@@ -374,7 +374,7 @@ function WhoThisIsFor() {
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="who-header text-center mb-16 flex flex-col items-center">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">Who This Is For</h2>
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">Who This Is For</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-white max-w-2xl">
             This is for you if...
           </h3>
@@ -460,7 +460,7 @@ function HowItWorks() {
     <section id="how-it-works" className="bg-porcelain pt-24 pb-32 px-6 md:px-12 relative z-10">
       <div className="max-w-6xl mx-auto mb-16">
         <div className="who-header text-center mb-16 flex flex-col items-center">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">How It Works</h2>
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">How It Works</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink">Map. Build. Maintain.</h3>
         </div>
       </div>
@@ -528,10 +528,10 @@ function About() {
             </p>
           </div>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-2xl mb-4">
-            Martin built Blueprint after navigating the exact cross-border complexities our clients face. Holding multiple citizenships, maintaining global residencies, and building multinational businesses across three languages, he experienced firsthand how disconnected the international advisory world truly is.
+            Martin built Blueprint after navigating the exact cross-border complexities our clients face. As an entrepreneur with multiple citizenships and residencies, he built businesses across 40+ countries — experiencing firsthand how disconnected the international advisory world truly is.
           </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-2xl mb-8">
-            He found one firm for banking, another for residency, and another for tax — with none of them speaking to each other. Blueprint was designed to be the single master architect that sees the entire picture and coordinates everything under one roof.
+            He found one firm for banking, another for residency, and another for tax, with none of them speaking to each other. Blueprint is the firm he wished existed: a single master architect that sees the full picture and coordinates your entire global structure under one roof.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
@@ -598,7 +598,7 @@ function FAQ() {
     <section ref={faqRef} className="py-32 px-6 md:px-12 bg-ink text-surface relative z-10 border-t border-surface/5">
       <div className="max-w-3xl mx-auto">
         <div className="faq-header mb-16 text-center">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">FAQ</h2>
+          <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">FAQ</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-surface">Common Questions</h3>
         </div>
 
