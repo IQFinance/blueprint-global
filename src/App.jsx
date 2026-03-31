@@ -97,23 +97,24 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/20 mix-blend-multiply"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mt-[-5dvh]">
-        <h1 className="text-5xl md:text-7xl lg:text-[6rem] leading-[1.05] tracking-tight mb-6 text-balance">
-          <span className="block hero-text font-sans font-medium bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">Your entire life is tied</span>
-          <span className="block hero-text font-sans font-medium text-surface mt-1 md:mt-2">to one country. <span className="text-white/40">It doesn't have to be.</span></span>
+      <div className="relative z-10 max-w-5xl mt-[-5dvh]">
+        <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.08] tracking-tight mb-8">
+          <span className="block hero-text font-sans font-medium text-surface">Your entire life is tied</span>
+          <span className="block hero-text font-sans font-medium text-surface/90">to one country.</span>
+          <span className="block hero-text font-sans font-medium text-white/50 mt-3 md:mt-4">It doesn't have to be.</span>
         </h1>
-        <p className="hero-text font-drama italic text-2xl md:text-3xl text-bronze mb-6 max-w-3xl">
+        <p className="hero-text font-drama italic text-2xl md:text-3xl lg:text-4xl text-bronze mb-8 max-w-3xl">
           We build your international life. You live it.
         </p>
         <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-12">
           Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families. Legally, under one roof.
         </p>
-        <div className="hero-text flex flex-col sm:flex-row gap-4">
-          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5">
+        <div className="hero-text flex flex-col sm:flex-row gap-5">
+          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5">
             Try the Demo
-            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </a>
-          <a href="#how-it-works" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-[2rem] text-sm font-medium flex items-center justify-center gap-2 hover:bg-white/10 hover:border-white transition-all">
+          <a href="#how-it-works" className="bg-transparent text-white border border-white/20 px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all">
             See How It Works
           </a>
         </div>
@@ -161,7 +162,7 @@ function Education() {
         scrollTrigger: { trigger: eduRef.current, start: 'top 80%' },
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
-      gsap.from('.edu-card', {
+      gsap.from('.edu-card-wrapper', {
         scrollTrigger: { trigger: eduRef.current, start: 'top 70%' },
         y: 40, opacity: 0, duration: 1, stagger: 0.08, ease: 'power3.out'
       });
@@ -236,25 +237,27 @@ function Education() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-6">
           {cards.map((card, idx) => (
-            <div key={idx} className="edu-card group flex flex-col bg-white p-6 rounded-[2rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] transition-all duration-500 overflow-hidden cursor-default">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-porcelain flex items-center justify-center text-bronze flex-shrink-0">
-                  {card.icon}
+            <div key={idx} className="edu-card-wrapper h-full">
+              <div className="group flex flex-col bg-white p-6 rounded-[2rem] border border-graphite/5 shadow-sm hover:-translate-y-[2px] hover:shadow-md transition-all duration-300 overflow-hidden cursor-default h-full">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-porcelain flex items-center justify-center text-bronze flex-shrink-0">
+                    {card.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-lg font-sans font-medium text-ink">{card.title}</h4>
+                    <p className="text-graphite text-xs line-clamp-1 mt-0.5 group-hover:hidden transition-all">{card.problem}</p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h4 className="text-lg font-sans font-medium text-ink">{card.title}</h4>
-                  <p className="text-graphite text-xs line-clamp-1 mt-0.5 group-hover:hidden transition-all">{card.problem}</p>
-                </div>
-              </div>
-              <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
-                <div className="overflow-hidden">
-                  <div className="pt-5 mt-4 border-t border-graphite/5">
-                    <p className="text-graphite font-sans leading-relaxed text-[14px] mb-3">
-                      <span className="font-medium text-ink">The problem:</span> {card.problem}
-                    </p>
-                    <p className="text-graphite font-sans leading-relaxed text-[14px]">
-                      <span className="font-medium text-ink">What we do:</span> {card.solution}
-                    </p>
+                <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+                  <div className="overflow-hidden">
+                    <div className="pt-5 mt-4 border-t border-graphite/5">
+                      <p className="text-graphite font-sans leading-relaxed text-[14px] mb-3">
+                        <span className="font-medium text-ink block mb-1">The problem:</span> {card.problem}
+                      </p>
+                      <p className="text-graphite font-sans leading-relaxed text-[14px]">
+                        <span className="font-medium text-ink block mb-1">What we do:</span> {card.solution}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -277,7 +280,7 @@ function WhatYouGet() {
         scrollTrigger: { trigger: getRef.current, start: 'top 80%' },
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
-      gsap.from('.get-card', {
+      gsap.from('.get-card-wrapper', {
         scrollTrigger: { trigger: getRef.current, start: 'top 70%' },
         y: 40, opacity: 0, duration: 1, stagger: 0.12, ease: 'power3.out'
       });
@@ -328,12 +331,14 @@ function WhatYouGet() {
 
         <div className="flex flex-col gap-10 max-w-4xl mx-auto">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-card flex flex-col md:flex-row items-start gap-6 md:gap-10 group bg-white md:bg-transparent p-8 md:p-0 rounded-[2rem] md:rounded-none border border-graphite/5 md:border-transparent">
-              <span className="font-data text-5xl md:text-6xl text-bronze/30 group-hover:text-bronze/70 transition-colors duration-500 w-20 flex-shrink-0">{item.num}</span>
-              <div className="hidden md:block w-px h-full min-h-[80px] bg-bronze/10 flex-shrink-0 mt-2"></div>
-              <div className="flex-grow md:pt-2">
-                <h4 className="text-xl md:text-2xl font-sans font-medium mb-3 text-ink">{item.title}</h4>
-                <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-lg max-w-2xl">{item.desc}</p>
+            <div key={idx} className="get-card-wrapper">
+              <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 group bg-white md:bg-transparent p-8 md:p-0 rounded-[2rem] md:rounded-none border border-graphite/5 md:border-transparent transition-transform hover:-translate-y-[2px] md:hover:-translate-y-[0px] duration-300 shadow-sm md:shadow-none">
+                <span className="font-data text-5xl md:text-6xl text-bronze/30 group-hover:text-bronze/70 transition-colors duration-500 w-20 flex-shrink-0">{item.num}</span>
+                <div className="hidden md:block w-px h-full min-h-[80px] bg-bronze/10 flex-shrink-0 mt-2 transition-colors duration-500 group-hover:bg-bronze/30"></div>
+                <div className="flex-grow md:pt-2">
+                  <h4 className="text-xl md:text-2xl font-sans font-medium mb-3 text-ink group-hover:text-bronze transition-colors">{item.title}</h4>
+                  <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-lg max-w-2xl">{item.desc}</p>
+                </div>
               </div>
             </div>
           ))}
@@ -348,7 +353,7 @@ function SocialProof() {
   
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from('.proof-stat', {
+      gsap.from('.proof-stat-wrapper', {
         scrollTrigger: { trigger: proofRef.current, start: 'top 85%' },
         y: 20, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out'
       });
@@ -373,15 +378,15 @@ function SocialProof() {
         </div>
         <p className="font-data text-xs uppercase tracking-widest text-surface/40 mb-10 text-center">Active across 9 jurisdictions on 5 continents</p>
         <div className="flex flex-wrap justify-center gap-12 md:gap-24 text-center">
-          <div className="proof-stat flex flex-col">
+          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
             <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">40+</span>
             <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Countries</span>
           </div>
-          <div className="proof-stat flex flex-col">
+          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
             <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">9</span>
             <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Jurisdictions</span>
           </div>
-          <div className="proof-stat flex flex-col">
+          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
             <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">200+</span>
             <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Structures Designed</span>
           </div>
