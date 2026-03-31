@@ -496,7 +496,7 @@ function About() {
 
             {/* Content Column */}
             <div className="about-item flex-grow pt-2 flex flex-col">
-              <span className="font-data text-[14px] uppercase tracking-[0.25em] text-bronze/70 mb-4 block">The Architect</span>
+              <span className="font-data text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-4 block">The Architect</span>
               
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-2">
