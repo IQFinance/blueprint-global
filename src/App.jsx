@@ -101,12 +101,12 @@ function Hero() {
         <div className="max-w-4xl">
           <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-10 md:mb-12">
             <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
-            <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg mt-1">to one country.</span>
+            <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg mt-1">to <span className="text-white font-semibold">one</span> country.</span>
             <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
           </h1>
           
           <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 md:mb-10 max-w-3xl drop-shadow-md">
-            We build your international life. You live it.
+            We build your international life. You <span className="text-bronze font-semibold italic">live</span> it.
           </p>
           
           <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
