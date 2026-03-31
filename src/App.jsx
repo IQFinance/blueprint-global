@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative h-[100dvh] w-full flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-24 overflow-hidden bg-ink text-surface pt-16">
+    <section ref={heroRef} className="relative h-[100dvh] w-full flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden bg-ink text-surface pt-16">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -97,19 +97,19 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mt-[-5dvh] flex flex-col items-center">
+      <div className="relative z-10 max-w-5xl mt-[-5dvh]">
         <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.08] tracking-tight mb-8">
           <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
           <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to one country.</span>
           <span className="block hero-text font-sans font-medium text-white/60 mt-3 md:mt-4 drop-shadow-lg">It doesn't have to be.</span>
         </h1>
-        <p className="hero-text font-drama italic text-3xl md:text-4xl lg:text-5xl text-bronze mb-8 max-w-4xl drop-shadow-md">
+        <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 max-w-3xl drop-shadow-md">
           We build your international life. You live it.
         </p>
         <p className="hero-text text-xl md:text-2xl text-porcelain/90 font-sans leading-relaxed max-w-3xl mb-12 drop-shadow-md">
-          Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families. Legally, under one roof.
+          Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
         </p>
-        <div className="hero-text flex flex-col sm:flex-row gap-5 justify-center">
+        <div className="hero-text flex flex-col sm:flex-row gap-5">
           <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5">
             Try the Demo
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -230,9 +230,11 @@ function Education() {
   return (
     <section ref={eduRef} id="education" className="py-20 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
-        <div className="edu-header mb-14 max-w-2xl">
+        <div className="edu-header mb-14 text-center flex flex-col items-center">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1]">Most people don't know these problems exist — until they're stuck.</h3>
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-3xl">
+            Most people don't know these problems exist —<br className="hidden md:block"/> until they're stuck.
+          </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 gap-x-6">
@@ -361,19 +363,19 @@ function SocialProof() {
             <circle cx="360" cy="140" r="3" className="fill-bronze stroke-none" />
           </svg>
         </div>
-        <p className="font-data text-xs uppercase tracking-widest text-surface/40 mb-10 text-center">Active across 9 jurisdictions on 5 continents</p>
+        <p className="font-data text-xs uppercase tracking-widest text-surface/40 mb-10 text-center">Lived experience building multinational businesses globally</p>
         <div className="flex flex-wrap justify-center gap-12 md:gap-24 text-center">
           <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
+            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">3</span>
+            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Citizenships</span>
+          </div>
+          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
+            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">3</span>
+            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Languages Spoken</span>
+          </div>
+          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
             <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">40+</span>
-            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Countries</span>
-          </div>
-          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
-            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">9</span>
-            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Jurisdictions</span>
-          </div>
-          <div className="proof-stat-wrapper flex flex-col hover:scale-105 transition-transform duration-300">
-            <span className="font-data text-5xl md:text-6xl text-bronze/80 mb-2">200+</span>
-            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Structures Designed</span>
+            <span className="text-xs uppercase tracking-widest text-surface/40 font-data">Countries Explored</span>
           </div>
         </div>
       </div>
@@ -564,7 +566,7 @@ function About() {
             Chartered Professional Accountant (CPA)
           </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-4">
-            Martin built Blueprint after living the problem firsthand. After visiting 40+ countries, he saw how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them talking to each other.
+            Martin built Blueprint after living the problem firsthand. Holding multiple citizenships, residencies, and having built multinational businesses across continents, he saw exactly how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them speaking to each other.
           </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-8">
             Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure every structure holds up.
@@ -574,10 +576,10 @@ function About() {
               <ShieldCheck size={14} className="text-bronze"/> CPA Ontario
             </span>
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
-              <MapPin size={14} className="text-bronze"/> 40+ Countries
+              <MapPin size={14} className="text-bronze"/> 5 Continents
             </span>
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
-              <Network size={14} className="text-bronze"/> Global Partner Network
+              <Globe size={14} className="text-bronze"/> English, Polish & Spanish
             </span>
             <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-[#0A66C2]/10 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-[#0A66C2] border border-[#0A66C2]/20 hover:bg-[#0A66C2]/20 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -611,8 +613,8 @@ function FAQ() {
   const questions = [
     {
       icon: <Scale size={18} className="text-bronze flex-shrink-0" />,
-      q: "Is this legal?",
-      a: "Yes. Everything we coordinate is fully legal and compliant. We work with licensed professionals in every jurisdiction — tax attorneys, immigration lawyers, banking compliance officers. There are no grey areas."
+      q: "Is this tax evasion?",
+      a: "Absolutely not. Everything we coordinate is fully legal and compliant. We work with licensed professionals in every jurisdiction — tax attorneys, immigration lawyers, banking compliance officers. There are no grey areas."
     },
     {
       icon: <Clock size={18} className="text-bronze flex-shrink-0" />,
