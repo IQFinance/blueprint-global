@@ -97,17 +97,17 @@ function Hero() {
           alt="Refined architecture"
           className="hero-image object-cover w-full h-full opacity-[0.5]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48 mt-auto pb-10 md:pb-0">
         <div className="max-w-none">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
-            <span className="block hero-text font-drama font-normal text-bronze/90 drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
+            <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text text-[14px] md:text-[1.35rem] text-porcelain/50 font-sans leading-relaxed max-w-2xl mb-8 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-[1.35rem] text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-8 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -265,7 +265,7 @@ function WhatYouGet() {
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
           <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
-            <span className="block text-bronze text-[2rem] md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
+            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
           </h3>
         </div>
 
