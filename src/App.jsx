@@ -530,7 +530,7 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-8 md:p-14 lg:p-20 flex flex-col md:flex-row gap-12 md:gap-20 items-start">
+          <div className="relative z-10 p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
             <div className="flex flex-col items-center md:items-start gap-8 flex-shrink-0">
               <div className="w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden about-item ring-1 ring-bronze/30 shadow-2xl">
                 <img
