@@ -99,9 +99,9 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-none">
-          <h1 className="text-4xl md:text-6xl lg:text-[4.2rem] leading-[1.1] tracking-tight mb-16 md:mb-20 max-w-none">
-            <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your life is tied to <span className="text-white font-semibold relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[2px] bg-bronze/60"></span></span> country</span>
-            <span className="block hero-text font-sans font-medium text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
+          <h1 className="text-4xl md:text-6xl lg:text-[4.2rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-none">
+            <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[2px] bg-bronze/60"></span></span> country</span>
+            <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-1 md:mt-2">...and it doesn't have to be.</span>
           </h1>
           
 
@@ -199,7 +199,7 @@ function Education() {
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
+          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.1] max-w-none px-4">
             <span className="block text-ink">We build your international life.</span>
             <span className="block text-bronze/60 mt-3 md:mt-4">You live it.</span>
           </h3>
@@ -265,7 +265,7 @@ function WhatYouGet() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
-          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
+          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.1] max-w-none px-4">
             <span className="block text-ink">Strategic implementation.</span>
             <span className="block text-bronze/60 mt-3 md:mt-4">Everything, coordinated.</span>
           </h3>
@@ -499,7 +499,7 @@ function About() {
               <span className="font-data text-[12px] uppercase tracking-[0.25em] text-bronze/70 mb-4 block">The Architect</span>
               
               <div className="mb-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-medium tracking-tight text-white mb-2">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-2">
                   Martin Popiel, CPA
                 </h2>
                 <p className="text-white/40 font-sans text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>

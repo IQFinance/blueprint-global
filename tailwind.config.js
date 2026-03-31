@@ -15,8 +15,8 @@ export default {
         darkSurface: "#16181B",
       },
       fontFamily: {
-        sans: ['"Inter"', "sans-serif"],
-        drama: ['"Instrument Serif"', "serif"],
+        sans: ['"DM Sans"', "sans-serif"],
+        drama: ['"Prata"', "serif"],
         data: ['"IBM Plex Mono"', "monospace"],
       },
       borderRadius: {
