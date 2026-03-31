@@ -134,28 +134,24 @@ function Hero() {
 
 function TrustBand() {
   return (
-    <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight flex items-center gap-2">
-            <ShieldCheck size={20} className="text-bronze flex-shrink-0" />
-            One Firm. The Full Picture.
-          </span>
-        </div>
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
-            <Briefcase size={20} className="text-bronze flex-shrink-0" />
-            CPA-Led
-          </span>
-        </div>
-        <div className="flex flex-col w-full md:w-1/3 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
-            <FileText size={20} className="text-bronze flex-shrink-0" />
-            Compliance-First
-          </span>
+    <section className="bg-ink py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
+      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
+          <div className="flex items-center gap-3 group">
+            <ShieldCheck size={20} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
+          <div className="flex items-center gap-3 group">
+            <Globe size={20} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
+          <div className="flex items-center gap-3 group">
+            <Lock size={20} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
+          </div>
         </div>
       </div>
     </section>
@@ -211,16 +207,16 @@ function Education() {
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-4xl">
+          <h3 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-5xl px-4">
             <span className="block text-ink">Most people don't know these problems exist</span>
-            <span className="block text-ink/50 mt-1 md:mt-2">...until they're stuck.</span>
+            <span className="block text-ink/40 mt-3 md:mt-4">...until they're stuck.</span>
           </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
           {pillars.map((pillar, pIdx) => (
             <div key={pIdx} className="edu-pillar flex flex-col">
-              <h4 className="font-sans font-bold text-2xl lg:text-3xl text-bronze mb-4 tracking-tight tracking-tight uppercase lg:text-3xl">{pillar.title}</h4>
+              <h4 className="font-sans font-bold text-xl md:text-2xl text-bronze mb-4 tracking-tight uppercase whitespace-nowrap">{pillar.title}</h4>
               <div className="w-full h-px bg-bronze/20 mb-8"></div>
               
               <div className="flex flex-col gap-10">
@@ -472,32 +468,6 @@ function HowItWorks() {
   );
 }
 
-function SocialTrustBand() {
-  return (
-    <section className="bg-ink py-16 px-6 relative z-10 overflow-hidden">
-      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
-      <div className="max-w-6xl mx-auto border-y border-surface/10 py-10 relative z-10">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
-          <div className="flex items-center gap-3 group">
-            <ShieldCheck size={20} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
-          </div>
-          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group">
-            <Globe size={20} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
-          </div>
-          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group">
-            <Lock size={20} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-xs uppercase tracking-[0.2em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function About() {
   const aboutRef = useRef(null);
 
@@ -715,7 +685,6 @@ export default function App() {
       <Education />
       
       <WhatYouGet />
-      <SocialTrustBand />
       
       <MidPageCTA 
         headline="Start Your Blueprint" 
