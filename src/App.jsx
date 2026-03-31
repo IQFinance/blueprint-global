@@ -89,7 +89,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[78dvh] lg:min-h-[80dvh] pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[78dvh] lg:min-h-[80dvh] pb-8 md:pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -101,7 +101,7 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-none">
-          <h1 className="text-[1.85rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl md:whitespace-nowrap">
+          <h1 className="text-[1.55rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl md:whitespace-nowrap">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[4px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
           </h1>
@@ -112,12 +112,9 @@ function Hero() {
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
-          <div className="hero-text flex flex-col sm:flex-row items-start gap-5">
+          <div className="hero-text flex flex-col sm:flex-row items-center sm:items-start gap-5">
             <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5 relative overflow-hidden">
               <span className="relative z-10 flex items-center gap-2">Try the Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" /></span>
-            </a>
-            <a href="#how-it-works" className="bg-transparent text-white border border-white/20 px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all">
-              See How It Works
             </a>
           </div>
         </div>
@@ -267,7 +264,7 @@ function WhatYouGet() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
-          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.1] max-w-none px-4">
+          <h3 className="text-[1.65rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.1] max-w-none px-4">
             <span className="block text-ink">Strategic implementation.</span>
             <span className="block text-bronze mt-3 md:mt-4 italic font-medium">Everything, coordinated.</span>
           </h3>
