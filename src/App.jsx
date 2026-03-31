@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative h-[100dvh] w-full flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden bg-ink text-surface pt-16">
+    <section ref={heroRef} className="relative min-h-[70dvh] lg:min-h-[75dvh] w-full flex flex-col justify-center px-6 overflow-hidden bg-ink text-surface pt-32 pb-16">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -97,18 +97,18 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mt-8 md:mt-0">
-        <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-10 md:mb-12">
+      <div className="relative z-10 max-w-5xl mx-auto w-full mt-8 md:mt-0">
+        <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-8 md:mb-10">
           <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
-          <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to one country.</span>
-          <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-4">It doesn't have to be.</span>
+          <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to <span className="italic font-normal text-bronze/90 pr-1">one country.</span></span>
+          <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
         </h1>
         
         <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-6 max-w-3xl drop-shadow-md">
-          We build your international life. You live it.
+          We build your <span className="text-white">international life</span>. You live it.
         </p>
         
-        <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-12 drop-shadow-md">
+        <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-10 drop-shadow-md">
           Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
         </p>
 
@@ -232,10 +232,11 @@ function Education() {
   return (
     <section ref={eduRef} id="education" className="py-20 px-6 md:px-12 bg-porcelain">
       <div className="max-w-6xl mx-auto">
-        <div className="edu-header mb-14 text-center flex flex-col items-center">
+        <div className="edu-header mb-14 text-center flex flex-col items-center px-4">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] max-w-4xl">
-            Most people don't know these problems exist <br className="hidden md:block"/> — until they're stuck.
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] w-full">
+            <span className="block">Most people don't know these problems</span>
+            <span className="block text-ink">exist — until they're stuck.</span>
           </h3>
         </div>
 
@@ -525,10 +526,13 @@ function About() {
             </p>
           </div>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-4">
-            Martin built Blueprint after living the problem firsthand. Holding 2 citizenships, 2 residencies, and having built multinational businesses — all while speaking English, Polish, and Spanish — he saw exactly how disconnected the international advisory world was: one firm for banking, another for residency, another for tax, none of them speaking to each other.
+            Blueprint exists to solve a structural flaw in wealth management: the international advisory world is completely disconnected. One firm handles private banking, another handles citizenship, and a third handles tax. None of them speak to each other.
           </p>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-8">
-            Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure your structure holds up globally.
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-6">
+            We act as your master architect. We design the complete cross-border structure from the top down, and project-manage the execution with local legal counsel in every jurisdiction so nothing falls through the cracks.
+          </p>
+          <p className="text-graphite/70 font-sans text-sm max-w-2xl mb-8 border-l-2 border-bronze/40 pl-4 py-1">
+            <span className="font-medium text-ink/80">Context:</span> Martin built Blueprint after living this friction firsthand — navigating the complexities of holding dual citizenships, multiple residencies, and building businesses globally across English, Polish, and Spanish.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
@@ -708,6 +712,8 @@ export default function App() {
         headline="Ready to start mapping your structure?" 
         buttonText="Try the Demo"
         subheadline="It takes 5 minutes."
+        bg="bg-porcelain border-t border-graphite/5"
+        py="py-16 md:py-20"
       />
       <About />
       <FAQ />
