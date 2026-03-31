@@ -492,47 +492,53 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-            <div className="flex flex-col items-center md:items-start gap-8 flex-shrink-0">
-              <div className="w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden about-item ring-2 ring-bronze/30 shadow-2xl">
+          <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-start">
+            {/* Photo Column */}
+            <div className="w-full md:w-[320px] flex-shrink-0">
+              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
-                  className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85]"
+                  className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85] group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent pointer-events-none"></div>
               </div>
             </div>
 
-            {/* Right col - text */}
-            <div className="about-item flex-grow">
-              <span className="font-data text-sm uppercase tracking-widest text-bronze/70 mb-6 block">About</span>
-              <h2 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-white mb-8">
-                Meet the Architect
-              </h2>
-              <h3 className="text-xl font-sans font-medium text-white mb-1">Martin Popiel, CPA</h3>
-              <p className="text-white/40 font-sans text-xs tracking-widest uppercase mb-8">Chartered Professional Accountant (CPA)</p>
+            {/* Content Column */}
+            <div className="about-item flex-grow pt-2">
+              <span className="font-data text-xs uppercase tracking-[0.3em] text-bronze mb-6 block opacity-80">The Architect</span>
               
-              <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-5">
-                Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents — only to find a completely disconnected advisory world.
-              </p>
-              <p className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
-                One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed — one team that sees the full picture and coordinates your entire global structure under one roof.
-              </p>
+              <div className="mb-8">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-medium tracking-tight text-white mb-2">
+                  Martin Popiel, CPA
+                </h2>
+                <p className="text-white/40 font-sans text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
+              </div>
+              
+              <div className="space-y-5 text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
+                <p>
+                  Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents — only to find a completely disconnected advisory world.
+                </p>
+                <p>
+                  One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed — one team that sees the full picture and coordinates your entire global structure under one roof.
+                </p>
+              </div>
 
-              <div className="flex flex-wrap gap-3">
-                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-ink/5 shadow-sm" style={{ background: '#F6F2EA' }}>
-                  <ShieldCheck size={14} className="text-bronze"/> CPA Ontario
-                </span>
+              <div className="flex flex-wrap gap-2.5">
+                {[
+                  { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
+                  { icon: <MapPin size={14} />, label: "40+ Countries" },
+                  { icon: <Users size={14} />, label: "Global Partner Network" }
+                ].map((badge, i) => (
+                  <span key={i} className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
+                    <span className="text-bronze">{badge.icon}</span>
+                    {badge.label}
+                  </span>
+                ))}
                 
-                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-white/60 border border-white/10" style={{ background: 'rgba(255,255,255,0.05)' }}>
-                  <MapPin size={14} className="text-bronze"/> 40+ Countries
-                </span>
-
-                <span className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-white/60 border border-white/10" style={{ background: 'rgba(255,255,255,0.05)' }}>
-                  <Users size={14} className="text-bronze"/> Global Partner Network
-                </span>
-
-                <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-[#70a9e8] border border-[#70a9e8]/20 hover:border-[#70a9e8]/50 transition-colors" style={{ background: 'rgba(10,102,194,0.12)' }}>
+                <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" 
+                  className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/90 border border-[#0a66c2]/30 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
                 </a>
