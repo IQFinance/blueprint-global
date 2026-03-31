@@ -101,7 +101,7 @@ function Hero() {
         <div className="max-w-none">
           <h1 className="text-4xl md:text-6xl lg:text-[4.2rem] leading-[1.1] tracking-tight mb-16 md:mb-20 max-w-none">
             <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your life is tied to <span className="text-white font-semibold relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[2px] bg-bronze/60"></span></span> country</span>
-            <span className="block hero-text font-sans font-medium text-bronze drop-shadow-lg mt-4 md:mt-6">...it doesn't have to be.</span>
+            <span className="block hero-text font-sans font-medium text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
 
