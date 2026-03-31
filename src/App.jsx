@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[85dvh] lg:min-h-[90dvh] pb-24 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-32 lg:pt-40">
+    <section ref={heroRef} className="relative min-h-[70dvh] lg:min-h-[72dvh] pb-12 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -97,19 +97,19 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48 mt-12 md:mt-16">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-4xl">
-          <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-12 md:mb-16">
+          <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-6 md:mb-8">
             <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
-            <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg mt-1 md:mt-3">to one country.</span>
-            <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-5 md:mt-8">It doesn't have to be.</span>
+            <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg mt-1">to one country.</span>
+            <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-10 md:mb-12 max-w-3xl drop-shadow-md">
+          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-4 md:mb-5 max-w-3xl drop-shadow-md">
             We build your international life. You live it.
           </p>
           
-          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-20 drop-shadow-md">
+          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-8 md:mb-10 drop-shadow-md">
             Blueprint designs international structures for entrepreneurs, investors, and globally mobile families.
           </p>
 
