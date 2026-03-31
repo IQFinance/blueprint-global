@@ -110,9 +110,7 @@ function Hero() {
             <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 md:mb-10 max-w-3xl drop-shadow-md">
-            We build your international life. <span className="text-white font-bold">You</span> <span className="text-bronze font-bold">live</span> it.
-          </p>
+
           
           <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
             Blueprint designs international structures for entrepreneurs, investors, and globally mobile families.
@@ -179,9 +177,9 @@ function Education() {
     {
       title: "Capital & Access",
       items: [
-        { icon: <Globe size={20} />, title: "Tax Residency", problem: "You're paying taxes based on where you were born — not where you live or earn." },
-        { icon: <ShieldCheck size={20} />, title: "Banking & Capital Access", problem: "Your bank can freeze your account, restrict transfers, or close you out — with no warning." },
-        { icon: <Coins size={20} />, title: "Digital Asset Integration", problem: "Crypto profits sit in a grey zone — hard to bank, hard to spend, easy to lose to bad compliance." }
+        { icon: <Globe size={20} />, title: "Tax Residency", problem: "You're paying taxes based on where you were born · not where you live or earn." },
+        { icon: <ShieldCheck size={20} />, title: "Banking & Capital Access", problem: "Your bank can freeze your account, restrict transfers, or close you out · with no warning." },
+        { icon: <Coins size={20} />, title: "Digital Asset Integration", problem: "Crypto profits sit in a grey zone · hard to bank, hard to spend, easy to lose to bad compliance." }
       ]
     },
     {
@@ -208,8 +206,8 @@ function Education() {
         <div className="edu-header mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
           <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
-            <span className="block text-ink">Most people don't know these problems exist</span>
-            <span className="block text-ink/30 mt-3 md:mt-4">...until they're stuck.</span>
+            <span className="block text-ink">We build your international life.</span>
+            <span className="block text-ink/30 mt-3 md:mt-4">You live it.</span>
           </h3>
         </div>
 
@@ -279,23 +277,23 @@ function WhatYouGet() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col max-w-5xl mx-auto border-t border-ink/5">
           {deliverables.map((item, idx) => (
-            <div key={idx} className="get-card-wrapper h-full">
-              <div className="bg-white/50 backdrop-blur-sm border border-ink/[0.05] rounded-3xl p-8 lg:p-10 h-full flex flex-col group hover:bg-white hover:border-bronze/10 hover:shadow-xl hover:shadow-bronze/[0.03] transition-all duration-500">
-                <div className="flex justify-between items-start mb-8">
-                  <div className="w-12 h-12 rounded-xl bg-ink/5 flex items-center justify-center text-bronze group-hover:bg-bronze group-hover:text-white transition-colors duration-500">
-                    {item.icon}
-                  </div>
-                  <span className="font-data text-2xl text-bronze/20 group-hover:text-bronze/40 transition-colors">{item.num}</span>
+            <div key={idx} className="get-row-wrapper border-b border-ink/5 py-8 md:py-10 group hover:bg-ink/[0.012] transition-colors">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10 group">
+                <div className="flex items-center gap-6 md:w-24 flex-shrink-0">
+                  <span className="font-data text-4xl md:text-5xl text-bronze/20 group-hover:text-bronze/40 transition-colors duration-500">{item.num}</span>
+                  <div className="w-px h-10 bg-bronze/15 hidden md:block group-hover:bg-bronze transition-colors"></div>
                 </div>
                 
-                <h4 className="text-xl font-sans font-medium mb-4 text-ink group-hover:text-bronze transition-colors duration-300">
-                  {item.title}
-                </h4>
-                <p className="text-graphite/70 font-sans leading-relaxed text-[15px] group-hover:text-graphite transition-colors">
-                  {item.desc}
-                </p>
+                <div className="flex-grow">
+                  <h4 className="text-xl md:text-2xl font-sans font-medium mb-1 text-ink group-hover:text-bronze transition-colors duration-300">
+                    {item.title}
+                  </h4>
+                  <p className="text-graphite/70 font-sans leading-relaxed text-[15px] md:text-[17px] max-w-4xl group-hover:text-graphite transition-colors">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -492,10 +490,10 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-start">
+              <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-14 items-stretch">
             {/* Photo Column */}
-            <div className="w-full md:w-[320px] flex-shrink-0">
-              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
+            <div className="w-full md:w-[380px] flex-shrink-0">
+              <div className="h-full w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group min-h-[420px]">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
@@ -506,8 +504,8 @@ function About() {
             </div>
 
             {/* Content Column */}
-            <div className="about-item flex-grow pt-2">
-              <span className="font-data text-xs uppercase tracking-[0.3em] text-bronze mb-6 block opacity-80">The Architect</span>
+            <div className="about-item flex-grow pt-2 flex flex-col">
+              <span className="font-data text-[14px] font-bold uppercase tracking-[0.5em] text-bronze mb-6 block">The Architect</span>
               
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-sans font-medium tracking-tight text-white mb-2">
@@ -518,10 +516,10 @@ function About() {
               
               <div className="space-y-5 text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
                 <p>
-                  Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents — only to find a completely disconnected advisory world.
+                  Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents · only to find a completely disconnected advisory world.
                 </p>
                 <p>
-                  One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed — one team that sees the full picture and coordinates your entire global structure under one roof.
+                  One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed · one team that sees the full picture and coordinates your entire global structure under one roof.
                 </p>
               </div>
 
