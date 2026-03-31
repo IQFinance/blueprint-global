@@ -234,8 +234,8 @@ function Education() {
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-14 text-center flex flex-col items-center">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-5xl">
-            Most people don't know these problems exist —<br className="hidden md:block"/> until they're stuck.
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] max-w-4xl">
+            Most people don't know these problems exist <br className="hidden md:block"/> — until they're stuck.
           </h3>
         </div>
 
@@ -512,19 +512,23 @@ function About() {
             className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.9]"
           />
         </div>
-        <div className="about-item">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-3">Meet Our Architect</h2>
-          <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-2">
-            Martin Popiel, CPA
-          </h3>
-          <p className="text-graphite/50 font-sans text-sm mb-6">
-            Chartered Professional Accountant (CPA)
-          </p>
+        <div className="about-item flex-grow">
+          <h2 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink mb-8">
+            Meet the Architect
+          </h2>
+          <div className="mb-6">
+            <h3 className="text-xl md:text-2xl font-sans font-medium text-ink mb-1">
+              Martin Popiel, CPA
+            </h3>
+            <p className="text-graphite/60 font-sans text-xs tracking-widest uppercase">
+              Chartered Professional Accountant
+            </p>
+          </div>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-4">
-            Martin built Blueprint after living the problem firsthand. Holding multiple citizenships, residencies, and having built multinational businesses across continents, he saw exactly how disconnected the international advisory world was — one firm for banking, another for residency, another for tax, none of them speaking to each other.
+            Martin built Blueprint after living the problem firsthand. Holding 2 citizenships, 2 residencies, and having built multinational businesses — all while speaking English, Polish, and Spanish — he saw exactly how disconnected the international advisory world was: one firm for banking, another for residency, another for tax, none of them speaking to each other.
           </p>
           <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-8">
-            Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure every structure holds up.
+            Blueprint is the firm he wished existed: one team that sees the full picture and coordinates everything under one roof — partnering with local counsel in every jurisdiction to ensure your structure holds up globally.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
@@ -534,21 +538,6 @@ function About() {
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               LinkedIn
             </a>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-10 pt-8 border-t border-graphite/5 w-full">
-            <div className="flex flex-col">
-              <span className="font-data text-4xl text-bronze/90 mb-1">3</span>
-              <span className="text-[10px] uppercase tracking-widest text-graphite/60 font-data">Citizenships</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-data text-4xl text-bronze/90 mb-1">3</span>
-              <span className="text-[10px] uppercase tracking-widest text-graphite/60 font-data">Languages Spoken</span>
-            </div>
-            <div className="flex flex-col col-span-2 lg:col-span-1">
-              <span className="font-data text-4xl text-bronze/90 mb-1">40+</span>
-              <span className="text-[10px] uppercase tracking-widest text-graphite/60 font-data">Countries Explored</span>
-            </div>
           </div>
         </div>
       </div>
