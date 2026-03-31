@@ -252,12 +252,12 @@ function WhatYouGet() {
   }, []);
 
   const deliverables = [
-    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "Strategic Blueprint", desc: "A comprehensive, written roadmap for your global architecture, tailored to your unique footprint, not a generic template." },
-    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "Global Banking Access", desc: "We navigate the complexities of account opening in stable, tax-efficient jurisdictions, securing the access you need for global mobility." },
-    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "Entity Architecture", desc: "Professional setup and coordination of holding companies, trusts, or foundations, ensuring every structure is registered for maximum benefit." },
-    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Residency Coordination", desc: "Expert management of cross-border residency and citizenship. We handle the paperwork and coordinate directly with local counsel." },
-    { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Compliance Oversight", desc: "Proactive management of cross-border reporting and annual filings, ensuring your global structure remains compliant with every jurisdiction." },
-    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "Global Portfolio Reviews", desc: "Ongoing structural optimization as laws and your life evolve. We maintain the efficiency and security of your international setup for the long term." },
+    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "STRATEGIC BLUEPRINT", desc: "A custom roadmap for your international life. No generic templates—just a clear plan built for your specific situation." },
+    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "GLOBAL BANKING", desc: "We take care of opening bank accounts abroad. We get you verified and set up in the world's most stable countries." },
+    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "ENTITY SETUP", desc: "We set up and coordinate your companies or trusts. We make sure everything is registered correctly and works for you." },
+    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "RESIDENCY & CITIZENSHIP", desc: "We handle the paperwork for your new residency or citizenship. We work with local experts so you don't have to." },
+    { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "COMPLIANCE & REPORTING", desc: "We track your global tax filings and reports. We stay on top of the rules so your structure stays legal and safe." },
+    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "ONGOING SUPPORT", desc: "As laws and your life change, we update your structure. We make sure your international setup stays efficient and secure." },
   ];
 
   return (
