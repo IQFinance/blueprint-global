@@ -517,6 +517,7 @@ function About() {
               <div className="flex flex-wrap gap-2.5">
                 {[
                   { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
+                  { icon: <Globe size={14} />, label: "3 Languages" },
                   { icon: <MapPin size={14} />, label: "40+ Countries" },
                   { icon: <Users size={14} />, label: "Global Partner Network" }
                 ].map((badge, i) => (
@@ -562,7 +563,7 @@ function FAQ() {
     {
       icon: <Scale size={18} className="text-bronze flex-shrink-0" />,
       q: "Is this legal?",
-      a: "Yes — fully. Every structure we coordinate is built on established legal frameworks, implemented by licensed professionals in each jurisdiction. We work with tax attorneys, immigration lawyers, and banking compliance officers to ensure everything is transparent and above board."
+      a: "Yes, fully. Every structure we coordinate is built on established legal frameworks, implemented by licensed professionals in each jurisdiction. We work with tax attorneys, immigration lawyers, and banking compliance officers to ensure everything is transparent and above board."
     },
     {
       icon: <Clock size={18} className="text-bronze flex-shrink-0" />,
@@ -572,12 +573,12 @@ function FAQ() {
     {
       icon: <Coins size={18} className="text-bronze flex-shrink-0" />,
       q: "How much does it cost?",
-      a: "It depends on the scope. A single residency application is different from a full multi-jurisdiction structure. We provide a clear quote after the initial assessment — no hidden fees, no hourly billing surprises."
+      a: "It depends on the scope. A single residency application is different from a full multi-jurisdiction structure. We provide a clear quote after the initial assessment: no hidden fees, no hourly billing surprises."
     },
     {
       icon: <Users size={18} className="text-bronze flex-shrink-0" />,
       q: "I already have an accountant and lawyer. Do I still need this?",
-      a: "Probably. Your local accountant and lawyer are great for domestic matters. But cross-border structuring requires coordination across multiple jurisdictions — that's the gap Blueprint fills. We work alongside your existing team, not against them."
+      a: "Probably. Your local accountant and lawyer are great for domestic matters. But cross-border structuring requires coordination across multiple jurisdictions: that's the gap Blueprint fills. We work alongside your existing team, not against them."
     },
     {
       icon: <RefreshCw size={18} className="text-bronze flex-shrink-0" />,
@@ -631,7 +632,7 @@ function Footer() {
         <div className="w-full md:w-1/3">
           <div className="font-sans font-semibold text-2xl tracking-tight mb-4">Blueprint Global</div>
           <p className="font-sans text-surface/60 text-[15px] leading-relaxed max-w-sm">
-            One firm. One plan. Your entire international structure — designed, built, and maintained under one roof.
+            One firm. One plan. Your entire international structure: designed, built, and maintained under one roof.
           </p>
         </div>
         <div className="flex gap-16 md:gap-32">
