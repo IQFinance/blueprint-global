@@ -97,19 +97,23 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mt-[-5dvh]">
-        <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.08] tracking-tight mb-8">
+      <div className="relative z-10 max-w-4xl">
+        <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-8">
           <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
           <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to one country.</span>
-          <span className="block hero-text font-sans font-medium text-white/60 mt-3 md:mt-4 drop-shadow-lg">It doesn't have to be.</span>
+          <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg">It doesn't have to be.</span>
         </h1>
-        <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 max-w-3xl drop-shadow-md">
-          We build your international life. You live it.
-        </p>
-        <p className="hero-text text-xl md:text-2xl text-porcelain/90 font-sans leading-relaxed max-w-3xl mb-12 drop-shadow-md">
-          Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
-        </p>
-        <div className="hero-text flex flex-col sm:flex-row gap-5">
+        
+        <div className="flex flex-col gap-4 mb-10">
+          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 drop-shadow-md">
+            We build your international life. You live it.
+          </p>
+          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl drop-shadow-md">
+            Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
+          </p>
+        </div>
+
+        <div className="hero-text flex flex-col sm:flex-row items-start gap-4">
           <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5">
             Try the Demo
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -558,7 +562,7 @@ function About() {
           />
         </div>
         <div className="about-item">
-          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-3">About</h2>
+          <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-3">Meet Our Architect</h2>
           <h3 className="text-2xl md:text-3xl font-sans font-medium tracking-tight text-ink mb-2">
             Martin Popiel, CPA
           </h3>
