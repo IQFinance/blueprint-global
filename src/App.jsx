@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[70dvh] lg:min-h-[75dvh] w-full flex flex-col justify-center px-6 overflow-hidden bg-ink text-surface pt-32 pb-16">
+    <section ref={heroRef} className="relative min-h-[75dvh] lg:min-h-[80dvh] pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-24">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -97,28 +97,30 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto w-full mt-8 md:mt-0">
-        <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight mb-8 md:mb-10">
-          <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
-          <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to <span className="italic font-normal text-bronze/90 pr-1">one country.</span></span>
-          <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-2 md:mt-3">It doesn't have to be.</span>
-        </h1>
-        
-        <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-6 max-w-3xl drop-shadow-md">
-          We build your <span className="text-white">international life</span>. You live it.
-        </p>
-        
-        <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-10 drop-shadow-md">
-          Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
-        </p>
+      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 md:px-12 mt-8 md:mt-0">
+        <div className="max-w-4xl">
+          <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.1] tracking-tight mb-10 md:mb-14">
+            <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
+            <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to one country.</span>
+            <span className="block hero-text font-sans font-medium text-white/60 drop-shadow-lg mt-4 md:mt-6">It doesn't have to be.</span>
+          </h1>
+          
+          <p className="hero-text font-sans font-medium text-2xl md:text-3xl text-bronze/90 mb-8 max-w-3xl drop-shadow-md">
+            We build your international life. You live it.
+          </p>
+          
+          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-12 md:mb-14 drop-shadow-md">
+            Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
+          </p>
 
-        <div className="hero-text flex flex-col sm:flex-row items-start gap-5">
-          <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5 relative overflow-hidden">
-            <span className="relative z-10 flex items-center gap-2">Try the Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" /></span>
-          </a>
-          <a href="#how-it-works" className="bg-transparent text-white border border-white/20 px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all">
-            See How It Works
-          </a>
+          <div className="hero-text flex flex-col sm:flex-row items-start gap-5">
+            <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5 relative overflow-hidden">
+              <span className="relative z-10 flex items-center gap-2">Try the Demo <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" /></span>
+            </a>
+            <a href="#how-it-works" className="bg-transparent text-white border border-white/20 px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center hover:bg-white/10 hover:border-white/50 transition-all">
+              See How It Works
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -127,26 +129,26 @@ function Hero() {
 
 function TrustBand() {
   return (
-    <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight flex items-center gap-2">
-            <ShieldCheck size={20} className="text-bronze flex-shrink-0" />
+    <section className="bg-ink text-surface/70 py-12 px-6 border-b border-surface/5 relative z-10">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-center gap-12 md:gap-20 lg:gap-32">
+        <div className="flex flex-col items-center gap-1">
+          <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Approach</span>
+          <span className="text-2xl md:text-3xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
+            <ShieldCheck size={28} className="text-bronze flex-shrink-0" />
             One Firm. The Full Picture.
           </span>
         </div>
-        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
-            <Briefcase size={20} className="text-bronze flex-shrink-0" />
+        <div className="flex flex-col items-center gap-1">
+          <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Foundation</span>
+          <span className="text-2xl md:text-3xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
+            <Briefcase size={28} className="text-bronze flex-shrink-0" />
             CPA-Led
           </span>
         </div>
-        <div className="flex flex-col w-full md:w-1/3 md:pl-8">
-          <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
-          <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
-            <FileText size={20} className="text-bronze flex-shrink-0" />
+        <div className="flex flex-col items-center gap-1">
+          <span className="font-data text-[10px] uppercase tracking-widest text-bronze/60">Priority</span>
+          <span className="text-2xl md:text-3xl font-sans mt-2 text-surface tracking-tight flex items-center gap-3">
+            <FileText size={28} className="text-bronze flex-shrink-0" />
             Compliance-First
           </span>
         </div>
@@ -235,8 +237,8 @@ function Education() {
         <div className="edu-header mb-14 text-center flex flex-col items-center px-4">
           <h2 className="font-data text-xs uppercase tracking-widest text-bronze mb-5">What We Do</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] w-full">
-            <span className="block">Most people don't know these problems</span>
-            <span className="block text-ink">exist — until they're stuck.</span>
+            <span className="block text-ink">Most people don't know these problems exist</span>
+            <span className="block text-ink md:mt-1">— until they're stuck.</span>
           </h3>
         </div>
 
@@ -525,14 +527,11 @@ function About() {
               Chartered Professional Accountant
             </p>
           </div>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-4">
-            Blueprint exists to solve a structural flaw in wealth management: the international advisory world is completely disconnected. One firm handles private banking, another handles citizenship, and a third handles tax. None of them speak to each other.
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-2xl mb-4">
+            Martin built Blueprint after navigating the exact cross-border complexities our clients face. Holding multiple citizenships, maintaining global residencies, and building multinational businesses across three languages, he experienced firsthand how disconnected the international advisory world truly is.
           </p>
-          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-base max-w-2xl mb-6">
-            We act as your master architect. We design the complete cross-border structure from the top down, and project-manage the execution with local legal counsel in every jurisdiction so nothing falls through the cracks.
-          </p>
-          <p className="text-graphite/70 font-sans text-sm max-w-2xl mb-8 border-l-2 border-bronze/40 pl-4 py-1">
-            <span className="font-medium text-ink/80">Context:</span> Martin built Blueprint after living this friction firsthand — navigating the complexities of holding dual citizenships, multiple residencies, and building businesses globally across English, Polish, and Spanish.
+          <p className="text-graphite font-sans leading-relaxed text-[15px] md:text-[17px] max-w-2xl mb-8">
+            He found one firm for banking, another for residency, and another for tax — with none of them speaking to each other. Blueprint was designed to be the single master architect that sees the entire picture and coordinates everything under one roof.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">
             <span className="flex items-center gap-2 bg-porcelain px-4 py-2 rounded-full text-xs font-data uppercase tracking-widest text-ink/80 border border-graphite/5 hover:bg-porcelain/50 transition-colors">
@@ -708,13 +707,6 @@ export default function App() {
       <WhoThisIsFor />
       <HowItWorks />
       
-      <MidPageCTA 
-        headline="Ready to start mapping your structure?" 
-        buttonText="Try the Demo"
-        subheadline="It takes 5 minutes."
-        bg="bg-porcelain border-t border-graphite/5"
-        py="py-16 md:py-20"
-      />
       <About />
       <FAQ />
       <Footer />
