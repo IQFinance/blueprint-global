@@ -87,29 +87,29 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative h-[100dvh] w-full flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden bg-ink text-surface pt-16">
+    <section ref={heroRef} className="relative h-[100dvh] w-full flex flex-col justify-center items-center text-center px-6 md:px-12 lg:px-24 overflow-hidden bg-ink text-surface pt-16">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
           alt="Refined architecture"
-          className="hero-image object-cover w-full h-full opacity-[0.65]"
+          className="hero-image object-cover w-full h-full opacity-[0.5]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/20 mix-blend-multiply"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mt-[-5dvh]">
+      <div className="relative z-10 max-w-5xl mt-[-5dvh] flex flex-col items-center">
         <h1 className="text-[3.5rem] md:text-7xl lg:text-[5.5rem] leading-[1.08] tracking-tight mb-8">
-          <span className="block hero-text font-sans font-medium text-surface">Your entire life is tied</span>
-          <span className="block hero-text font-sans font-medium text-surface/90">to one country.</span>
-          <span className="block hero-text font-sans font-medium text-white/50 mt-3 md:mt-4">It doesn't have to be.</span>
+          <span className="block hero-text font-sans font-medium text-surface drop-shadow-lg">Your entire life is tied</span>
+          <span className="block hero-text font-sans font-medium text-surface/90 drop-shadow-lg">to one country.</span>
+          <span className="block hero-text font-sans font-medium text-white/60 mt-3 md:mt-4 drop-shadow-lg">It doesn't have to be.</span>
         </h1>
-        <p className="hero-text font-drama italic text-2xl md:text-3xl lg:text-4xl text-bronze mb-8 max-w-3xl">
+        <p className="hero-text font-drama italic text-3xl md:text-4xl lg:text-5xl text-bronze mb-8 max-w-4xl drop-shadow-md">
           We build your international life. You live it.
         </p>
-        <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-12">
+        <p className="hero-text text-xl md:text-2xl text-porcelain/90 font-sans leading-relaxed max-w-3xl mb-12 drop-shadow-md">
           Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families. Legally, under one roof.
         </p>
-        <div className="hero-text flex flex-col sm:flex-row gap-5">
+        <div className="hero-text flex flex-col sm:flex-row gap-5 justify-center">
           <a href="https://app.blueprintglobal.io/onboarding" className="group bg-surface text-ink px-8 py-4 rounded-[2rem] text-[15px] font-medium flex items-center justify-center gap-2 hover:bg-white transition-colors shadow-lg shadow-white/5">
             Try the Demo
             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
