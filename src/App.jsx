@@ -207,9 +207,9 @@ function Education() {
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
-          <h3 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-5xl px-4">
+          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
             <span className="block text-ink">Most people don't know these problems exist</span>
-            <span className="block text-ink/40 mt-3 md:mt-4">...until they're stuck.</span>
+            <span className="block text-ink/30 mt-3 md:mt-4">...until they're stuck.</span>
           </h3>
         </div>
 
