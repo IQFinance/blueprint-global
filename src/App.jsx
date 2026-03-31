@@ -265,9 +265,9 @@ function WhatYouGet() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.3] max-w-2xl">
-            <span>White-glove implementation.</span>
-            <span className="block text-bronze/80 mt-5 md:mt-8">Your global life, coordinated.</span>
+          <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
+            <span className="block text-ink">White-glove implementation.</span>
+            <span className="block text-bronze/60 mt-3 md:mt-4">Your global life, coordinated.</span>
           </h3>
         </div>
 
