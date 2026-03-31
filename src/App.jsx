@@ -504,12 +504,9 @@ function About() {
                 <p className="text-white/40 font-sans text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
               </div>
               
-              <div className="space-y-5 text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
+              <div className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-8">
                 <p>
-                  Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents, only to find a completely disconnected advisory world.
-                </p>
-                <p>
-                  One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed: one team that sees the full picture and coordinates your entire global structure under one roof.
+                  Martin built Blueprint after navigating the friction of multinational business across three continents. Frustrated by a disconnected advisory world—one firm for tax, another for residency, none of them talking—he created the firm he wished existed: a single team that coordinates your entire global structure under one roof.
                 </p>
               </div>
 
