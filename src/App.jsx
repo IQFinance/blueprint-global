@@ -99,14 +99,14 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-none">
-          <h1 className="text-4xl md:text-6xl lg:text-[4.2rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl lg:text-[4rem] leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl md:whitespace-nowrap">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[4px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
 
           
-          <p className="hero-text text-xl md:text-2xl text-porcelain/60 font-sans leading-relaxed max-w-3xl mb-10 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-xl md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-5xl md:whitespace-nowrap mb-10 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
