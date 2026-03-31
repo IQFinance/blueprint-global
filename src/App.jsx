@@ -198,7 +198,7 @@ function Education() {
         <div className="edu-header mb-8 md:mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What We Do</h2>
           <h3 className="text-[1.65rem] sm:text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
-            <span className="block text-ink mb-4 md:mb-6 whitespace-nowrap">We build your international life.</span>
+            <span className="block text-ink mb-4 md:mb-6">We build your international life.</span>
             <span className="block text-bronze text-[2.2rem] md:text-6xl lg:text-[64px] font-medium">You live it.</span>
           </h3>
         </div>
@@ -265,7 +265,7 @@ function WhatYouGet() {
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
           <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
-            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
+            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-semibold md:font-normal">Everything, coordinated.</span>
           </h3>
         </div>
 
@@ -371,9 +371,9 @@ function WhoThisIsFor() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
           {profiles.map((profile, idx) => (
-            <div key={idx} className="who-card-wrapper h-full sticky md:static mb-4 md:mb-0" style={{ top: `calc(100px + ${idx * 15}px)` }}>
-              <div className="group relative h-full flex flex-col p-8 rounded-[2rem] border border-white/10 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30"
-                style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%)', backdropFilter: 'blur(12px)' }}>
+            <div key={idx} className="who-card-wrapper h-full sticky md:static mb-12 md:mb-0" style={{ top: `calc(80px + ${idx * 24}px)` }}>
+              <div className="group relative h-full flex flex-col p-8 rounded-[2.5rem] md:rounded-[2rem] border border-white/10 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30 shadow-2xl"
+                style={{ background: 'rgba(20, 22, 26, 0.95)', backdropFilter: 'blur(16px)' }}>
                 
                 <div className="relative z-10 flex items-start justify-between mb-8">
                   <div className="who-icon-inner w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
