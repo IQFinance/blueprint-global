@@ -87,7 +87,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-[70dvh] lg:min-h-[72dvh] pb-12 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32">
+    <section ref={heroRef} className="relative min-h-[78dvh] lg:min-h-[80dvh] pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-28 lg:pt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
