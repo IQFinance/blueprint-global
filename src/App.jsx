@@ -90,24 +90,24 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[70dvh] lg:min-h-[80dvh] pb-4 md:pb-16 w-full flex flex-col justify-center overflow-hidden bg-ink text-surface pt-24 lg:pt-32 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[80dvh] pb-4 md:pb-16 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-32 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
           alt="Refined architecture"
           className="hero-image object-cover w-full h-full opacity-[0.5]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/90 to-ink/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
+      <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48 mt-auto pb-10 md:pb-0">
         <div className="max-w-none">
-          <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl">
-            <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one country<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span></span>
-            <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
+          <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
+            <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
+            <span className="block hero-text font-drama font-normal text-bronze/90 drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text text-[15px] md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-2xl mb-10 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-[14px] md:text-[1.35rem] text-porcelain/50 font-sans leading-relaxed max-w-2xl mb-8 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -127,20 +127,20 @@ function TrustBand() {
     <section className="bg-ink py-12 md:py-16 px-6 relative z-10 overflow-hidden border-t border-b border-surface/5">
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-16">
           <div className="flex items-center gap-3 group">
-            <ShieldCheck size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">CPA-Led Coordination</span>
+            <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-[10px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
-            <Globe size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Multi-Jurisdictional Network</span>
+            <Globe size={15} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-[10px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
           <div className="flex items-center gap-3 group">
-            <Lock size={18} className="text-bronze group-hover:scale-110 transition-transform" />
-            <span className="font-data text-[11px] md:text-[11px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/50 group-hover:text-surface/80 transition-colors">Compliance-First Approach</span>
+            <Lock size={15} className="text-bronze group-hover:scale-110 transition-transform" />
+            <span className="font-data text-[10px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Compliance-First Approach</span>
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@ function Education() {
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What We Do</h2>
           <h3 className="text-3xl md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">We build your international life.</span>
-            <span className="block text-bronze text-4xl md:text-6xl lg:text-[64px] font-medium">You live it.</span>
+            <span className="block text-bronze text-[2.2rem] md:text-6xl lg:text-[64px] font-medium">You live it.</span>
           </h3>
         </div>
 
@@ -265,7 +265,7 @@ function WhatYouGet() {
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
           <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
-            <span className="block text-bronze text-4xl md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
+            <span className="block text-bronze text-[2rem] md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
           </h3>
         </div>
 
@@ -306,7 +306,12 @@ function WhoThisIsFor() {
       });
       gsap.from('.who-card-wrapper', {
         scrollTrigger: { trigger: whoRef.current, start: 'top 75%' },
-        y: 30, opacity: 0, duration: 1, stagger: 0.1, ease: 'power3.out'
+        y: 40, opacity: 0, duration: 0.8, stagger: 0.12, ease: 'power3.out'
+      });
+      // Subtle scale-in on the icon circles
+      gsap.from('.who-icon', {
+        scrollTrigger: { trigger: whoRef.current, start: 'top 70%' },
+        scale: 0.5, opacity: 0, duration: 0.6, stagger: 0.12, ease: 'back.out(1.7)'
       });
     }, whoRef);
     return () => ctx.revert();
@@ -340,7 +345,7 @@ function WhoThisIsFor() {
                 style={{ background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)', backdropFilter: 'blur(10px)' }}>
                 
                 <div className="relative z-10 flex items-start justify-between mb-8">
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                  <div className="who-icon w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
                     {profile.icon}
                   </div>
                   <span className="font-data text-xs tracking-widest text-white/20 group-hover:text-bronze/40 transition-colors">{profile.label}</span>
@@ -491,10 +496,10 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-8 md:p-12 lg:p-14 flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-            {/* Photo Column */}
-            <div className="w-full md:w-[240px] flex-shrink-0">
-              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
+          <div className="relative z-10 p-6 md:p-12 lg:p-14 flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center">
+            {/* Photo Column — compact on mobile */}
+            <div className="w-[120px] md:w-[240px] flex-shrink-0">
+              <div className="aspect-[4/5] w-full rounded-xl md:rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
@@ -505,18 +510,18 @@ function About() {
             </div>
 
             {/* Content Column */}
-            <div className="about-item flex-grow pt-2 flex flex-col">
-              <span className="font-data text-[14px] md:text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-4 block">The Architect</span>
+            <div className="about-item flex-grow flex flex-col">
+              <span className="font-data text-[12px] md:text-[14px] uppercase tracking-[0.3em] text-bronze/70 mb-3 block">The Architect</span>
               
-              <div className="mb-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-2">
+              <div className="mb-5">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-1">
                   Martin Popiel, CPA
                 </h2>
-                <p className="text-white/40 font-sans text-[12px] md:text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
+                <p className="text-white/40 font-sans text-[11px] md:text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
               </div>
               
-              <div className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-8">
-                <p className="mb-6">
+              <div className="text-white/70 font-sans leading-relaxed text-[14px] md:text-[17px] max-w-xl mb-6">
+                <p className="mb-4">
                   Martin holds multiple citizenships and manages residencies across three continents. He didn't study international structuring — he lives inside it.
                 </p>
                 <p>
@@ -524,21 +529,21 @@ function About() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-x-2.5 gap-y-3">
+              <div className="flex flex-wrap gap-x-2 gap-y-2">
                 {[
-                  { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
-                  { icon: <Globe size={14} />, label: "3 Languages" },
-                  { icon: <MapPin size={14} />, label: "40+ Countries" }
+                  { icon: <ShieldCheck size={12} />, label: "CPA Ontario" },
+                  { icon: <Globe size={12} />, label: "3 Languages" },
+                  { icon: <MapPin size={12} />, label: "40+ Countries" }
                 ].map((badge, i) => (
-                  <span key={i} className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
+                  <span key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
                     <span className="text-bronze">{badge.icon}</span>
                     {badge.label}
                   </span>
                 ))}
                 
                 <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" 
-                  className="flex items-center gap-2.5 px-4 py-2 rounded-lg text-[11px] font-data uppercase tracking-widest text-white/90 border border-[#0a66c2]/30 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] font-data uppercase tracking-widest text-white/90 border border-[#0a66c2]/30 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
                 </a>
               </div>
