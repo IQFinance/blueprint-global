@@ -188,7 +188,7 @@ function Education() {
       title: "Life & Mobility",
       items: [
         { icon: <Landmark size={20} />, title: "Citizenship & Mobility", problem: "A single passport limits where you can live, work, and move freely." },
-        { icon: <HeartPulse size={20} />, title: "Healthcare Access", problem: "You're stuck with one country's healthcare system, which often means long waits and limited options." },
+        { icon: <Activity size={20} strokeWidth={1.5} />, title: "Healthcare Access", problem: "Stuck with one country's system: long waits and limited options." },
         { icon: <GraduationCap size={20} />, title: "Education Planning", problem: "Your children's education options are limited to one country's school system." }
       ]
     }
