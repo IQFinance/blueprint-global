@@ -110,7 +110,7 @@ function Hero() {
           </p>
           
           <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-20 drop-shadow-md">
-            Blueprint designs and builds complete international structures for entrepreneurs, investors, and globally mobile families.
+            Blueprint designs international structures for entrepreneurs, investors, and globally mobile families.
           </p>
 
           <div className="hero-text flex flex-col sm:flex-row items-start gap-5">
