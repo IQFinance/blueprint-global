@@ -571,7 +571,7 @@ function About() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-start gap-2 md:gap-3">
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
                 {[
                   { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
                   { icon: <Globe size={14} />, label: "3 Languages" },
