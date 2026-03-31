@@ -538,14 +538,14 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-8 md:p-16 lg:p-20 flex flex-col md:flex-row gap-10 md:gap-20 items-start">
+          <div className="relative z-10 p-6 md:p-16 lg:p-20 flex flex-col md:flex-row gap-8 md:gap-20 items-center">
             {/* Photo Column — compact on mobile */}
             <div className="w-full md:w-[320px] flex-shrink-0">
-              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
+              <div className="aspect-video md:aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
-                  className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85] group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[center_20%] filter contrast-[1.05] saturate-[0.85] group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent pointer-events-none"></div>
               </div>
@@ -553,25 +553,25 @@ function About() {
 
             {/* Content Column */}
             <div className="about-item flex-grow flex flex-col text-left">
-              <span className="font-data text-[12px] md:text-[14px] uppercase tracking-[0.3em] text-bronze/80 mb-4 block">The Architect</span>
+              <span className="font-data text-[11px] md:text-[14px] uppercase tracking-[0.3em] text-bronze/80 mb-2 block">The Architect</span>
               
-              <div className="mb-8">
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-drama font-normal tracking-tight text-white mb-2">
+              <div className="mb-4 md:mb-6">
+                <h2 className="text-2xl md:text-5xl lg:text-6xl font-drama font-normal tracking-tight text-white mb-1">
                   Martin Popiel, CPA
                 </h2>
-                <p className="text-white/40 font-sans text-[12px] md:text-[14px] tracking-widest uppercase">Chartered Professional Accountant</p>
+                <p className="text-white/40 font-sans text-[11px] md:text-[14px] tracking-widest uppercase">Chartered Professional Accountant</p>
               </div>
               
-              <div className="text-white/80 font-sans leading-relaxed text-[16px] md:text-[19px] max-w-2xl mb-10 space-y-5">
+              <div className="text-white/80 font-sans leading-relaxed text-[15px] md:text-[19px] max-w-2xl mb-6 md:mb-10 space-y-4">
                 <p>
-                  Martin holds multiple citizenships and manages residencies across three continents. He didn't study international structuring — he lives inside it.
+                  Martin lives the international life he builds for others. With multiple citizenships, residencies and businesses across three continents, he understands the complexity of a global footprint.<span className="hidden md:inline"> One firm for banking. Another for residency. Another for tax. None of them talking to each other.</span>
                 </p>
                 <p>
-                  He built Blueprint because no single firm could see his full picture. Blueprint is the team that coordinates everything under one roof.
+                  He founded Blueprint to solve this problem, providing a single team to coordinate your entire international structure under one roof.
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-start gap-3">
+              <div className="flex flex-wrap justify-start gap-2 md:gap-3">
                 {[
                   { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
                   { icon: <Globe size={14} />, label: "3 Languages" },
