@@ -131,21 +131,21 @@ function TrustBand() {
   return (
     <section className="bg-ink text-surface/70 py-16 px-6 border-b border-surface/5 relative z-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-4">
-        <div className="flex flex-col items-center text-center md:border-r border-surface/10 w-full md:w-1/3">
+        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Approach</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight leading-tight flex items-center gap-2">
             <ShieldCheck size={20} className="text-bronze flex-shrink-0" />
             One Firm. The Full Picture.
           </span>
         </div>
-        <div className="flex flex-col items-center text-center md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
+        <div className="flex flex-col md:border-r border-surface/10 w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Foundation</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
             <Briefcase size={20} className="text-bronze flex-shrink-0" />
             CPA-Led
           </span>
         </div>
-        <div className="flex flex-col items-center text-center w-full md:w-1/3 md:pl-8">
+        <div className="flex flex-col w-full md:w-1/3 md:pl-8">
           <span className="font-data text-xs uppercase tracking-widest text-bronze/90">Priority</span>
           <span className="text-2xl font-sans mt-2 text-surface tracking-tight flex items-center gap-2">
             <FileText size={20} className="text-bronze flex-shrink-0" />
