@@ -106,7 +106,7 @@ function Hero() {
           
 
           
-          <p className="hero-text text-lg md:text-xl text-porcelain/60 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
+          <p className="hero-text text-lg md:text-xl text-porcelain/60 font-sans leading-relaxed max-w-4xl mb-14 md:mb-16 drop-shadow-md">
             International structures for entrepreneurs, investors, and global mobile families.
           </p>
 
@@ -265,9 +265,9 @@ function WhatYouGet() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
-          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.2] max-w-2xl">
+          <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.3] max-w-2xl">
             <span>White-glove implementation.</span>
-            <span className="block text-bronze/80 mt-2 md:mt-3">Your global life, coordinated.</span>
+            <span className="block text-bronze/80 mt-5 md:mt-8">Your global life, coordinated.</span>
           </h3>
         </div>
 
