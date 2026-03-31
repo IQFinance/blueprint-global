@@ -167,7 +167,7 @@ function Education() {
         y: 30, opacity: 0, duration: 1, ease: 'power3.out'
       });
       gsap.from('.edu-card-wrapper', {
-        scrollTrigger: { trigger: eduRef.current, start: 'top 70%' },
+        scrollTrigger: { trigger: eduRef.current, start: 'top 90%' },
         y: 40, opacity: 0, duration: 1, stagger: 0.08, ease: 'power3.out'
       });
     }, eduRef);
