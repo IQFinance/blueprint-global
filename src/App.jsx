@@ -113,7 +113,7 @@ function Hero() {
 
           
           <p className="hero-text text-lg md:text-xl text-porcelain/60 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
-            Architecting international structures for founders, investors, and families.
+            International structures for entrepreneurs, investors, and global mobile families.
           </p>
 
           <div className="hero-text flex flex-col sm:flex-row items-start gap-5">
@@ -177,9 +177,9 @@ function Education() {
     {
       title: "Capital & Access",
       items: [
-        { icon: <Globe size={20} />, title: "Tax Residency", problem: "You're paying taxes based on where you were born · not where you live or earn." },
-        { icon: <ShieldCheck size={20} />, title: "Banking & Capital Access", problem: "Your bank can freeze your account, restrict transfers, or close you out · with no warning." },
-        { icon: <Coins size={20} />, title: "Digital Asset Integration", problem: "Crypto profits sit in a grey zone · hard to bank, hard to spend, easy to lose to bad compliance." }
+        { icon: <Globe size={20} />, title: "Tax Residency", problem: "You're paying taxes based on where you were born, not where you live or earn." },
+        { icon: <ShieldCheck size={20} />, title: "Banking & Capital Access", problem: "Your bank can freeze your account or restrict your movement with no warning." },
+        { icon: <Coins size={20} />, title: "Digital Asset Integration", problem: "Crypto profits often sit in a grey zone, making it hard to bank and harder to explain." }
       ]
     },
     {
@@ -194,7 +194,7 @@ function Education() {
       title: "Life & Mobility",
       items: [
         { icon: <Landmark size={20} />, title: "Citizenship & Mobility", problem: "A single passport limits where you can live, work, and move freely." },
-        { icon: <HeartPulse size={20} />, title: "Healthcare Access", problem: "You're stuck with one country's healthcare system · long waits and limited options." },
+        { icon: <HeartPulse size={20} />, title: "Healthcare Access", problem: "You're stuck with one country's healthcare system, which often means long waits and limited options." },
         { icon: <GraduationCap size={20} />, title: "Education Planning", problem: "Your children's education options are limited to one country's school system." }
       ]
     }
@@ -214,8 +214,8 @@ function Education() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
           {pillars.map((pillar, pIdx) => (
             <div key={pIdx} className="edu-pillar flex flex-col">
-              <h4 className="font-sans font-bold text-xl md:text-2xl text-bronze mb-4 tracking-tight uppercase whitespace-nowrap">{pillar.title}</h4>
-              <div className="w-full h-px bg-bronze/20 mb-8"></div>
+              <h4 className="font-sans font-bold text-xl md:text-2xl text-bronze mb-4 tracking-tight uppercase whitespace-nowrap text-center">{pillar.title}</h4>
+              <div className="w-16 h-px bg-bronze/30 mb-8 mx-auto"></div>
               
               <div className="flex flex-col gap-10">
                 {pillar.items.map((item, iIdx) => (
@@ -258,12 +258,12 @@ function WhatYouGet() {
   }, []);
 
   const deliverables = [
-    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "Your Global Blueprint", desc: "A written roadmap covering residency, banking, entities, and compliance — tailored to your exact situation. Not a template." },
-    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "Bank Accounts Opened", desc: "Accounts opened and verified in stable jurisdictions, with your name on them — ready to move capital from day one." },
-    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "Entities Formed", desc: "Holding companies, trusts, or foundations structured and registered where they serve you best — with proper documentation." },
+    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "Your Global Blueprint", desc: "A written roadmap covering residency, banking, entities, and compliance, tailored to your exact situation. Not a template." },
+    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "Bank Accounts Opened", desc: "Accounts opened and verified in stable jurisdictions, with your name on them, ready to move capital from day one." },
+    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "Entities Formed", desc: "Holding companies, trusts, or foundations structured and registered where they serve you best, with proper documentation." },
     { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Residency or Citizenship Filed", desc: "Applications submitted, tracked, and followed through. We handle the paperwork and coordinate with local counsel." },
     { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Compliance Handled", desc: "Cross-border reporting, tax filings, and ongoing obligations managed so nothing falls through the cracks." },
-    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "Ongoing Adjustments", desc: "Laws change. Your life changes. We update your structure so it stays current, compliant, and optimized." },
+    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "Ongoing Adjustments", desc: "Laws change and your life changes. We update your structure so it stays current, compliant, and optimized." },
   ];
 
   return (
@@ -374,8 +374,8 @@ function HowItWorks() {
     {
       num: "01",
       title: "Map",
-      subtitle: "We learn your situation.",
-      desc: "We start with a detailed assessment: where you live, where your income comes from, what you own, and where you want to go. No recommendations until we understand the full picture.",
+      subtitle: "Strategic assessment.",
+      desc: "A deep-dive valuation of your global footprint. We identify risks and explore opportunities before drafting a single document.",
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
           <circle cx="100" cy="100" r="40" fill="none" stroke="#9C7B52" strokeWidth="1" />
@@ -393,8 +393,8 @@ function HowItWorks() {
     {
       num: "02",
       title: "Build",
-      subtitle: "We design and execute your structure.",
-      desc: "We create your custom blueprint — then execute it. Bank accounts, entities, residency applications, compliance filings. Everything coordinated by one team, in the right sequence.",
+      subtitle: "Seamless execution.",
+      desc: "We execute your custom blueprint. From offshore banking and entities to residencies and tax filings, we handle the entire implementation.",
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
           <rect x="80" y="40" width="40" height="30" fill="none" stroke="#9C7B52" strokeWidth="1" />
@@ -410,8 +410,8 @@ function HowItWorks() {
     {
       num: "03",
       title: "Maintain",
-      subtitle: "We keep it running.",
-      desc: "Laws change. Your life changes. We handle renewals, annual filings, and adjustments so your structure stays current and compliant — without you having to track it all yourself.",
+      subtitle: "Ongoing optimization.",
+      desc: "As laws and your life evolve, we ensure your structure remains compliant and optimized. One partner for the long-term management of your international life.",
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
           <path d="M100 50 A 50 50 0 0 1 143.3 125" fill="none" stroke="#9C7B52" strokeWidth="1" />
@@ -513,10 +513,10 @@ function About() {
               
               <div className="space-y-5 text-white/70 font-sans leading-relaxed text-[16px] md:text-[17px] max-w-xl mb-10">
                 <p>
-                  Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents · only to find a completely disconnected advisory world.
+                  Martin built Blueprint after living the problem. An entrepreneur and avid traveler with multiple citizenships, he navigated the friction of multinational business and residencies across continents, only to find a completely disconnected advisory world.
                 </p>
                 <p>
-                  One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed · one team that sees the full picture and coordinates your entire global structure under one roof.
+                  One firm for banking. Another for residency. Another for tax. None of them talking to each other. Blueprint is the firm he wished existed: one team that sees the full picture and coordinates your entire global structure under one roof.
                 </p>
               </div>
 
