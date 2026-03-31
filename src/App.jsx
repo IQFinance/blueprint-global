@@ -265,7 +265,7 @@ function WhatYouGet() {
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
           <h3 className="text-[1.55rem] md:text-5xl lg:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
-            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-medium">Everything, coordinated.</span>
+            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-6xl lg:text-[64px] font-bold">Everything, coordinated.</span>
           </h3>
         </div>
 
@@ -484,8 +484,8 @@ function About() {
   }, []);
 
   return (
-    <section id="about" ref={aboutRef} className="py-20 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 scroll-mt-24">
-      <div className="max-w-5xl mx-auto">
+    <section id="about" ref={aboutRef} className="py-24 md:py-32 px-6 md:px-12 bg-porcelain relative z-10 scroll-mt-24">
+      <div className="max-w-6xl mx-auto">
         {/* Main card */}
         <div className="about-item relative rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-graphite/8 shadow-xl"
           style={{ background: 'linear-gradient(150deg, #1a1c1f 0%, #16181B 60%, #1e1a15 100%)' }}>
@@ -494,10 +494,10 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-6 md:p-12 lg:p-14 flex flex-col md:flex-row gap-6 md:gap-12 items-start md:items-center">
+          <div className="relative z-10 p-8 md:p-16 lg:p-20 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
             {/* Photo Column — compact on mobile */}
-            <div className="w-[120px] md:w-[240px] flex-shrink-0">
-              <div className="aspect-[4/5] w-full rounded-xl md:rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
+            <div className="w-[160px] md:w-[340px] flex-shrink-0 mx-auto md:mx-0">
+              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
@@ -508,18 +508,18 @@ function About() {
             </div>
 
             {/* Content Column */}
-            <div className="about-item flex-grow flex flex-col">
-              <span className="font-data text-[12px] md:text-[14px] uppercase tracking-[0.3em] text-bronze/70 mb-3 block">The Architect</span>
+            <div className="about-item flex-grow flex flex-col text-center md:text-left">
+              <span className="font-data text-[14px] md:text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-4 block">The Architect</span>
               
-              <div className="mb-5">
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-drama font-normal tracking-tight text-white mb-1">
+              <div className="mb-8">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-drama font-normal tracking-tight text-white mb-2">
                   Martin Popiel, CPA
                 </h2>
-                <p className="text-white/40 font-sans text-[11px] md:text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
+                <p className="text-white/40 font-sans text-[12px] md:text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
               </div>
               
-              <div className="text-white/70 font-sans leading-relaxed text-[14px] md:text-[17px] max-w-xl mb-6">
-                <p className="mb-4">
+              <div className="text-white/70 font-sans leading-relaxed text-[16px] md:text-[18px] max-w-2xl mb-10 mx-auto md:mx-0">
+                <p className="mb-6">
                   Martin holds multiple citizenships and manages residencies across three continents. He didn't study international structuring — he lives inside it.
                 </p>
                 <p>
@@ -527,21 +527,21 @@ function About() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-x-2 gap-y-2">
+              <div className="flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-4">
                 {[
-                  { icon: <ShieldCheck size={12} />, label: "CPA Ontario" },
-                  { icon: <Globe size={12} />, label: "3 Languages" },
-                  { icon: <MapPin size={12} />, label: "40+ Countries" }
+                  { icon: <ShieldCheck size={16} />, label: "CPA Ontario" },
+                  { icon: <Globe size={16} />, label: "3 Languages" },
+                  { icon: <MapPin size={16} />, label: "40+ Countries" }
                 ].map((badge, i) => (
-                  <span key={i} className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
+                  <span key={i} className="flex items-center gap-3 px-5 py-2.5 rounded-lg text-[11px] md:text-[12px] font-data uppercase tracking-widest text-white/70 border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-colors">
                     <span className="text-bronze">{badge.icon}</span>
                     {badge.label}
                   </span>
                 ))}
                 
                 <a href="https://www.linkedin.com/in/martinpopiel/" target="_blank" rel="noopener noreferrer" 
-                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-[10px] font-data uppercase tracking-widest text-white/90 border border-[#0a66c2]/30 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 transition-colors">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  className="flex items-center gap-3 px-5 py-2.5 rounded-lg text-[11px] md:text-[12px] font-data uppercase tracking-widest text-white/90 border border-[#0a66c2]/30 bg-[#0a66c2]/10 hover:bg-[#0a66c2]/20 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                   LinkedIn
                 </a>
               </div>
