@@ -45,12 +45,12 @@ function Navbar() {
         </div>
         <div className="flex items-center gap-4">
         <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
-        <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
+        <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium hidden md:flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
           <span>Try the Demo</span>
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
         </a>
       </div>
-        <button className={`md:hidden p-1 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'}`} onClick={() => setMenuOpen(true)}>
+        <button className={`p-1 transition-colors ${scrolled ? 'text-ink' : 'text-porcelain'}`} onClick={() => setMenuOpen(true)}>
           <Menu size={24} />
         </button>
       </nav>
@@ -101,12 +101,12 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 lg:px-32 xl:px-48">
         <div className="max-w-none">
-          <h1 className="text-[1.75rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.15] md:leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl">
-            <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[4px] bg-bronze/80"></span></span> country</span>
-            <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-4 md:mt-6">...and it doesn't have to be.</span>
+          <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-8 md:mb-10 max-w-5xl">
+            <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one country<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span></span>
+            <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
           
-          <p className="hero-text text-base md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-5xl mb-10 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-[1.35rem] text-porcelain/60 font-sans leading-relaxed max-w-2xl mb-10 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
