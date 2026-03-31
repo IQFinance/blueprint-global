@@ -258,12 +258,12 @@ function WhatYouGet() {
   }, []);
 
   const deliverables = [
-    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "Your Global Blueprint", desc: "A written roadmap covering residency, banking, entities, and compliance, tailored to your exact situation. Not a template." },
-    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "Bank Accounts Opened", desc: "Accounts opened and verified in stable jurisdictions, with your name on them, ready to move capital from day one." },
-    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "Entities Formed", desc: "Holding companies, trusts, or foundations structured and registered where they serve you best, with proper documentation." },
-    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Residency or Citizenship Filed", desc: "Applications submitted, tracked, and followed through. We handle the paperwork and coordinate with local counsel." },
-    { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Compliance Handled", desc: "Cross-border reporting, tax filings, and ongoing obligations managed so nothing falls through the cracks." },
-    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "Ongoing Adjustments", desc: "Laws change and your life changes. We update your structure so it stays current, compliant, and optimized." },
+    { num: '01', icon: <Map className="text-bronze" size={24} strokeWidth={1.5} />, title: "Strategic Blueprint", desc: "A comprehensive, written roadmap for your global architecture, tailored to your unique footprint, not a generic template." },
+    { num: '02', icon: <Landmark className="text-bronze" size={24} strokeWidth={1.5} />, title: "Global Banking Access", desc: "We navigate the complexities of account opening in stable, tax-efficient jurisdictions, securing the access you need for global mobility." },
+    { num: '03', icon: <Building2 className="text-bronze" size={24} strokeWidth={1.5} />, title: "Entity Architecture", desc: "Professional setup and coordination of holding companies, trusts, or foundations, ensuring every structure is registered for maximum benefit." },
+    { num: '04', icon: <FileCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Residency Coordination", desc: "A white-glove approach to cross-border residency and citizenship. We handle the paperwork and coordinate directly with local counsel." },
+    { num: '05', icon: <ShieldCheck className="text-bronze" size={24} strokeWidth={1.5} />, title: "Compliance Oversight", desc: "Proactive management of cross-border reporting and annual filings, ensuring your global structure remains compliant with every jurisdiction." },
+    { num: '06', icon: <Settings className="text-bronze" size={24} strokeWidth={1.5} />, title: "Global Portfolio Reviews", desc: "Ongoing structural optimization as laws and your life evolve. We maintain the efficiency and security of your international setup for the long term." },
   ];
 
   return (
@@ -272,8 +272,8 @@ function WhatYouGet() {
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What You Get</h2>
           <h3 className="text-4xl md:text-5xl font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-2xl">
-            Tangible outcomes.<br/>
-            <span className="text-bronze/80">Not just advice.</span>
+            White-glove implementation.<br/>
+            <span className="text-bronze/80">Your global life, coordinated.</span>
           </h3>
         </div>
 
