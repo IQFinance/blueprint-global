@@ -112,7 +112,7 @@ function Hero() {
           
 
           
-          <p className="hero-text text-lg md:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl mb-14 md:mb-16 drop-shadow-md">
+          <p className="hero-text text-xl md:text-2xl text-porcelain/80 font-sans leading-relaxed max-w-3xl mb-14 md:mb-16 drop-shadow-md">
             Blueprint designs international structures for entrepreneurs, investors, and globally mobile families.
           </p>
 
@@ -194,7 +194,7 @@ function Education() {
       title: "Life & Mobility",
       items: [
         { icon: <Landmark size={20} />, title: "Citizenship & Mobility", problem: "A single passport limits where you can live, work, and move freely." },
-        { icon: <HeartPulse size={20} />, title: "Healthcare Access", problem: "You're stuck with one country's healthcare system — long waits and limited options." },
+        { icon: <HeartPulse size={20} />, title: "Healthcare Access", problem: "You're stuck with one country's healthcare system · long waits and limited options." },
         { icon: <GraduationCap size={20} />, title: "Education Planning", problem: "Your children's education options are limited to one country's school system." }
       ]
     }
@@ -207,7 +207,7 @@ function Education() {
           <h2 className="font-data text-sm uppercase tracking-widest text-bronze mb-5">What We Do</h2>
           <h3 className="text-3xl md:text-5xl lg:text-[52px] font-sans font-medium tracking-tight text-ink leading-[1.1] max-w-none px-4">
             <span className="block text-ink">We build your international life.</span>
-            <span className="block text-ink/30 mt-3 md:mt-4">You live it.</span>
+            <span className="block text-bronze/60 mt-3 md:mt-4">You live it.</span>
           </h3>
         </div>
 
