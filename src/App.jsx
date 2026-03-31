@@ -358,7 +358,7 @@ function WhoThisIsFor() {
   ];
 
   return (
-    <section id="who-this-is-for" ref={whoRef} className="py-16 md:py-32 px-6 md:px-12 bg-ink relative z-10 overflow-hidden text-surface scroll-mt-24">
+    <section id="who-this-is-for" ref={whoRef} className="py-16 md:py-32 px-6 md:px-12 bg-ink relative z-10 overflow-visible text-surface scroll-mt-24">
       <div className="absolute inset-0 z-0 pointer-events-none opacity-40" style={{ backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(156, 123, 82, 0.1) 0%, transparent 70%)' }}></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
@@ -369,24 +369,29 @@ function WhoThisIsFor() {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 relative z-10 pb-[140px] md:pb-0">
           {profiles.map((profile, idx) => (
-            <div key={idx} className="who-card-wrapper h-full sticky md:static mb-12 md:mb-0" style={{ top: `calc(80px + ${idx * 24}px)` }}>
-              <div className="group relative h-full flex flex-col p-8 rounded-[2.5rem] md:rounded-[2rem] border border-white/10 cursor-default overflow-hidden transition-all duration-500 hover:border-bronze/30 shadow-2xl"
-                style={{ background: 'rgba(20, 22, 26, 0.95)', backdropFilter: 'blur(16px)' }}>
-                
-                <div className="relative z-10 flex items-start justify-between mb-8">
-                  <div className="who-icon-inner w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
-                    {profile.icon}
-                  </div>
-                  <span className="font-data text-xs tracking-widest text-white/20 group-hover:text-bronze/40 transition-colors">{profile.label}</span>
+            <div
+              key={idx}
+              className="who-card-wrapper w-full rounded-[2.5rem] md:rounded-[2rem] border border-white/10 p-8 flex flex-col relative mb-6 md:mb-0 sticky md:static group"
+              style={{
+                top: `calc(100px + ${idx * 20}px)`,
+                background: 'rgba(20, 22, 26, 0.97)',
+                backdropFilter: 'blur(16px)',
+                zIndex: 10 + idx
+              }}
+            >
+              <div className="relative z-10 flex items-start justify-between mb-8">
+                <div className="who-icon-inner w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-bronze transition-colors group-hover:bg-bronze group-hover:text-white duration-300" style={{ background: 'rgba(255,255,255,0.05)' }}>
+                  {profile.icon}
                 </div>
-                
-                <h4 className="text-xl font-sans font-medium text-white mb-3 relative z-10">{profile.title}</h4>
-                <p className="text-surface/60 font-sans leading-relaxed text-[15px] group-hover:text-surface/90 transition-colors duration-300 relative z-10 flex-grow">
-                  {profile.desc}
-                </p>
+                <span className="font-data text-xs tracking-widest text-white/20 group-hover:text-bronze/40 transition-colors">{profile.label}</span>
               </div>
+              
+              <h4 className="text-xl font-sans font-medium text-white mb-3 relative z-10">{profile.title}</h4>
+              <p className="text-surface/60 font-sans leading-relaxed text-[15px] group-hover:text-surface/90 transition-colors duration-300 relative z-10 flex-grow">
+                {profile.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -533,40 +538,40 @@ function About() {
           <div className="absolute top-0 right-0 w-96 h-96 pointer-events-none" style={{ background: 'radial-gradient(circle at 100% 0%, rgba(156,123,82,0.18) 0%, transparent 60%)' }}></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 pointer-events-none" style={{ background: 'radial-gradient(circle at 0% 100%, rgba(156,123,82,0.08) 0%, transparent 60%)' }}></div>
 
-          <div className="relative z-10 p-6 md:p-16 lg:p-20 flex flex-col md:flex-row gap-8 md:gap-16 items-center">
+          <div className="relative z-10 p-8 md:p-16 lg:p-20 flex flex-col md:flex-row gap-10 md:gap-20 items-start">
             {/* Photo Column — compact on mobile */}
-            <div className="w-[120px] md:w-[340px] flex-shrink-0">
-              <div className="aspect-square md:aspect-[4/5] w-full rounded-full md:rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
+            <div className="w-full md:w-[320px] flex-shrink-0">
+              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden about-item ring-1 ring-bronze/20 shadow-2xl relative group">
                 <img
                   src="/martin.jpg"
                   alt="Martin Popiel - Founder"
                   className="w-full h-full object-cover object-top filter contrast-[1.05] saturate-[0.85] group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
             {/* Content Column */}
-            <div className="about-item flex-grow flex flex-col text-center md:text-left">
-              <span className="font-data text-[12px] md:text-[16px] uppercase tracking-[0.3em] text-bronze/70 mb-2 block">The Architect</span>
+            <div className="about-item flex-grow flex flex-col text-left">
+              <span className="font-data text-[12px] md:text-[14px] uppercase tracking-[0.3em] text-bronze/80 mb-4 block">The Architect</span>
               
-              <div className="mb-6">
-                <h2 className="text-2xl md:text-5xl lg:text-6xl font-drama font-normal tracking-tight text-white mb-1">
+              <div className="mb-8">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-drama font-normal tracking-tight text-white mb-2">
                   Martin Popiel, CPA
                 </h2>
-                <p className="text-white/40 font-sans text-[11px] md:text-[13px] tracking-widest uppercase">Chartered Professional Accountant</p>
+                <p className="text-white/40 font-sans text-[12px] md:text-[14px] tracking-widest uppercase">Chartered Professional Accountant</p>
               </div>
               
-              <div className="text-white/70 font-sans leading-relaxed text-[15px] md:text-[18px] max-w-2xl mb-8">
+              <div className="text-white/80 font-sans leading-relaxed text-[16px] md:text-[19px] max-w-2xl mb-10 space-y-5">
                 <p>
                   Martin holds multiple citizenships and manages residencies across three continents. He didn't study international structuring — he lives inside it.
                 </p>
-                <p className="mt-4">
+                <p>
                   He built Blueprint because no single firm could see his full picture. Blueprint is the team that coordinates everything under one roof.
                 </p>
               </div>
 
-              <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
+              <div className="flex flex-wrap justify-start gap-3">
                 {[
                   { icon: <ShieldCheck size={14} />, label: "CPA Ontario" },
                   { icon: <Globe size={14} />, label: "3 Languages" },
