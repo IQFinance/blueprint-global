@@ -101,7 +101,7 @@ function Hero() {
       </div>
 
       <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl mx-auto mt-auto pb-10 md:pb-24">
-        <div className="max-w-none text-left -ml-6 md:-ml-12 lg:-ml-20">
+        <div className="max-w-none text-left md:-ml-12 lg:-ml-20">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
@@ -128,17 +128,17 @@ function TrustBand() {
       <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 lg:gap-20">
-          <div className="flex items-center gap-3 group">
+          <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-start">
             <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
             <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">CPA-Led Coordination</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group">
+          <div className="flex items-center gap-3 group w-full md:w-auto justify-center">
             <Globe size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
             <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Multi-Jurisdictional Network</span>
           </div>
           <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-          <div className="flex items-center gap-3 group">
+          <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-end">
             <Lock size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
             <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Compliance-First Approach</span>
           </div>
