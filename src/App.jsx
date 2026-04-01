@@ -38,14 +38,14 @@ function Navbar() {
         <div className={`font-sans font-semibold text-lg md:text-xl tracking-tight ${scrolled ? 'text-ink' : 'text-porcelain'} transition-colors duration-500`}>Blueprint Global</div>
         
         {/* Centered Desktop Links */}
-        <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-sm font-medium ${scrolled ? 'text-ink' : 'text-porcelain/90'} transition-colors duration-500`}>
+        <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 text-sm font-bold ${scrolled ? 'text-ink' : 'text-porcelain/90'} transition-colors duration-500`}>
           <a href="#education" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">What We Do</a>
           <a href="#how-it-works" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">How It Works</a>
           <a href="#about" className="hover:text-bronze transition-colors hover:-translate-y-[1px] transform inline-block">About</a>
         </div>
 
         <div className="flex items-center gap-4">
-          <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-medium transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
+          <a href="https://app.blueprintglobal.io/dashboard" className={`hidden md:block font-sans text-[15px] font-bold transition-colors ${scrolled ? 'text-ink/80 hover:text-bronze' : 'text-porcelain/80 hover:text-white'}`}>Client Login</a>
           <a href="https://app.blueprintglobal.io/onboarding" className="group bg-bronze text-white px-5 py-2.5 rounded-[2rem] text-sm font-medium hidden md:flex items-center gap-2 hover:bg-bronze/90 transition-all shadow-md shadow-bronze/10">
             <span>Try the Demo</span>
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
