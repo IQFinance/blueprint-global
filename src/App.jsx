@@ -100,7 +100,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl mx-auto mt-auto pb-6 md:pb-12 lg:pb-10">
+      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-6 md:pb-12 lg:pb-10">
         <div className="max-w-none text-left">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-6 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
