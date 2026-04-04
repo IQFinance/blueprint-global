@@ -90,7 +90,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[100dvh] 2xl:min-h-[93dvh] pb-4 md:pb-0 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[100dvh] 2xl:min-h-[100dvh] pb-4 md:pb-0 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -100,7 +100,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-6 md:pb-12 lg:pb-10">
+      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-6 md:pb-12 lg:pb-10 2xl:pb-[8vh]">
         <div className="max-w-none text-left">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-6 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
