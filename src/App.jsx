@@ -90,7 +90,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[100dvh] 2xl:min-h-[100dvh] pb-4 md:pb-0 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[100dvh] 2xl:min-h-[100dvh] pb-4 md:pb-12 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -100,14 +100,14 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-10 md:pb-12 lg:pb-10 xl:pb-20 2xl:pb-[18vh]">
-        <div className="max-w-none text-left">
-          <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-6 max-w-5xl">
+      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-10 md:pb-24 lg:pb-10 xl:pb-20 2xl:pb-[18vh]">
+        <div className="max-w-none text-left md:-ml-12 lg:-ml-20 lg:ml-0">
+          <h1 className="text-[1.45rem] sm:text-4xl md:text-6xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 lg:mb-6 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
 
-          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans md:font-medium leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-8 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-[1.35rem] lg:text-lg xl:text-xl text-porcelain/80 font-sans md:font-medium leading-relaxed max-w-2xl md:max-w-none md:whitespace-nowrap lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-12 lg:mb-8 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -118,25 +118,29 @@ function Hero() {
           </div>
         </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Trust band pinned to bottom of hero */}
-      <div className="relative z-10 w-full px-6 md:px-12 pb-12 md:pb-10 border-t border-surface/5">
-        <div className="max-w-6xl mx-auto pt-12 md:pt-10">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 lg:gap-20">
-            <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-start">
-              <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
-              <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">CPA-Led Coordination</span>
-            </div>
-            <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-            <div className="flex items-center gap-3 group w-full md:w-auto justify-center">
-              <Globe size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
-              <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Multi-Jurisdictional Network</span>
-            </div>
-            <div className="hidden md:block w-px h-4 bg-surface/10"></div>
-            <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-end">
-              <Lock size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
-              <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Compliance-First Approach</span>
-            </div>
+function TrustBand() {
+  return (
+    <section className="bg-ink py-12 md:py-16 lg:py-10 px-6 md:px-12 relative z-10 overflow-hidden border-t border-b border-surface/5">
+      <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(156,123,82,0.15) 0%, transparent 70%)' }}></div>
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 lg:gap-20">
+          <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-start">
+            <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
+            <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">CPA-Led Coordination</span>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
+          <div className="flex items-center gap-3 group w-full md:w-auto justify-center">
+            <Globe size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
+            <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Multi-Jurisdictional Network</span>
+          </div>
+          <div className="hidden md:block w-px h-4 bg-surface/10"></div>
+          <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-end">
+            <Lock size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
+            <span className="font-data text-[10px] md:text-[12px] whitespace-nowrap uppercase tracking-[0.15em] text-surface/40 group-hover:text-surface/70 transition-colors">Compliance-First Approach</span>
           </div>
         </div>
       </div>
@@ -729,6 +733,7 @@ export default function App() {
       <BlueprintThread />
       <Navbar />
       <Hero />
+      <TrustBand />
       <Education />
       
       <WhatYouGet />
