@@ -90,7 +90,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[100dvh] 2xl:min-h-[85dvh] pb-4 md:pb-12 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[100dvh] 2xl:min-h-[85dvh] pb-4 md:pb-0 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -102,12 +102,12 @@ function Hero() {
 
       <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl mx-auto mt-auto pb-6 md:pb-12 lg:pb-10">
         <div className="max-w-none text-left">
-          <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[3.25rem] xl:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
+          <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
 
-          <p className="hero-text text-[15px] md:text-lg lg:text-xl xl:text-[1.35rem] text-porcelain/80 font-sans leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-12 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-[1.35rem] text-porcelain/80 font-sans leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-12 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -120,8 +120,8 @@ function Hero() {
       </div>
 
       {/* Trust band pinned to bottom of hero */}
-      <div className="relative z-10 w-full px-6 md:px-12 pb-6 md:pb-8 border-t border-surface/5">
-        <div className="max-w-6xl mx-auto pt-6 md:pt-8">
+      <div className="relative z-10 w-full px-6 md:px-12 pb-8 md:pb-10 border-t border-surface/5">
+        <div className="max-w-6xl mx-auto pt-8 md:pt-10">
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 lg:gap-20">
             <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-start">
               <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
