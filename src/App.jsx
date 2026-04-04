@@ -107,7 +107,7 @@ function Hero() {
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
 
-          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-8 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans md:font-medium leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-8 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
