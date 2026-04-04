@@ -107,7 +107,7 @@ function Hero() {
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
 
-          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-6 md:mb-8 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans font-medium leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-6 md:mb-8 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
@@ -193,9 +193,9 @@ function Education() {
       <div className="max-w-6xl mx-auto">
         <div className="edu-header mb-8 md:mb-20 text-center flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What We Do</h2>
-          <h3 className="text-[1.65rem] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
+          <h3 className="text-[1.65rem] sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-[48px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">We build your international life.</span>
-            <span className="block text-bronze text-[2.2rem] md:text-5xl lg:text-6xl xl:text-[64px] font-medium">You live it.</span>
+            <span className="block text-bronze text-[2.2rem] md:text-5xl lg:text-[3.25rem] xl:text-[56px] font-medium">You live it.</span>
           </h3>
         </div>
 
@@ -259,9 +259,9 @@ function WhatYouGet() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 md:mb-16 flex flex-col items-center">
           <h2 className="font-data text-sm uppercase tracking-[0.2em] text-bronze mb-6">What You Get</h2>
-          <h3 className="text-[1.55rem] md:text-4xl lg:text-5xl xl:text-[52px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
+          <h3 className="text-[1.55rem] md:text-4xl lg:text-[2.75rem] xl:text-[48px] font-drama font-normal tracking-tight text-ink leading-[1.2] md:leading-[1.1] max-w-none px-2">
             <span className="block text-ink mb-4 md:mb-6">Strategic implementation.</span>
-            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-5xl lg:text-6xl xl:text-[64px] font-semibold md:font-normal">Everything, coordinated.</span>
+            <span className="block text-bronze text-[1.65rem] sm:text-[2rem] md:text-5xl lg:text-[3.25rem] xl:text-[56px] font-semibold md:font-normal">Everything, coordinated.</span>
           </h3>
         </div>
 
