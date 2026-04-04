@@ -120,8 +120,8 @@ function Hero() {
       </div>
 
       {/* Trust band pinned to bottom of hero */}
-      <div className="relative z-10 w-full px-6 md:px-12 pb-8 md:pb-10 border-t border-surface/5">
-        <div className="max-w-6xl mx-auto xl:mx-0 xl:ml-[12%] 2xl:ml-[16%] pt-8 md:pt-10">
+      <div className="relative z-10 w-full px-6 md:px-12 pb-6 md:pb-10 border-t border-surface/5">
+        <div className="max-w-6xl mx-auto xl:mx-0 xl:ml-[12%] 2xl:ml-[16%] pt-6 md:pt-10">
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 lg:gap-20">
             <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-start">
               <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
