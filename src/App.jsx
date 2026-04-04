@@ -100,7 +100,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl mx-auto mt-auto pb-6 md:pb-12 lg:pb-10">
+      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl mx-auto xl:mx-0 xl:ml-[12%] 2xl:ml-[16%] mt-auto pb-6 md:pb-12 lg:pb-10">
         <div className="max-w-none text-left">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[4rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-10 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
@@ -121,7 +121,7 @@ function Hero() {
 
       {/* Trust band pinned to bottom of hero */}
       <div className="relative z-10 w-full px-6 md:px-12 pb-8 md:pb-10 border-t border-surface/5">
-        <div className="max-w-6xl mx-auto pt-8 md:pt-10">
+        <div className="max-w-6xl mx-auto xl:mx-0 xl:ml-[12%] 2xl:ml-[16%] pt-8 md:pt-10">
           <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-12 lg:gap-20">
             <div className="flex items-center gap-3 group w-full md:w-auto justify-center md:justify-start">
               <ShieldCheck size={15} className="text-bronze group-hover:scale-110 transition-transform md:w-[18px] md:h-[18px]" />
