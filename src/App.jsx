@@ -100,14 +100,14 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/80 to-ink/30"></div>
       </div>
 
-      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-6 md:pb-12 lg:pb-10 2xl:pb-[16vh]">
+      <div className="relative z-10 w-full px-6 md:px-12 max-w-6xl 2xl:max-w-[85rem] mx-auto mt-auto pb-6 md:pb-12 lg:pb-10 2xl:pb-[24vh]">
         <div className="max-w-none text-left">
           <h1 className="text-[1.45rem] sm:text-4xl md:text-5xl lg:text-[2.75rem] xl:text-[3.25rem] leading-[1.2] md:leading-[1.1] tracking-tight mb-6 md:mb-6 max-w-5xl">
             <span className="block hero-text font-drama font-normal text-surface drop-shadow-lg">Your life is tied to <span className="text-white relative inline-block">one<span className="absolute -bottom-1 left-0 w-full h-[3px] bg-bronze/80"></span></span> country</span>
             <span className="block hero-text font-drama font-normal text-bronze drop-shadow-lg mt-3 md:mt-6">...and it doesn't have to be.</span>
           </h1>
 
-          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans font-medium leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-6 md:mb-8 drop-shadow-md">
+          <p className="hero-text text-[15px] md:text-lg lg:text-lg xl:text-xl text-porcelain/80 font-sans font-medium leading-relaxed max-w-2xl lg:max-w-none lg:whitespace-nowrap mb-8 md:mb-8 drop-shadow-md">
             International structures for entrepreneurs, investors, and mobile families.
           </p>
 
