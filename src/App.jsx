@@ -90,7 +90,7 @@ function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[calc(100dvh-10rem)] 2xl:min-h-[calc(100dvh-10rem)] pb-4 md:pb-12 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
+    <section ref={heroRef} id="hero" className="relative min-h-[75dvh] lg:min-h-[calc(100dvh-5rem)] 2xl:min-h-[calc(100dvh-5rem)] pb-4 md:pb-12 w-full flex flex-col justify-end overflow-hidden bg-ink text-surface pt-24 lg:pt-28 scroll-mt-32">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
