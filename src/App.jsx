@@ -251,9 +251,9 @@ function WhatYouGet() {
 
   const deliverables = [
     { num: '01', icon: <Map className="text-bronze" size={20} strokeWidth={1.5} />, title: "STRATEGIC BLUEPRINT", desc: "A custom roadmap for your international life. No generic templates—just a clear plan built for your specific situation." },
-    { num: '02', icon: <Landmark className="text-bronze" size={20} strokeWidth={1.5} />, title: "GLOBAL BANKING", desc: "We take care of opening bank accounts abroad. We get you verified and set up in the world's most stable countries." },
-    { num: '03', icon: <Building2 className="text-bronze" size={20} strokeWidth={1.5} />, title: "ENTITY SETUP", desc: "We set up and coordinate your companies or trusts. We make sure everything is registered correctly and works for you." },
-    { num: '04', icon: <FileCheck className="text-bronze" size={20} strokeWidth={1.5} />, title: "RESIDENCY & CITIZENSHIP", desc: "We handle the paperwork for your new residency or citizenship. We work with local experts so you don't have to." },
+    { num: '02', icon: <Landmark className="text-bronze" size={20} strokeWidth={1.5} />, title: "GLOBAL BANKING", desc: "We design your banking architecture and coordinate account setup with institutions in the world's most stable jurisdictions." },
+    { num: '03', icon: <Building2 className="text-bronze" size={20} strokeWidth={1.5} />, title: "ENTITY SETUP", desc: "We coordinate the formation of your companies, foundations, or trusts with licensed local professionals in each jurisdiction." },
+    { num: '04', icon: <FileCheck className="text-bronze" size={20} strokeWidth={1.5} />, title: "RESIDENCY & CITIZENSHIP", desc: "We coordinate your residency or citizenship process end-to-end, managing local providers and paperwork so you don't have to." },
     { num: '05', icon: <ShieldCheck className="text-bronze" size={20} strokeWidth={1.5} />, title: "COMPLIANCE & REPORTING", desc: "We track your global tax filings and reports. We stay on top of the rules so your structure stays legal and safe." },
     { num: '06', icon: <Settings className="text-bronze" size={20} strokeWidth={1.5} />, title: "ONGOING SUPPORT", desc: "As laws and your life change, we update your structure. We make sure your international setup stays efficient and secure." },
   ];
@@ -445,7 +445,7 @@ function HowItWorks() {
       num: "02",
       title: "Build",
       subtitle: "Seamless execution.",
-      desc: "We execute your custom blueprint. From offshore banking and entities to residencies and tax filings, we handle the entire implementation.",
+      desc: "We coordinate your entire implementation. From banking architecture and entity formation to residencies and compliance, we manage every provider and every step.",
       svg: (
         <svg viewBox="0 0 200 200" className="w-full h-full opacity-60">
           <rect x="80" y="40" width="40" height="30" fill="none" stroke="#9C7B52" strokeWidth="1" />
