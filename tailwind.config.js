@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -15,9 +15,9 @@ export default {
         darkSurface: "#16181B",
       },
       fontFamily: {
-        sans: ['"DM Sans"', "sans-serif"],
-        drama: ['"Prata"', "serif"],
-        data: ['"IBM Plex Mono"', "monospace"],
+        sans: ['var(--font-dm-sans)', "sans-serif"],
+        drama: ['var(--font-prata)', "serif"],
+        data: ['var(--font-ibm-plex-mono)', "monospace"],
       },
       borderRadius: {
         '2xl': '1rem',
